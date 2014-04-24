@@ -109,7 +109,8 @@ The input is defined by the previous subsection and the output will be defined i
 \begin{itemize}
 \item The algorithm must be able to return possible practical partners to the user.
 \item The algorithm must be able to return more then one possible practical partner.
-\item The algorithm must be able to respond to a rejection by the user.
+\item The algorithm must be able to return a partner given a list of unwanted (allready rejected) partners.
+\item The algorithm must be able to handle the addition and deleting of users.
 \end{itemize}
 
 \reqr{Should have}
@@ -128,7 +129,7 @@ The input is defined by the previous subsection and the output will be defined i
 
 \reqr{Would have}
 \begin{itemize}
-\item \TODO{Add would haves to the peer matching requirements}
+\item The algorithm would have to be able to use information gathered from rejections to improve the matching.
 \end{itemize}
 
 \subsection{Usage of the system}
@@ -139,7 +140,7 @@ The system has different actors that can interact with the system in different w
 
 \reqr{Must have}
 \begin{itemize}
-\item The participant must be able to view the different MOOCs without registering or logging in.
+\item The a potential participant (anyone who visits the site) must be able to view the different MOOCs without registering or logging in.
 \item The participant must be able to inform him/herself about the usage of the application without registering or logging in.
 \item The participant must be able to register to the application.
 \item The participant must be able to log in to the application.
@@ -172,8 +173,9 @@ The system has different actors that can interact with the system in different w
 \reqr{Must have}
 \begin{itemize}
 \item The administrator must be able to create a MOOC and add this to his account.
-\item The administrator must be able to invite participants to join the MOOC.
+\item The administrator must be able to open and close the particpant registration for a MOOC.
 \item The administrator must be able to manage the list of participants and groups of participants.
+\item The administrator must be able to view what groups have finished what assignments.
 \end{itemize}
 
 \reqr{Should have}
