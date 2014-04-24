@@ -5,6 +5,7 @@
 \usepackage[colorlinks,linkcolor=black,urlcolor=blue,citecolor=black]{hyperref}
 
 \newcommand{\TODO}[1]{{\color{red}\textbf{TODO: #1}}}
+\newcommand{\reqr}[1]{{\noindent\emph{#1:}}}
 \renewcommand*\contentsname{Table of Contents}
 
 \title{Peer Matching Research}
@@ -61,7 +62,7 @@ Some data is necessary to collect.
 Other data would be nice to have to give an better result, but is not essential for basic matching. 
 We distinguish the essential data and the not essential data.\cite{cmu}
 
-\emph{Must have:}
+\reqr{Must have}
 \begin{itemize}
 \item The algorithm must know the size of the groups that must be created
 \item Users must declare their prior knowledge.
@@ -69,19 +70,19 @@ We distinguish the essential data and the not essential data.\cite{cmu}
 \item Users must declare their skills.
 \end{itemize}
 
-\emph{Should have:}
+\reqr{Should have}
 \begin{itemize}
 \item Users should declare their motivation. 
 Mixing students with different motivations within a group can cause tensions and problems.
 \item Users should declare their personality. 
 \end{itemize}
 
-\emph{Could have:}
+\reqr{Could have}
 \begin{itemize}
 \item The users could indicate which role they can perform best, for example project manger, data analyst, writer. 
 \end{itemize}
 
-\emph{Would have:}
+\reqr{Would have}
 \begin{itemize}
 \item \TODO{Add would haves to the peer matching requirements}
 \end{itemize}
@@ -90,28 +91,29 @@ Mixing students with different motivations within a group can cause tensions and
 This subsection will provide a first idea for the peer matching algorithm and what requirements are made for this algorithm.
 The input is defined by the previous subsection and the output will be defined in this subsection.
 \TODO{Finish Peer matching requirements}
-\emph{Must have:}
+
+\reqr{Must have}
 \begin{itemize}
 \item The algorithm must return possible practical partners to the user.
 \item The algorithm must be able to return more then one possible practical partner.
 \item The algorithm must be able to respond to a rejection by the user.
 \end{itemize}
 
-\emph{Should have:}
+\reqr{Should have}
 \begin{itemize}
 \item The algorithm uses basic user provided data (e.g. education, preferences) to build up a profile for a MOOC participant.
 \item The algorithm can calculate whether two people will be good practical partners using the basic user provided data.
 \item The algorithm can return a possible practical partners using the basic user provided data.
 \end{itemize}
 
-\emph{Could have:}
+\reqr{Could have}
 \begin{itemize}
 \item The algorithm uses advanced user provided data (e.g. asked questions, programming tests) to build up an extended profile for a MOOC participant.
 \item The algorithm can calculate whether two people will be good practical partners using the advanced user provided data.
 \item The algorithm can return a possible practical partner using the basic user provided data.
 \end{itemize}
 
-\emph{Would have:}
+\reqr{Would have}
 \begin{itemize}
 \item \TODO{Add would haves to the peer matching requirements}
 \end{itemize}
@@ -121,7 +123,8 @@ The usage of the system is defined by the actions the users can do, these action
 The system has different actors that can interact with the system in different ways, so the requirements and actions are categorised by actor.
 
 \subsubsection{Actor 1: MOOC participant}
-\emph{Must have:}
+
+\reqr{Must have}
 \begin{itemize}
 \item The participant must be able to view the different MOOCs without registering or logging in.
 \item The participant must be able to inform him/herself about the usage of the application without registering or logging in.
@@ -135,30 +138,30 @@ The system has different actors that can interact with the system in different w
 \end{itemize}
 \TODO{Add must haves to the peer matching requirements}
 
-\emph{Should have:}
+\reqr{Should have}
 \begin{itemize}
 \item \TODO{Add should haves to the peer matching requirements}
 \end{itemize}
 
-\emph{Could have:}
+\reqr{Could have}
 \begin{itemize}
 \item \TODO{Add could haves to the peer matching requirements}
 \end{itemize}
 
-\emph{Would have:}
+\reqr{Would have}
 \begin{itemize}
 \item \TODO{Add would haves to the peer matching requirements}
 \end{itemize}
 
 \subsubsection{Actor 2: MOOC teacher/MOOC administrator}
-\emph{Must have:}
+\reqr{Must have}
 \begin{itemize}
 \item The administrator must be able to create a MOOC and add this to his account.
 \item The administrator must be able to invite participants to join the MOOC.
 \item The administrator must be able to manage the list of participants and groups of participants.
 \end{itemize}
 
-\emph{Should have:}
+\reqr{Should have}
 \begin{itemize}
 \item The administrator should be able to grade the group for its practical.
 \item The administrator should be able to set deadlines for each practical.
@@ -166,7 +169,7 @@ The system has different actors that can interact with the system in different w
 \item The administrator should be able to communicate with the groups.
 \end{itemize}
 
-\emph{Could have:}
+\reqr{Could have}
 \begin{itemize}
 \item The administrator could be able to provide for his own criteria for each of his MOOC.
 \item The administrator could be able to add different assignments to the application.
@@ -174,29 +177,29 @@ The system has different actors that can interact with the system in different w
 \item The administrator could be able to provide feedback for the different assignments.
 \end{itemize}
 
-\emph{Would have:}
+\reqr{Would have}
 \begin{itemize}
 \item \TODO{Add would haves to the peer matching requirements}
 \end{itemize}
 
 \subsubsection{Actor 3: Groups of participants}
 This actor consist of two or more MOOC participants who accepted each other to their group.
-\emph{Must have:}
+\reqr{Must have}
 \begin{itemize}
 \item The groups must be able to communicate with each other using the application.
 \end{itemize}
 
-\emph{Should have:}
+\reqr{Should have}
 \begin{itemize}
 \item \TODO{Add should haves to the peer matching requirements}
 \end{itemize}
 
-\emph{Could have:}
+\reqr{Could have}
 \begin{itemize}
 \item \TODO{Add should haves to the peer matching requirements}
 \end{itemize}
 
-\emph{Would have:}
+\reqr{Would have}
 \begin{itemize}
 \item \TODO{Add would haves to the peer matching requirements}
 \end{itemize}
@@ -206,22 +209,22 @@ The previous section limits the possible kinds of systems that are appropriate f
 The requirements that are provided in this section will further limit the kinds of systems.
 The MoSCoW categories can be used to compare different kinds of systems and select the best fitting.
 
-\emph{Must have:}
+\reqr{Must have}
 \begin{itemize}
 \item \TODO{Add must haves to the peer matching requirements}
 \end{itemize}
 
-\emph{Should have:}
+\reqr{Should have}
 \begin{itemize}
 \item \TODO{Add should haves to the peer matching requirements}
 \end{itemize}
 
-\emph{Could have:}
+\reqr{Could have}
 \begin{itemize}
 \item \TODO{Add could haves to the peer matching requirements}
 \end{itemize}
 
-\emph{Would have:}
+\reqr{Would have}
 \begin{itemize}
 \item \TODO{Add would haves to the peer matching requirements}
 \end{itemize}
