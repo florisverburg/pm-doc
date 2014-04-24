@@ -52,13 +52,29 @@ Then you would be better of by having one person who is good at programming and 
 
 \TODO{Finish problem definition}
 
-\section{Requirements}
-This section will describe what requirements are set for the product.
+\section{Introduction to requirements}
+The following sections will describe what requirements are set for the product.
 These requirements are partly provided by the company and further filled in by our team.
 The resulting requirements were completely talked through before the start of the implementation and thus provide a solid base for the rest of our project.
-We first define four global requirements who capture the entire project, these requirements are split up in requirements that are measurable and that are assigned to the appropriate MoSCoW\cite{highsmith2001agile} method category.
+We first define four global requirements who capture the entire project in this section.
+We first start with a section that has the requirements for the basic system.
+After that we will continue with a section that mention the different requirements for the peer matching algorithm.
+We choose to split these requirements up, because of the literature study required to further specify the requirements.
+The following two sections will split up these requirements in requirements that are measurable and that are assigned to the appropriate MoSCoW\cite{highsmith2001agile} method category.
 
-\subsection{Usage user information}
+\subsection{Global Requirements}
+Listed below are the global requirements are partly defined by the orginal assignment and partly defined by discussing with our client.
+\TODO{The global requirements need more introduction and there are no actual requirements listed below}
+\begin{itemize}
+\item User information
+\item Usage of the system
+\item Kind of system
+\item Peer matching
+\end{itemize}
+
+\section{Requirements basic system}
+This section will mention the different requirements that involve the basic system which the actors interact with. The section starts with mentioning the possible types of user information, followed up by what actions are possible with the system, lastly the kind of systems are limited by the requirements listed.
+\subsection{User information}
 This subsection will provide information about what data is interesting for our peer matching algorithm and how this data is acquired.
 Some data is necessary to collect. 
 Other data would be nice to have to give a better result, but is not essential for basic matching.
@@ -84,37 +100,6 @@ We distinguish the essential data and the not essential data.\cite{cmu}
 \reqr{Would have}
 \begin{itemize}
 \item \TODO{Add would haves to the peer matching requirements}
-\end{itemize}
-
-\subsection{Peer matching}
-This subsection will provide a first idea for the peer matching algorithm and what requirements are made for this algorithm.
-This algorithm has all of the information of each user as input and calculates values from this information that can be used to compare and group users.
-Using these values, the algorithm can calculate if two users would make a good team.
-The input is defined by the previous subsection and the output will be defined in this subsection.
-\TODO{Finish Peer matching requirements}
-
-\reqr{Must have}
-\begin{itemize}
-\item The algorithm must be able to return one or more suggestions of practical partners to the user given a list of rejected users.
-\end{itemize}
-
-\reqr{Should have}
-\begin{itemize}
-\item The algorithm uses basic user provided data (e.g. education, preferences) to build up a profile for a MOOC participant.
-\item The algorithm can calculate whether two people will be good practical partners using the basic user provided data.
-\item The algorithm can return a possible practical partners using the basic user provided data.
-\end{itemize}
-
-\reqr{Could have}
-\begin{itemize}
-\item The algorithm uses advanced user provided data (e.g. asked questions, programming tests) to build up an extended profile for a MOOC participant.
-\item The algorithm can calculate whether two people will be good practical partners using the advanced user provided data.
-\item The algorithm can return a possible practical partner using the basic user provided data.
-\end{itemize}
-
-\reqr{Would have}
-\begin{itemize}
-\item The algorithm would have to be able to use information gathered from rejections to improve the matching.
 \end{itemize}
 
 \subsection{Usage of the system}
@@ -235,6 +220,47 @@ The MoSCoW categories can be used to compare different kinds of systems and sele
 \begin{itemize}
 \item \TODO{Add would haves to the peer matching requirements}
 \end{itemize}
+
+\section{Peer matching requirements and literature study}
+The peer matching algorithm can be limited and pushed in the correct direction by the requirements, but leaves room for choices to be made.
+To make the correct choices a literature study is required.
+This section will first list the requirements set by the client and will continue with a discussion about different possibilities to choose from.
+It will discuss a range of possible algorithms that can be applied to the problem and what their respective advantages and disadvantages are.
+This section will end with a conclusion about the algorithm we will be using.
+
+\subsection{Peer matching}
+This subsection will provide a first idea for the peer matching algorithm and what requirements are made for this algorithm.
+This algorithm has all of the information of each user as input and calculates values from this information that can be used to compare and group users.
+Using these values, the algorithm can calculate if two users would make a good team.
+The input is defined by the previous subsection and the output will be defined in this subsection.
+\TODO{Finish Peer matching requirements}
+
+\reqr{Must have}
+\begin{itemize}
+\item The algorithm must be able to return one or more suggestions of practical partners to the user given a list of rejected users.
+\end{itemize}
+
+\reqr{Should have}
+\begin{itemize}
+\item The algorithm uses basic user provided data (e.g. education, preferences) to build up a profile for a MOOC participant.
+\item The algorithm can calculate whether two people will be good practical partners using the basic user provided data.
+\item The algorithm can return a possible practical partners using the basic user provided data.
+\end{itemize}
+
+\reqr{Could have}
+\begin{itemize}
+\item The algorithm uses advanced user provided data (e.g. asked questions, programming tests) to build up an extended profile for a MOOC participant.
+\item The algorithm can calculate whether two people will be good practical partners using the advanced user provided data.
+\item The algorithm can return a possible practical partner using the basic user provided data.
+\end{itemize}
+
+\reqr{Would have}
+\begin{itemize}
+\item The algorithm would have to be able to use information gathered from rejections to improve the matching.
+\end{itemize}
+
+\subsection{Literature study}
+\TODO{Add different algorithms that are compared}
 
 \section{Chosen implementations for requirements}
 Some requirements limit the possible choices for a part of the system, but still leaves some questions unanswered.
