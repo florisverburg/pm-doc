@@ -54,22 +54,35 @@ Then you would be better of by having one person who is good at programming and 
 
 \section{Introduction to requirements}
 The following sections will describe what requirements are set for the product.
-These requirements are partly provided by the company and further filled in by our team.
-The resulting requirements were completely talked through before the start of the implementation and thus provide a solid base for the rest of our project.
-We first define four global requirements who capture the entire project in this section.
-We first start with a section that has the requirements for the basic system.
-After that we will continue with a section that mention the different requirements for the peer matching algorithm.
+This section will define four global requirements who cover the entire project.
+These requirements are then split up in the next two sections, the first being the requirements for the basic system and the second being the requirements for the peer matching algorithm.
 We choose to split these requirements up, because of the literature study required to further specify the requirements.
-The following two sections will split up these requirements in requirements that are measurable and that are assigned to the appropriate MoSCoW\cite{highsmith2001agile} method category.
+In these sections, the global requirements are split up in smaller requirements.
+It is easier to verify these smaller requirements for their completion and these requirements are more transformable to functions of the system.
+We also assigned these requirements into their appropiate MoSCoW \cite{highsmith2001agile} method category.
+
+\subsection{Actors of the system}
+\TODO{Define the actors of the system and provide a brief introduction}
+\subsubsection{MOOC participant}
+\subsubsection{MOOC teacher/MOOC administrator} 
+\subsubsection{Groups of participants}
+This actor consist of two or more MOOC participants who accepted each other to their group.schetsen
 
 \subsection{Global Requirements}
-Listed below are the global requirements are partly defined by the orginal assignment and partly defined by discussing with our client.
-\TODO{The global requirements need more introduction and there are no actual requirements listed below}
+To provide an overview of what the software must be capable of, we define four global requirements for the system. By defining these four global requirements we provide a foundation of what the system must be able to do.
 \begin{itemize}
-\item User information
-\item Usage of the system
-\item Kind of system
-\item Peer matching
+\item The system will be using user information to try to find the best practical partner.
+The user must be able to enter his personal data so it can be used by the algorithm.
+This user information is further defined in what kind of information is important (a must have) and what information is less important (i.e. a should/could have) in the appropiate section.
+\item The system must be designed to accomodate the usage for both MOOC administrators and participants.
+Each of these actors needs to be able to perform different actions then the other.
+For example the participants must be able to register to the system and must be able to join a MOOC.
+The section that will further specify the usage of the system requirements, will define what actions are a must and what actions are less important.
+\item Next to the actions different actors can perform using the system, the system must also be defined in other terms.
+These terms are about for example about the accesability of the application and the usage of a database.
+The requirements specified in the section about the kind of system will set demands which will help to select the appropiate framework and kind of application.
+\item The system is centered around an algorithm used to recommend a practical partner to a participant.
+There are requirements that are set for this algorithm concerning the input it must be able to handle and the output it must give back.
 \end{itemize}
 
 \section{Requirements basic system}
@@ -78,7 +91,7 @@ This section will mention the different requirements that involve the basic syst
 This subsection will provide information about what data is interesting for our peer matching algorithm and how this data is acquired.
 Some data is necessary to collect. 
 Other data would be nice to have to give a better result, but is not essential for basic matching.
-We distinguish the essential data and the not essential data.\cite{cmu}
+We distinguish the essential data and the not essential data.
 
 \reqr{Must have}
 \begin{itemize}
@@ -103,8 +116,6 @@ We distinguish the essential data and the not essential data.\cite{cmu}
 \end{itemize}
 
 \subsection{Usage of the system}
-The usage of the system is defined by the actions the users can do, these actions are defined in requirements that are listed in this subsection.
-The system has different actors that can interact with the system in different ways, so the requirements and actions are categorised by actor.
 
 \subsubsection{Actor 1: MOOC participant}
 
@@ -195,9 +206,6 @@ This actor consist of two or more MOOC participants who accepted each other to t
 \end{itemize}
 
 \subsection{Kind of system}
-The previous section limits the possible kinds of systems that are appropriate for our cause.
-The requirements that are provided in this section will further limit the kinds of systems.
-The MoSCoW categories can be used to compare different kinds of systems and select the best fitting.
 
 \reqr{Must have}
 \begin{itemize}
@@ -237,6 +245,7 @@ The input is defined by the previous subsection and the output will be defined i
 
 \reqr{Must have}
 \begin{itemize}
+\item The algorithm must be able to use a list of users as input.
 \item The algorithm must be able to return one or more suggestions of practical partners to the user given a list of rejected users.
 \end{itemize}
 
@@ -260,7 +269,8 @@ The input is defined by the previous subsection and the output will be defined i
 \end{itemize}
 
 \subsection{Literature study}
-\TODO{Add different algorithms that are compared}
+\cite{cmu}
+\TODO{Add different algorithms and a comparison}
 
 \section{Chosen implementations for requirements}
 Some requirements limit the possible choices for a part of the system, but still leaves some questions unanswered.
