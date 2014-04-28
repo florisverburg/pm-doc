@@ -33,28 +33,45 @@ This document is the research report that has been written for the Peer Matching
 The report provides a summary of the requirements that are set for the system and will provide for a literature study about different possible algorithms to solve the peer matching problem presented in the problem definition.
 
 \section{Introduction}
-It is well known that many students come to the university to visit lectures because it provides the opportunity to meet peers and to have discussions also about less academic topics.
-At this moment social media plays a limited role in the academic process of teaching and learning. However, social media offers great opportunities, especially around the development of MOOCS (Massive Open Online Courses).
+Many students go to an university each year to follow the predefined bachelor and/or master programs, but not everyone has the time and intent to follow an entire program.
+There is a demand from all sorts of people to be able to follow a course while their main occupation isn't that of a student.
+For example: a working parent could be very interested in such a course.
+That is why universities introduced MOOCs.
 
-The basic idea of MOOCS is that students remote in place and time follow the lectures, they can use social media as an academic communication media, where students discuss about their study activities, put forward their questions and get help and support from peers. 
+The basic idea of MOOCs is that students remote in place and time follow the lectures, can participate in a practical assignment and can make an exam.
+If they score sufficient, they are rewarded with a certificate that states their succes in the course.
 
-At this moment there many sites finding the best matching partner, our goal is finding the best matching study partners.
+The concept of the MOOCs is a very new concept that still has many areas to improve upon.
+One of these areas is the area of practical assignments.
+Currently, for a Computer Science MOOC at the TU Delft, multiple practical assignments are required.
+The participants are required to form groups to make these assignments.
+After the announcement the participants either use mail, Facebook or  Twitter to contact other people in order to form the groups.
 
-\section{Problem definition}
-More and more people from all over the world with different backgrounds are participating in the MOOCs.
-During most of the MOOCs practical assignments need to be made with a partner or in a group.
-But finding the correct partner or group members can become really difficult when you don't see each other during courses and haven't even met most of the people from you course.
+We would like to improve upon this concept and try to provide a more fitting approach.
 
-Most of the time people are searching partners or group members on social media like Facebook or Twitter.
-They just try to look through some of the participants names in the course, search for them online trough social media and check if they are a capable partner or group member.
+\subsection{Problem definition}
+In this subsection we will continue on the case provided by the introduction.
+We will pinpoint the points we would like to improve upon.\\
+
+MOOCs around the world are growing in size and thus the practical assignments need to be easy to manage.
+The growth also means that it is more difficult for each participant to find a possible practical partner due to the large amount of people.
+It also becomes really difficult to find the correct partner or group members when you don't see each other during courses and haven't even met most of the people from your course.
+
+Most of the time participants of MOOCs are searching group members on social media like Facebook or Twitter.
+They just try to look through some of the participants names in the course, search for them on-line through social media and check if they are a capable partner or group member.
 This approach takes a lot of time and most of the time there are too much MOOC participants to go trough all of them.
 
-These approaches often doesn't lead to the "most optimal" solution, but more to a group or set of partners which share the same interest and are able to work together.
-Next to the fact that you want a socially stable group or practicum partner you also want to combine as much different experiences as possible.
-For example if both practicum partners a good at programming but also both don't like, or aren't good at writing documents and papers.
-Then you would be better of by having one person who is good at programming and a person who is better at writing documents.
+Next to the fact that this process is very time consuming for every participant, it also leads to a sub optimal solution.
+This sub optimal solution will be focussed on a group or set of partners which share the same interest and this doesn't say anything if they would form a good group.
 
-\TODO{Finish problem definition}
+We would like to improve upon this process by creating an application that can be used to create practical groups without the participants being required to go search intensively.
+Participants should be able to easily access the application, fill in some relevant information about themselves and then be recommended possible group members.
+
+The interaction with the system is a pretty straight forward application, but the recommendation of possible group members is more difficult.
+One of the questions we are trying to answer is: What user information is useful to determine whether two people can be good practical partners?
+We will also need to figure out a good way to recommend a practical partner, but still give the possibility to reject such a request.
+
+These questions and difficulties will be answered in this report.
 
 \section{Global system design}
 The first thing that has to be done is for the teacher to create a assignment in the application.
@@ -227,14 +244,14 @@ This actor consist of two or more MOOC participants who accepted each other to t
 \reqr{Should have}
 \begin{itemize}
 \item A group should be able to invite other participants to join their group.
-\item A group should be able to view a possible group mate.
-\item A group should be able to invite a possible group mate to join their group.
+\item A group should be able to view a possible group member.
+\item A group should be able to invite a possible group member to join their group.
 \item A group should be able to accept an request from a participant to join their group.
 \end{itemize}
 
 \reqr{Could have}
 \begin{itemize}
-\item The group could be able to select their preferences for the new group mate.
+\item The group could be able to select their preferences for the new group member.
 \item The participants could be able to share files to other group members using this application.
 \end{itemize}
 
