@@ -83,14 +83,18 @@ We also assigned these requirements into their appropiate MoSCoW \cite{highsmith
 \subsection{Actors of the system}
 In this subsection we will clarify the different actors used in the system and throughout this report.
 \subsubsection{MOOC participant}
-Due to the nature of the MOOCs, there are no requirements set for the participants. Every person with an interest in the given course can enlist for the MOOC and should thus be able to register with our system.
+Due to the nature of the MOOCs, there are no requirements set for the participants.
+Every person with an interest in the given course can enlist for the MOOC and should thus be able to register with our system.
 \subsubsection{MOOC teacher/MOOC administrator} 
-The MOOC is organised by a professor of an university. This professor will need to register with the system and create a MOOC.
+The MOOC is organised by a professor of an university.
+This professor will need to register with the system and create a MOOC.
 \subsubsection{Groups of participants}
-This actor consist of two or more MOOC participants who accepted each other to their group. These groups can be of variable size, set by the MOOC organiser.
+This actor consist of two or more MOOC participants who accepted each other to their group.
+These groups can be of variable size, set by the MOOC organiser.
 
 \subsection{Global Requirements}
-To provide an overview of what the software must be capable of, we define four global requirements for the system. By defining these four global requirements we provide a foundation of what the system must be able to do.
+To provide an overview of what the software must be capable of, we define four global requirements for the system.
+By defining these four global requirements we provide a foundation of what the system must be able to do.
 \begin{itemize}
 \item The system will be using user information to try to find the best practical partner.
 The user must be able to enter his personal data so it can be used by the algorithm.
@@ -107,7 +111,9 @@ There are requirements that are set for this algorithm concerning the input it m
 \end{itemize}
 
 \section{Requirements basic system}
-This section will mention the different requirements that involve the basic system which the actors interact with. The section starts with mentioning the possible types of user information, followed up by what actions are possible with the system, lastly the kind of systems are limited by the requirements listed.
+This section will mention the different requirements that involve the basic system which the actors interact with.
+The section starts with mentioning the possible types of user information, followed up by what actions are possible with the system, lastly the kind of systems are limited by the requirements listed.
+
 \subsection{User information}
 This subsection will provide information about what data is interesting for our peer matching algorithm and how this data is acquired.
 Some data is necessary to collect. 
@@ -122,11 +128,13 @@ We distinguish the essential data and the not essential data.
 
 \reqr{Should have}
 \begin{itemize}
-\item Users should be able to enter the following basic user information: Country, Age, Short description, Skills, Education and Experiences.
+\item Users should be able to enter the following basic user information: Country, Age, Short description, Skills, Education, a Picture and Personality Traits.
 \end{itemize}
 
 \reqr{Could have}
 \begin{itemize}
+\item Users could be able to use a personality test to determine their personality traits.
+\item Users could be able to fill in their personality traits.
 \item Users could be able to enter the following extended user information: Preferred group Role\TODO{More information}
 \item Users could be able to enter a predefined questionnaires.
 \end{itemize}
@@ -156,12 +164,17 @@ We distinguish the essential data and the not essential data.
 
 \reqr{Should have}
 \begin{itemize}
-\item \TODO{Add should haves to the peer matching requirements}
+\item The participant should be able to ask a currently existing group if he can join them.
+\item The participant should be able to use their Linkedin profile to log in to the application.
+\item In case the participant already has an account, the participant should be able to add the course to his profile using the teachers url.
+\item The participant should be able to receive an invitation from a group.
+\item The participant should be able to accept the invitation from a group.
 \end{itemize}
 
 \reqr{Could have}
 \begin{itemize}
-\item \TODO{Add could haves to the peer matching requirements}
+\item The participant could be able to set his preferences for his possible partner.
+\item The participant could be able to search for other participants using information that is available in the profile.
 \end{itemize}
 
 \reqr{Would have}
@@ -177,14 +190,14 @@ We distinguish the essential data and the not essential data.
 \item The administrator must be able to create a MOOC and add this to his account.
 \item The administrator must be able to open and close the particpant registration for a MOOC.
 \item The administrator must be able to manage the list of participants and groups of participants.
-\item The administrator must be able to view what groups have finished what assignments.
+\item The administrator must be able to create an url that he can use to invite the participants.
 \end{itemize}
 
 \reqr{Should have}
 \begin{itemize}
 \item The administrator should be able to grade the group for its practical.
-\item The administrator should be able to set deadlines for each practical.
-\item The administrator should be able to easily communicate with every participant.
+\item The administrator should be able to set a deadline for a practical.
+\item The administrator should be able to communicate with every participant.
 \item The administrator should be able to communicate with the groups.
 \end{itemize}
 
@@ -192,6 +205,7 @@ We distinguish the essential data and the not essential data.
 \begin{itemize}
 \item The administrator could be able to provide for his own criteria for each of his MOOC.
 \item The administrator could be able to add different assignments to the application.
+\item The administrator could be able to view what groups have finished what assignments.
 \item The administrator could be able to grade the different assignments.
 \item The administrator could be able to provide feedback for the different assignments.
 \end{itemize}
@@ -212,18 +226,21 @@ This actor consist of two or more MOOC participants who accepted each other to t
 
 \reqr{Should have}
 \begin{itemize}
-\item \TODO{Add should haves to the peer matching requirements}
+\item A group should be able to invite other participants to join their group.
+\item A group should be able to view a possible group mate.
+\item A group should be able to invite a possible group mate to join their group.
+\item A group should be able to accept an request from a participant to join their group.
 \end{itemize}
 
 \reqr{Could have}
 \begin{itemize}
+\item The group could be able to select their preferences for the new group mate.
 \item The participants could be able to share files to other group members using this application.
 \end{itemize}
 
 \reqr{Would have}
 \begin{itemize}
 \item The participants would be able upload their source code to the application for verification.
-\item \TODO{Add would haves to the peer matching requirements}
 \end{itemize}
 
 \subsection{Kind of system}
@@ -268,6 +285,7 @@ The input is defined by the previous subsection and the output will be defined i
 \begin{itemize}
 \item The algorithm must be able to use a list of users as input.
 \item The algorithm must be able to return one or more suggestions of practical partners to the user given a list of rejected users.
+\item The algorithm must be able to return one or more suggestions of possible groups the participant could join.
 \end{itemize}
 
 \reqr{Should have}
@@ -282,6 +300,8 @@ The input is defined by the previous subsection and the output will be defined i
 \item The algorithm uses advanced user provided data (e.g. asked questions, programming tests) to build up an extended profile for a MOOC participant.
 \item The algorithm can calculate whether two people will be good practical partners using the advanced user provided data.
 \item The algorithm can return a possible practical partner using the basic user provided data.
+\item The algorithm could be able to respond to the preferences of groups.
+\item The algorithm could be able to respond to the preferences of a participant.
 \end{itemize}
 
 \reqr{Would have}
