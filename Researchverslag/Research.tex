@@ -6,8 +6,6 @@
 
 \newcommand{\TODO}[1]{{\color{red}\textbf{TODO: #1}}}
 \newcommand{\reqr}[1]{{\noindent\emph{#1:}}}
-\newcommand{\name}{the Peer Matching system}
-\newcommand{\company}{the Company}
 \renewcommand*\contentsname{Table of Contents}
 
 \title{Peer Matching Research}
@@ -65,40 +63,41 @@ These requirements are then split up in the next two sections, the first being t
 We choose to split these requirements up, because of the literature study required to further specify the requirements.
 In these sections, the global requirements are split up in smaller requirements.
 It is easier to verify these smaller requirements for their completion and these requirements are more transformable to functions of the system.
-We also assigned these requirements into their appropriate MoSCoW \cite{highsmith2001agile} method category.
+We also assigned these requirements into their appropiate MoSCoW \cite{highsmith2001agile} method category.
 
 \subsection{Actors of the system}
-\TODO{Define the actors of the system and provide a brief introduction}
+In this subsection we will clarify the different actors used in the system and throughout this report.
 \subsubsection{MOOC participant}
+Due to the nature of the MOOCs, there are no requirements set for the participants. Every person with an interest in the given course can enlist for the MOOC and should thus be able to register with our system.
 \subsubsection{MOOC teacher/MOOC administrator} 
+The MOOC is organised by a professor of an university. This professor will need to register with the system and create a MOOC.
 \subsubsection{Groups of participants}
-This actor consist of two or more MOOC participants who accepted each other to their \TODO{group.schetsen}
+This actor consist of two or more MOOC participants who accepted each other to their group. These groups can be of variable size, set by the MOOC organiser.
 
 \subsection{Global Requirements}
 To provide an overview of what the software must be capable of, we define four global requirements for the system. By defining these four global requirements we provide a foundation of what the system must be able to do.
 \begin{itemize}
 \item The system will be using user information to try to find the best practical partner.
 The user must be able to enter his personal data so it can be used by the algorithm.
-This user information is further defined in what kind of information is important (a must have) and what information is less important (i.e. a should/could have) in the appropriate section.
-\item The system must be designed to accommodate the usage for both MOOC administrators and participants.
+This user information is further defined in what kind of information is important (a must have) and what information is less important (i.e. a should/could have) in the appropiate section.
+\item The system must be designed to accomodate the usage for both MOOC administrators and participants.
 Each of these actors needs to be able to perform different actions then the other.
 For example the participants must be able to register to the system and must be able to join a MOOC.
 The section that will further specify the usage of the system requirements, will define what actions are a must and what actions are less important.
 \item Next to the actions different actors can perform using the system, the system must also be defined in other terms.
-These terms are about for example about the accessibility of the application and the usage of a database.
-The requirements specified in the section about the kind of system will set demands which will help to select the appropriate framework and kind of application.
-\item The system is centred around an algorithm used to recommend a practical partner to a participant.
+These terms are about for example about the accesability of the application and the usage of a database.
+The requirements specified in the section about the kind of system will set demands which will help to select the appropiate framework and kind of application.
+\item The system is centered around an algorithm used to recommend a practical partner to a participant.
 There are requirements that are set for this algorithm concerning the input it must be able to handle and the output it must give back.
 \end{itemize}
 
-\section{Basic system requirements}
-This section will mention the different requirements that involve the basic system which the actors interact with.
-The section starts with mentioning the possible types of user information, followed up by what actions are possible with the system, lastly the kind of systems are limited by the requirements listed.
+\section{Requirements basic system}
+This section will mention the different requirements that involve the basic system which the actors interact with. The section starts with mentioning the possible types of user information, followed up by what actions are possible with the system, lastly the kind of systems are limited by the requirements listed.
 \subsection{User information}
 This subsection will provide information about what data is interesting for our peer matching algorithm and how this data is acquired.
 Some data is necessary to collect. 
 Other data would be nice to have to give a better result, but is not essential for basic matching.
-We distinguish the essential data and the not essential data\cite{cmu}.
+We distinguish the essential data and the not essential data.
 
 \reqr{Must have}
 \begin{itemize}
@@ -161,7 +160,7 @@ We distinguish the essential data and the not essential data\cite{cmu}.
 \reqr{Must have}
 \begin{itemize}
 \item The administrator must be able to create a MOOC and add this to his account.
-\item The administrator must be able to open and close the participant registration for a MOOC.
+\item The administrator must be able to open and close the particpant registration for a MOOC.
 \item The administrator must be able to manage the list of participants and groups of participants.
 \item The administrator must be able to view what groups have finished what assignments.
 \end{itemize}
