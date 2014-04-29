@@ -301,8 +301,41 @@ The meeting rooms provide for a good place to hold meetings and work together as
 The public studying areas are a good place to work alone on a task.
 
 \section{Quality assurance}
-\subsection{Introduction}
-\subsection{Quality}
+For quality assurance we use several tools and techniques, to make sure our code is maintainable and is well documented.
+In this section we will first describe some of the techniques we will use and explain why they are useful for quality assurance.
+Next we will describe how several tools are providing use useful help and knowledge about our quality.
+
+\subsection{Techniques}
+As described before we will use scrum as our software development method, which will give us the opportunity to write tests very early in the process.
+Due to the fast scrum cycles of one week and splitting the software in small features, we can test each feature in the same scrum cycle.
+This way we will detect bugs and programming faults very early.
+
+Next to scrum we will make use of Git branches to separate our feature implementations in different branches.
+When a feature is completely tested and reviewed by another member of the programming team, it will be merged into the staging branch.
+After that acceptance testing will be done on the staging branch and when all tests are passed it will be merged into the master branch.
+This will always assure that we have a stable release available in the master branch.
+
+As last technique we will use unit testing together with acceptance testing with our client and future users of the system.
+Unit testing will be happing during each scrum cycle, and will be required for each feature to be merged into the staging branch.
+Acceptance testing will happen in the last two weeks of our project implementation and will give us feedback on which requirements we finished or didn't finish.
+
+\subsection{Tools}
+For quality assurance our main tool will be the Jenkins (Cloudbees) continuous integration testing environment.
+This environment gives us the opportunity to automatically perform several testing techniques and code analysis during each push to the Github repository.
+In this environment we will run several tools we will explain in the following paragraphs in more detail.
+
+At first all our Unit test will be run on Jenkins, which will give us fast feedback about the functionality of classes and functions.
+Bugs can easily be found, and when code is changed later on each test will be run again to make sure it keeps on working.
+
+Next we will run Findbugs to statically analyse our code for small bugs, and wrong naming conventions.
+This will not make sure there are less bugs in our code, but at least will give a helping hand in finding bugs very easily.
+
+After Findbugs we will run JaCoCo, which will give a really good insight in the data analysis of our code coverage.
+It will help use find parts of code where more testing needs to be done.
+
+As last we will run Codestyle, to make sure that every programming holds itself to the same conventions.
+Codestyle will rive a report of the errors in the conventions and need to be checked before pushing to staging,
+This will make sure our code is more maintainable, because it provides more easy to read and understand code.
 
 \newpage
 \bibliographystyle{plainnat}
