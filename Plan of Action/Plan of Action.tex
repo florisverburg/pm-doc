@@ -104,7 +104,7 @@ Next to the fact that this process is very time consuming, this process also oft
 This is due to the problem that people often look for partners of group members which share the same interests.
 While this often makes it easy to work together, this will not guarantee that you have a good functioning group and enough knowledge inside the group.
 
-We would like to improve upon this process by creating an application that can be used to create practical groups without the participants being required to go search intensively trough all the participants.
+We would like to improve upon this process by creating an application that can be used to create practical groups without the participants being required to go search intensively trough all the particpants.
 Participants should be able to easily access the application, fill in some relevant information about themselves and then be recommended possible practical partners or group members.
 
 The interaction with the system is a pretty straight forward application, but the recommendation of possible group members is more difficult.
@@ -115,12 +115,18 @@ This and other questions will be answered in this document.
 To provide an overview of what the software must be capable of, we define four global requirements for the system.
 By defining these four global requirements we provide a foundation of what the system must be able to do.
 \begin{itemize}
-\item MOOC teachers must be able to create, manage and edit courses for which participants of their MOOC are able to register.
-
-\item MOOC students must be able to register and deregister for a MOOC practical assignment.
-
-\item The system must be capable to use personal data provided by the user to find a suggestion of an appropriate practical partner or group member.
-It must be possible to adjust the definition (parameters) of the appropriate practical partner or group member, and search trough several suggestions.
+\item The system will be using user information to try to find the best practical partner.
+The user must be able to enter his personal data so it can be used by the algorithm.
+This user information is further defined in what kind of information is important (a must have) and what information is less important (i.e. a should/could have) in the appropriate section.
+\item The system must be designed to accommodate the usage for both MOOC administrators and participants.
+Each of these actors needs to be able to perform different actions then the other.
+For example the participants must be able to register to the system and must be able to join a MOOC.
+The section that will further specify the usage of the system requirements, will define what actions are a must and what actions are less important.
+\item Next to the actions different actors can perform using the system, the system must also be defined in other terms.
+These terms are about for example about the accessibility of the application and the usage of a database.
+The requirements specified in the section about the kind of system will set demands which will help to select the appropriate framework and kind of application.
+\item The system is centred around an algorithm used to recommend a practical partner to a participant.
+There are requirements that are set for this algorithm concerning the input it must be able to handle and the output it must give back.
 \end{itemize}
 
 \subsection{Assignment formulation}
@@ -154,12 +160,12 @@ Because of that estimating the time required for several tasks is very hard.
 \end{itemize}
 
 \section{Approach and time schedule}
-\TODO{Gaat Marijn doen}\\
 In this section we will be describing the methods, techniques and tools that we will be using to develop our application. We will also be giving a global overview of the planning.
 
 \subsection{Methods and techniques}
-We will be developing our application in the programming language Java. We will combine this with the Play framework to provide us with a solid basis with which we can develop our web application.
+We will be developing our application in the programming language Java. We will combine this with the Play framework to provide us with a solid basis with which we can develop our web application. Next to this we will be using scrum as our software development, more on that in the appropriate section.
 
+\subsubsection{Applications and technologies}
 We will being using the following applications and technologies:
 \begin{itemize}
 \item IntelliJ IDEA, is our Integrated Development Environment (IDE) which will facilitate the development and testing of our code.
@@ -177,8 +183,51 @@ The play framework gives us the possibility to easily create a web application u
 \item Checkstyle is a plug in for Cloudbees and IntelliJ that checks the code for coding standards.
 This makes it ideal to enforce the coding standard for our project.
 \end{itemize}
-\subsection{Proceedings}
+
+\subsubsection{Software development method}
+We will be using scrum as our software development method.
+Scrum is based on the agile software development framework which can be used to manage software projects.
+We choose scrum because of its flexible approach to software development.
+We do not have the time to research all of the aspects of the system.
+Scrum gives us the possibility to react to changes of requirements, but also to react to new insights given by our increasing understanding of the system as time progresses.
+We will define the different roles associated with scrum (e.g. the product owner, development team, scrum master) in the next section.
+
 \subsection{Planning}
+We have set up a global planning that splits up the project in phases. Each of these phases has deliverables attached to it. We will be mentioning our goals for each week. Other important dates are also added to the planning.
+
+\subsubsection{Phase 1, Set up and research}
+During the first phase we will be researching the requirements of the system and which requirements are essential for the application and what requirements are not. We will also be looking into the set up of the project for our implementation phase.\\
+
+\noindent{Week 1: 21-04-2014 - 25-04-2014}\\
+Drafts of Plan of Approach and literature study, setup of the development environment.\\
+\noindent\emph{Week 2: 28-04-2014 - 02-05-2014}\\
+Finished Plan of Approach, literature study, first system design.
+
+\subsubsection{Phase 2, Implementation}
+During the second phase we will be developing the application. During this time we will be using Scrum to support our development. During week 3 to 8 we will be developing the application. During this time we won't have big deliverables, but we will be using the weekly meetings with our supervisors to measure our progress.\\
+
+\noindent\emph{Week 3: 05-05-2014 - 09-05-2014}\\
+
+\noindent\emph{Week 4: 12-05-2014 - 16-05-2014}\\
+
+\noindent\emph{Week 5: 19-05-2014 - 23-05-2014}\\
+
+\noindent\emph{Week 6: 26-05-2014 - 30-05-2014}\\
+Start of the acceptance testing.
+
+\noindent\emph{Week 7: 02-06-2014 - 06-06-2014}\\
+End of the acceptance testing, first draft of the final report and send code to SIG for review.
+
+\subsubsection{Phase 3, Final report and presentation}
+
+\noindent\emph{Week 8: 09-06-2014 - 13-06-2014}\\
+Final development week, final draft of the final report.
+
+\noindent\emph{Week 9: 16-06-2014 - 20-06-2014}\\
+Send code for final review to SIG, send final report to supervisors for review, creation of the presentation.
+
+\noindent\emph{Week 10: 23-06-2014 - 27-06-2014}\\
+Presentation
 \section{Project approach}
 \subsection{Introduction}
 \subsection{Stakeholders}
