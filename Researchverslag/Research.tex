@@ -340,7 +340,7 @@ One of the best ways to do this is by developing a web application.
 \subsection{Framework}
 Because Web applications are getting more and more popular, a lot of frameworks are appearing which we could use for our Peer Matching system.
 Choosing the right framework is therefor really difficult, because they are hard to compare and not a good way to say which is better.
-We therefor listed a couple of frameworks which we had experience with, to make sure we have a lot of knowledge available in our programming team.
+We there for listed a couple of frameworks which we had experience with, to make sure we have a lot of knowledge available in our programming team.
 
 \TODO{more frameworks}
 
@@ -359,20 +359,25 @@ Some questions remain:
 \item How does the algorithm make use the extra information provided if the could haves are achieved?
 \item How does it make sure the partner that is recommended hasn't already been suggested?
 \end{itemize}
+Due to the unique requirements set to how the system works, we 
+
 It is now important to determine what known technique adheres to the requirements and answers these questions in a good and efficient way.\\
 
-One approach is the use of techniques that are used in dating sites.
-Another approach is looking at categorising people into classes which the recommendation algorithm can choose from.
-
-\subsubsection{Dating sites}
-
-\subsubsection{Recommendation algorithms}
-Their are three different kinds of approaches for recommendation algorithms:
+After looking at different known techniques:
 \begin{itemize}
-\item Collaborative filtering\cite{Breese1998}. These methods try to predict the utility of items to a particular user based on a database of user votes from a sample or population of other users.
-\item Content-based filtering\cite{Peter2007}. These methods use information provided by the user to determine the utility of items.
-\item Hybrid Recommender Systems combine the previous two approaches to predict more accurately.
+\item Recommendation algorithms
+\item Dating algorithms
+\item Cluster algorithms
+\item Nearest neighbour algorithms
 \end{itemize}
+
+We concluded that these weren't appropriate for the requirements that were set.
+There are two reasons why the techniques mentioned above aren't appropriate for our solution.
+First is the fact that the requirements state the need for the administrator to be able to influence the group characteristics.
+And secondly the requirements state the possibility that the participants could be able to influence the recommendation.
+That is why we took another look at the requirements and how the different actors should interact with each other.
+During this evaluation we thought up a algorithm that combines multiple known techniques that adheres to the requirements.
+
 
 \section{Conclusion}
 
