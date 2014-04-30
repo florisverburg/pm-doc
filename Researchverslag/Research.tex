@@ -52,7 +52,7 @@ For example: a working parent could be very interested in such a course.
 That is why universities introduced MOOCs.
 
 The basic idea of MOOCs is that students remote in place and time follow the lectures, can participate in a practical assignment and can make an exam.
-If they score sufficient, they are rewarded with a certificate that states their succes in the course.
+If they score sufficient, they are rewarded with a certificate that states their success in the course.
 
 The concept of the MOOCs is a very new concept that still has many areas to improve upon.
 One of these areas is the area of practical assignments.
@@ -86,25 +86,6 @@ We will also need to figure out a good way to recommend a practical partner, but
 
 These questions and difficulties will be answered in this report.
 
-\section{Global system design}
-In this section we will be describing a first concept of the system.
-In this concept we will describe the different actions, that different actors will need to be able to perform.
-Using this concept we can later define the requirements.\\
-
-The first thing that has to be done is for the teacher to create a assignment in the application.
-It must be possible for the teacher to open and close this assignment. 
-While creating, the teacher has to define some properties of the assignment.
-When the assignment is created successfully, a link is generated that can be sent to the students.
-
-When the students open the link, they have a choice between logging in or registering.
-For logging in and registering, the student could use LinkedIn, so a lot of data is gathered automatically.
-After filling in the basic information, the student must provide information about his personality.
-This can be done by means of an questionnaire.
-
-After logging in, the assignment can be added to the profile of the student.
-After adding the assignment to the profile, some recommendations are provided.
-The student can form groups by means of this recommendations.
-
 \section{Introduction to requirements}
 The following sections will describe what requirements are set for the product.
 This section will define four global requirements who cover the entire project.
@@ -112,7 +93,7 @@ These requirements are then split up in the next two sections, the first being t
 We choose to split these requirements up, because of the literature study required to further specify the requirements.
 In these sections, the global requirements are split up in smaller requirements.
 It is easier to verify these smaller requirements for their completion and these requirements are more transformable to functions of the system.
-We also assigned these requirements into their appropiate MoSCoW \cite{highsmith2001agile} method category.
+We also assigned these requirements into their appropriate MoSCoW \cite{highsmith2001agile} method category.
 
 \subsection{Actors of the system}
 In this subsection we will clarify the different actors used in the system and throughout this report.
@@ -130,30 +111,24 @@ These groups can be of variable size, set by the MOOC organiser.
 To provide an overview of what the software must be capable of, we define four global requirements for the system.
 By defining these four global requirements we provide a foundation of what the system must be able to do.
 \begin{itemize}
-\item The system will be using user information to try to find the best practical partner.
-The user must be able to enter his personal data so it can be used by the algorithm.
-This user information is further defined in what kind of information is important (a must have) and what information is less important (i.e. a should/could have) in the appropiate section.
-\item The system must be designed to accomodate the usage for both MOOC administrators and participants.
-Each of these actors needs to be able to perform different actions then the other.
-For example the participants must be able to register to the system and must be able to join a MOOC.
-The section that will further specify the usage of the system requirements, will define what actions are a must and what actions are less important.
-\item Next to the actions different actors can perform using the system, the system must also be defined in other terms.
-These terms are about for example about the accesability of the application and the usage of a database.
-The requirements specified in the section about the kind of system will set demands which will help to select the appropiate framework and kind of application.
-\item The system is centered around an algorithm used to recommend a practical partner to a participant.
-There are requirements that are set for this algorithm concerning the input it must be able to handle and the output it must give back.
+\item MOOC teachers must be able to create, manage and edit courses for which participants of their MOOC are able to register.
+
+\item MOOC students must be able to register and deregister for a MOOC practical assignment.
+
+\item The system must be capable to use personal data provided by the user to find a suggestion of an appropriate practical partner or group member.
+It must be possible to adjust the definition (parameters) of the appropriate practical partner or group member, and search trough several suggestions.
 \end{itemize}
 
-\section{Requirements basic system}
+\section{Requirements}
 This section will mention the different requirements that involve the basic system which the actors interact with.
-The section starts with mentioning the possible types of user information, followed up by what actions are possible with the system, lastly the kind of systems are limited by the requirements listed.
+The section starts with mentioning the possible types of user information the application can use and what requirements are associated with that.
+Followed up by what actions are possible within the system.
+After that the kind of system is limited by the requirements listed.
+Lastly we will list the requirements set for the algorithm.
+Each section will use the MoSCoW model to divide the requirements in their appropriate categories.
+
 
 \subsection{User information}
-This subsection will provide information about what data is interesting for our peer matching algorithm and how this data is acquired.
-Some data is necessary to collect. 
-Other data would be nice to have to give a better result, but is not essential for basic matching.
-We distinguish the essential data and the not essential data.
-
 \reqr{Must have}
 \begin{itemize}
 \item Users must have a viewable profile that can be filled with personal information.
@@ -218,7 +193,6 @@ We distinguish the essential data and the not essential data.
 
 
 \subsubsection{Actor 2: MOOC teacher/MOOC administrator}
-
 \reqr{Must have}
 \begin{itemize}
 \item The administrator must be able to create a MOOC and add this to his account.
@@ -301,20 +275,7 @@ This actor consist of two or more MOOC participants who accepted each other to t
 \item \TODO{Add would haves to the peer matching requirements}
 \end{itemize}
 
-\section{Peer matching requirements and literature study}
-The peer matching algorithm can be limited and pushed in the correct direction by the requirements, but leaves room for choices to be made.
-To make the correct choices a literature study is required.
-This section will first list the requirements set by the client and will continue with a discussion about different possibilities to choose from.
-It will discuss a range of possible algorithms that can be applied to the problem and what their respective advantages and disadvantages are.
-This section will end with a conclusion about the algorithm we will be using.
-
 \subsection{Peer matching}
-This subsection will provide a first idea for the peer matching algorithm and what requirements are made for this algorithm.
-This algorithm has all of the information of each user as input and calculates values from this information that can be used to compare and group users.
-Using these values, the algorithm can calculate if two users would make a good team.
-The input is defined by the previous subsection and the output will be defined in this subsection.
-\TODO{Finish Peer matching requirements}
-
 \reqr{Must have}
 \begin{itemize}
 \item The algorithm must be able to use a list of users as input.
@@ -350,6 +311,25 @@ We will argue using scientific literature or the requirements.
 We will first describe the choices we have made concerning the kind of system.
 Secondly we will describe the choices we have made concerning the framework that we will be using.
 Following this, we will be describing the choices we have made concerning the algorithm.
+
+\section{Global system design}
+In this section we will be describing a first concept of the system.
+In this concept we will describe the different actions, that different actors will need to be able to perform.
+Using this concept we can later define the requirements.\\
+
+The first thing that has to be done is for the teacher to create an assignment in the application.
+It must be possible for the teacher to open and close this assignment. 
+While creating, the teacher has to define some properties of the assignment.
+When the assignment is created successfully, a link is generated that can be sent to the students.
+
+When the students open the link, they have a choice between logging in or registering.
+For logging in and registering, the student could use LinkedIn, so a lot of data is gathered automatically.
+After filling in the basic information, the student must provide information about his personality.
+This can be done by means of an questionnaire.
+
+After logging in, the assignment can be added to the profile of the student.
+After adding the assignment to the profile, some recommendations are provided.
+The student can form groups by means of this recommendations.
 
 \subsection{Web application}
 
