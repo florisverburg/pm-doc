@@ -17,23 +17,6 @@
 \begin{document}
 \maketitle
 
-\begin{abstract}
-This document will explain the design process of the Peer Matching system made for the MOOCs, Massive Online Open Courses.
-\TODO{Some more text}
-\end{abstract}
-
-\TODO{
-Nieuwe structuur\\
-- Problem description\\
-- Requirements(af te leiden uit het probleem)\\
--- Global requirements\\
--- User information requirements\\
--- Algorithm requirements\\
-- Design choises(af te leiden uit de requirements / literatuur)\\
--- Web application\\
--- Framework\\
--- Algorithm\\}
-
 \newpage
 
 \tableofcontents
@@ -137,21 +120,21 @@ Each section will use the MoSCoW model to divide the requirements in their appro
 
 \reqr{Should have}
 \begin{itemize}
-\item Users should be able to enter the following basic user information: Country, Age, Short description, Skills, Education, a Picture and Personality Traits.
+\item Users should be able to enter the basic user information, like: country, age, short description, skills, education, a picture and personality traits.
 \end{itemize}
 
 \reqr{Could have}
 \begin{itemize}
 \item Users could be able to use a personality test to determine their personality traits.
 \item Users could be able to fill in their personality traits.
-\item Users could be able to enter the following extended user information: Preferred group Role\TODO{More information}
+\item Users could be able to enter the following extended user information: preferred group role, role of the other group members, etcetera.
 \item Users could be able to enter a predefined questionnaires.
 \end{itemize}
 
 \reqr{Would have}
-\begin{itemize}
-\item \TODO{Add would haves to the peer matching requirements}
-\end{itemize}
+%\begin{itemize}
+%\item
+%\end{itemize}
 
 \subsection{Usage of the system}
 
@@ -169,7 +152,6 @@ Each section will use the MoSCoW model to divide the requirements in their appro
 \item The participant must be able to accept or decline the practical partner into his practical group.
 \item The participant must be able to communicate within the group.
 \end{itemize}
-\TODO{Add must haves to the peer matching requirements}
 
 \reqr{Should have}
 \begin{itemize}
@@ -187,9 +169,9 @@ Each section will use the MoSCoW model to divide the requirements in their appro
 \end{itemize}
 
 \reqr{Would have}
-\begin{itemize}
-\item \TODO{Add would haves to the peer matching requirements}
-\end{itemize}
+%\begin{itemize}
+%\item
+%\end{itemize}
 
 
 \subsubsection{Actor 2: MOOC teacher/MOOC administrator}
@@ -203,7 +185,6 @@ Each section will use the MoSCoW model to divide the requirements in their appro
 
 \reqr{Should have}
 \begin{itemize}
-\item The administrator should be able to grade the group for its practical.
 \item The administrator should be able to set a deadline for a practical.
 \item The administrator should be able to communicate with every participant.
 \item The administrator should be able to communicate with the groups.
@@ -211,6 +192,7 @@ Each section will use the MoSCoW model to divide the requirements in their appro
 
 \reqr{Could have}
 \begin{itemize}
+\item The administrator should be able to grade the group for its practical.
 \item The administrator could be able to provide for his own criteria for each of his MOOC.
 \item The administrator could be able to add different assignments to the application.
 \item The administrator could be able to view what groups have finished what assignments.
@@ -219,9 +201,9 @@ Each section will use the MoSCoW model to divide the requirements in their appro
 \end{itemize}
 
 \reqr{Would have}
-\begin{itemize}
-\item \TODO{Add would haves to the peer matching requirements}
-\end{itemize}
+%\begin{itemize}
+%\item
+%\end{itemize}
 
 
 \subsubsection{Actor 3: Groups of participants}
@@ -234,7 +216,6 @@ This actor consist of two or more MOOC participants who accepted each other to t
 
 \reqr{Should have}
 \begin{itemize}
-\item A group should be able to invite other participants to join their group.
 \item A group should be able to view a possible group member.
 \item A group should be able to invite a possible group member to join their group.
 \item A group should be able to accept an request from a participant to join their group.
@@ -261,9 +242,9 @@ This actor consist of two or more MOOC participants who accepted each other to t
 \end{itemize}
 
 \reqr{Should have}
-\begin{itemize}
-\item \TODO{Add should haves to the peer matching requirements}
-\end{itemize}
+%\begin{itemize}
+%\item
+%\end{itemize}
 
 \reqr{Could have}
 \begin{itemize}
@@ -271,9 +252,9 @@ This actor consist of two or more MOOC participants who accepted each other to t
 \end{itemize}
 
 \reqr{Would have}
-\begin{itemize}
-\item \TODO{Add would haves to the peer matching requirements}
-\end{itemize}
+%\begin{itemize}
+%\item
+%\end{itemize}
 
 \subsection{Peer matching}
 \reqr{Must have}
@@ -312,10 +293,9 @@ We will first describe the choices we have made concerning the kind of system.
 Secondly we will describe the choices we have made concerning the framework that we will be using.
 Following this, we will be describing the choices we have made concerning the algorithm.
 
-\section{Global system design}
-In this section we will be describing a first concept of the system.
+\subsection{Global system design}
+In the global system design we will be describing a first concept of the system.
 In this concept we will describe the different actions, that different actors will need to be able to perform.
-Using this concept we can later define the requirements.\\
 
 The first thing that has to be done is for the teacher to create an assignment in the application.
 It must be possible for the teacher to open and close this assignment. 
@@ -377,9 +357,6 @@ First is the fact that the requirements state the need for the administrator to 
 And secondly the requirements state the possibility that the participants could be able to influence the recommendation.
 That is why we took another look at the requirements and how the different actors should interact with each other.
 During this evaluation we thought up a algorithm that combines multiple known techniques that adheres to the requirements.
-
-
-\section{Conclusion}
 
 \newpage
 \bibliographystyle{plainnat}
