@@ -358,6 +358,36 @@ And secondly the requirements state the possibility that the participants could 
 That is why we took another look at the requirements and how the different actors should interact with each other.
 During this evaluation we thought up a algorithm that combines multiple known techniques that adheres to the requirements.
 
+\subsubsection{Self assembled algorithm}
+The algorithm is centred around the usage of the m properties a participant has to fill in as user information.
+These properties will be used to determine whether the combination of two participants results in a combined property that lies closed to a predefined number for this property.
+This predefined number can either be set by the administrator or later adjusted by the searching participant.
+
+There are two cases in which the algorithm should be able to recommend a new group member:\\
+\emph{A single participant searches for a first group member}
+Given m properties and n participants currently enlisted to the course the algorithm will search for a possible practical partner for participant X.
+The algorithm determines for each possible practical partner how the creation of a group of that pair would bring them closer to the predefined numbers.
+It will do this by taking the average for each property and taking the difference between this average and the predefined number.
+It will then sum these differences and take the m root of this number.
+This will result in an number that represents the overall difference between the group of the two participants and the predefined numbers.
+A group with a low overall difference means that the two participants form a group that as closely meet the predefined numbers as possible.
+During this calculation the algorithm keeps track of the top possible practical partners which it will return as a result to the participant.
+
+\emph{A group searches for a new group member}
+The second case is similar to the first, the calculation is completely the same.
+The only difference is that you do not start with a participant X, but with a group of participants.
+The properties of these participants are already averaged per property.
+This results in a number per property which can be used by the algorithm mentioned above.
+
+\subsubsection{Possible improvements of the algorithm}
+\begin{itemize}
+\item The user can use extra properties (which the administrator can't define) to further specify their groups.
+\item The user can adjust the predefined numbers (the predefined numbers of the administrator are not required).
+\item The algorithm uses the group size to ensure that there are more versatile people in a group.
+\end{itemize}
+
+\section{Conclusion}
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{references}
