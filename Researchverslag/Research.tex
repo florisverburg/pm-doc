@@ -350,6 +350,29 @@ Play is a high-productivity Java and Scala web application framework that integr
 \TODO{conclusion}
 
 \subsection{Algorithm}
+Using the requirements stated in the previous section we see that the requirements all state the need for the handling of a specific set of input and outputting the needed information.
+The requirements do not state any limitations about the inner workings of the algorithm.
+Some questions remain:
+\begin{itemize}
+\item How does the algorithm determine a possible practical partner?
+\item How does the algorithm make a difference between two possible partners and determine which one is a better fit?
+\item How does the algorithm make use the extra information provided if the could haves are achieved?
+\item How does it make sure the partner that is recommended hasn't already been suggested?
+\end{itemize}
+It is now important to determine what known technique adheres to the requirements and answers these questions in a good and efficient way.\\
+
+One approach is the use of techniques that are used in dating sites.
+Another approach is looking at categorising people into classes which the recommendation algorithm can choose from.
+
+\subsubsection{Dating sites}
+
+\subsubsection{Recommendation algorithms}
+Their are three different kinds of approaches for recommendation algorithms:
+\begin{itemize}
+\item Collaborative filtering\cite{Breese1998}. These methods try to predict the utility of items to a particular user based on a database of user votes from a sample or population of other users.
+\item Content-based filtering\cite{Peter2007}. These methods use information provided by the user to determine the utility of items.
+\item Hybrid Recommender Systems combine the previous two approaches to predict more accurately.
+\end{itemize}
 
 \section{Conclusion}
 
