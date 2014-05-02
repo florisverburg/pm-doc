@@ -345,16 +345,18 @@ It is now important to determine what known technique adheres to the requirement
 
 After looking at different known techniques:
 \begin{itemize}
-\item Recommendation algorithms
-\item Dating algorithms
-\item Cluster algorithms
-\item Nearest neighbour algorithms
+\item Recommendation algorithms \citep{Breese1998},\citep{Peter2007}
+\item Dating algorithms \citep{okcupid}
+\item Cluster algorithms \citep{estivill2002so}
+\item Nearest neighbour algorithms \citep{cayton2008fast}
 \end{itemize}
 
 We concluded that these weren't appropriate for the requirements that were set.
-There are two reasons why the techniques mentioned above aren't appropriate for our solution.
+There are three reasons why the techniques mentioned above aren't appropriate for our solution.
 First is the fact that the requirements state the need for the administrator to be able to influence the group characteristics.
-And secondly the requirements state the possibility that the participants could be able to influence the recommendation.
+Secondly the requirements state the possibility that the participants could be able to influence the recommendation.
+Lastly not every method is able to easily provide for groups of different sizes.
+The techniques mentioned above do not provide for the flexibility 
 That is why we took another look at the requirements and how the different actors should interact with each other.
 During this evaluation we thought up a algorithm that combines multiple known techniques that adheres to the requirements.
 
