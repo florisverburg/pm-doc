@@ -360,6 +360,31 @@ The techniques mentioned above do not provide for the flexibility
 That is why we took another look at the requirements and how the different actors should interact with each other.
 During this evaluation we thought up a algorithm that combines multiple known techniques that adheres to the requirements.
 
+\subsubsection{Recommendation algorithms}
+As can be read in these papers \citep{Breese1998},\citep{Peter2007}.
+There are roughly three kinds of recommendation algorithmic approaches:
+\begin{itemize}
+\item Collaborative filtering, is the analysing of user preferences to predict topics and products a new user might like.
+This method uses information about the preferences of past users and/or the results of preference research.
+\item Content-based filtering, builds up a user history and uses this history to recommend related products and topics. 
+\item Hybrid Recommender Systems
+\end{itemize}
+
+\emph{Collaborative filtering} is insufficient, because we do not have research available or the history of user preferences.
+Next to this, the optimal group composition can vary between courses and collaborative filtering can't handle this.
+
+\emph{Content-based filtering} is insufficient.
+Because, although we could build up a history of what a user prefers this will require a lot of time.
+Next to this, a user could only do one course using our software and we could hardly recommend useful partners.
+
+\emph{Hybrid filtering} is insufficient, because collaborative filtering is an essential part of this and we already concluded that collaborative filtering is impossible to use.
+
+\subsubsection{Dating algorithms}
+
+\subsubsection{Cluster algorithms}
+
+\subsubsection{Nearest neighbour algorithms}
+
 \subsubsection{Self assembled algorithm}
 The algorithm is centred around the usage of the m properties a participant has to fill in as user information.
 These properties will be used to determine whether the combination of two participants results in a combined property that lies closed to a predefined number for this property.
