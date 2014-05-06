@@ -364,18 +364,73 @@ Some questions remain:
 \item How does the algorithm make use the extra information provided if the could haves are achieved?
 \item How does it make sure the partner that is recommended hasn't already been suggested?
 \end{itemize}
-Due to the unique requirements set to how the system works, we 
-
-It is now important to determine what known technique adheres to the requirements and answers these questions in a good and efficient way.\\
-
-After looking at different known techniques:
+Due to the unique requirements set to how the system works, we need to look for all kinds of different algorithms that could help us solve our problem.
+Because of the unique requirements, these techniques will probably not solve the entire problem, but we can possibly use parts of these algorithms to formulate our own solution.
+As can be read in these papers \citep{Breese1998},\citep{Peter2007}, there are roughly three kinds of algorithmic recommendation approaches:
 \begin{itemize}
-\item Recommendation algorithms \citep{Breese1998},\citep{Peter2007}
+\item Collaborative filtering, is the analysing of current user preferences to predict topics and products a new user might like.
+This method uses information about the preferences of past users and/or the results of preference research.
+\item Content-based filtering, builds up a user history and uses this history to recommend related products and topics. 
+\item Hybrid Recommender Systems
+\end{itemize}
+
+Each of these has its 
+
+\begin{itemize}
+\item Collaborative filtering \citep{Peter2007}\citep{Breese1998}
+\item Content-based filtering \citep{Peter2007}
+\item Hybrid filtering
 \item Dating algorithms \citep{okcupid}
 \item Cluster algorithms \citep{estivill2002so}
 \item Nearest neighbour algorithms \citep{cayton2008fast}
 \end{itemize}
 
+We will now first discuss each of the techniques mentioned above.
+We will name the aspects that make them inappropriate and what aspects could be used to formulate our own algorithm.
+
+\subsubsection{Collaborative filtering}
+The book Adaptive Web \citep{Peter2007} describes what collaborative filtering techniques are. These techniques generally involve matching the ratings of a current user for objects with those of similar users. In this way it produces recommendations for objects that the users has not yet rated or have not been seen by the active user. Traditionally, the primary technique used to implement a collaborative filtering is the use of k-Nearest-Neighbor (kNN) algorithm. This algorithm compares a target user's profile with the historical profiles of other users in order to find the top k users who have similar tastes or interests.
+
+Examples of collaborative filtering algorithms are found in the on-line dating branch.
+An example that provides some insightful information about the subject is OKCupid.
+The video ,that can be found on the website\cite{okcupid}, describes the workings of the OKCupid algorithm.
+The OKCupid algorithm uses the geometric mean.
+This is a type of mean or average, which indicates the central tendency or typical value of a set of numbers.
+OKCupid's algorithm is an algorithm that uses questions and preferences to determine whether two people would make a good pair.
+Instead of the questions they ask, we could fill in our own questions or values.
+The geometric mean would still give an overall score for the combining of two people.\\
+
+In the paper: Recommender System for Online Dating Service\cite{lukas07}, they describe two algorithms that can be used for a recommender system focussed on dating.
+\TODO{de twee algoritmen toevoegen + uitwerking}
+
+
+\subsubsection{Content-based filtering}
+\TODO{Content-based filtering definitie toevoegen}
+\TODO{Voorbeeld content-based filtering toevoegen}
+\TODO{Bruikbare en niet bruikbare aspecten benoemen en verdedigen}
+
+
+\subsubsection{Hybrid filtering}
+\TODO{Hybrid filtering definitie toevoegen}
+\TODO{Voorbeeld Hybrid filtering toevoegen}
+\TODO{Bruikbare en niet bruikbare aspecten benoemen en verdedigen}
+
+\subsubsection{Other possibilities}
+\TODO{Herschrijven}
+Tinder, the Tinder app uses a completely different approach.
+They let the user choose what they like and they just provide for a platform.
+The user is shown a small profile of a potential match and let the user decide whether it is a go or not based on that info.
+The only options a user can set are age and distance away.
+
+Insufficient, the skills we would like our user to decide upon are not very applicable to the Tinder format.
+Next to this is the fact that the format does not provide for a way to influence the outcomes of the groups.
+For example, the administrator should be able to set values for the different skills that are advised for each group.
+
+\subsubsection{Cluster algorithms}
+\TODO{Uitzoeken of Cluster algoritmen een toepassing bieden}
+
+
+\subsubsection{Self assembled algorithm}
 We concluded that these weren't appropriate for the requirements that were set.
 There are three reasons why the techniques mentioned above aren't appropriate for our solution.
 First is the fact that the requirements state the need for the administrator to be able to influence the group characteristics.
@@ -385,32 +440,7 @@ The techniques mentioned above do not provide for the flexibility
 That is why we took another look at the requirements and how the different actors should interact with each other.
 During this evaluation we thought up a algorithm that combines multiple known techniques that adheres to the requirements.
 
-\subsubsection{Recommendation algorithms}
-As can be read in these papers \citep{Breese1998},\citep{Peter2007}.
-There are roughly three kinds of recommendation algorithmic approaches:
-\begin{itemize}
-\item Collaborative filtering, is the analysing of user preferences to predict topics and products a new user might like.
-This method uses information about the preferences of past users and/or the results of preference research.
-\item Content-based filtering, builds up a user history and uses this history to recommend related products and topics. 
-\item Hybrid Recommender Systems
-\end{itemize}
-
-\emph{Collaborative filtering} is insufficient, because we do not have research available or the history of user preferences.
-Next to this, the optimal group composition can vary between courses and collaborative filtering can't handle this.
-
-\emph{Content-based filtering} is insufficient.
-Because, although we could build up a history of what a user prefers this will require a lot of time.
-Next to this, a user could only do one course using our software and we could hardly recommend useful partners.
-
-\emph{Hybrid filtering} is insufficient, because collaborative filtering is an essential part of this and we already concluded that collaborative filtering is impossible to use.
-
-\subsubsection{Dating algorithms}
-
-\subsubsection{Cluster algorithms}
-
-\subsubsection{Nearest neighbour algorithms}
-
-\subsubsection{Self assembled algorithm}
+\emph{The algorithm:}\\
 The algorithm is centred around the usage of the m properties a participant has to fill in as user information.
 These properties will be used to determine whether the combination of two participants results in a combined property that lies closed to a predefined number for this property.
 This predefined number can either be set by the administrator or later adjusted by the searching participant.
