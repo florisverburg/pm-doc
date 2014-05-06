@@ -1,0 +1,47 @@
+\documentclass{tudelft-report}
+
+\begin{document}
+
+%% Use Roman numerals for the page numbers of the title pages and table of
+%% contents.
+\frontmatter
+
+\title[TI3800 Bachelorproject]{Peer Matching Tool}
+\author{Floris Verburg\\Freek van Tienen\\Marijn Goedegebure}
+\affiliation{Technische Universiteit Delft}
+\coverimage{coverimage.png}
+\makecover
+
+%% Include an optional title page.
+\input{title}
+
+\input{summary}
+
+\input{preface}
+
+\tableofcontents
+
+%% Use Arabic numerals for the page numbers of the chapters.
+\mainmatter
+
+\input{introduction}
+
+\input{assignment_and_requirements}
+
+\input{project_methodology}
+
+\input{system_design_and_implementation}
+
+\input{testing}
+
+\input{conclusion}
+
+%% Use letters for the chapter numbers of the appendices.
+\appendix
+
+%\input{appendix-a}
+
+\bibliography{references}
+
+\end{document}
+
