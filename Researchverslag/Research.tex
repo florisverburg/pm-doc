@@ -3,12 +3,13 @@
 \usepackage{xcolor}
 \usepackage[numbers]{natbib}
 \usepackage[colorlinks,linkcolor=black,urlcolor=blue,citecolor=black]{hyperref}
+\usepackage{graphicx}
 
 \newcommand{\TODO}[1]{{\color{red}\textbf{TODO: #1}}}
 \newcommand{\reqr}[1]{{\noindent\emph{#1:}}}
 \renewcommand*\contentsname{Table of Contents}
 
-\title{Peer Matching Research}
+\title{Peer Matching Researchverslag}
 \author{Marijn Goedegebure \and
 	Floris Verburg \and
 	Freek van Tienen}
@@ -16,6 +17,17 @@
 
 \begin{document}
 \maketitle
+
+\begin{center}
+  \makebox[\textwidth]{\includegraphics[width=20cm]{Images/MOOCbubble}}
+\end{center}
+
+\hfill \textbf{Supervisors:}
+
+\hfill Prof. drs. dr. L.J.M. Rothkrantz
+
+\hfill Dr.ir. D. Datcu
+
 
 \newpage
 
@@ -25,7 +37,7 @@
 
 \section{Preface}
 This document is the research report that has been written for the Peer Matching assignment for the Bachelor Project course.
-This course is the last project based course of the Bachelor of Science at the TU Delft in the Netherlands. The assignment was issued by Dr. L.J.M. Rothkrantz of the TU Delft.
+This course is the last project based course of the Bachelor of Science at the TU Delft in the Netherlands. The assignment was issued by Prof. drs. dr. L.J.M. Rothkrantz of the TU Delft.
 The report provides a summary of the requirements that are set for the system and will provide for a literature study about different possible algorithms to solve the peer matching problem presented in the problem definition.
 
 \section{Introduction}
@@ -42,6 +54,10 @@ One of these areas is the area of practical assignments.
 Currently, for a Computer Science MOOC at the TU Delft, multiple practical assignments are required.
 The participants are required to form groups to make these assignments.
 After the announcement the participants either use mail, Facebook or  Twitter to contact other people in order to form the groups.
+
+TUDelft has been a forerunner in the field of Open \& Online Education since 2007 and is one of the sustaining members of the OpenCourseWare Consortium and since 2013 charter member of the edX Consortium. 
+In March 2014, the board of the TU Delft approved an innovation program to accelerate the development of open \& online education. 
+The goal is to create a Delft Extension School that will bundle all open \& online courses for a global population of life long learners.
 
 We would like to improve upon this concept and try to provide a more fitting approach.
 
@@ -62,10 +78,15 @@ This sub optimal solution will be focussed on a group or set of partners which s
 
 We would like to improve upon this process by creating an application that can be used to create practical groups without the participants being required to go search intensively.
 Participants should be able to easily access the application, fill in some relevant information about themselves and then be recommended possible group members.
+Our peer matching tool is an add on for the MOOCs. 
+It can be parallel used for every MOOC with group assignments.
+The teacher can create a course in our tool to represent a MOOC.
 
 The interaction with the system is a pretty straight forward application, but the recommendation of possible group members is more difficult.
 One of the questions we are trying to answer is: What user information is useful to determine whether two people can be good practical partners?
-We will also need to figure out a good way to recommend a practical partner, but still give the possibility to reject such a request.
+We will also need to figure out a good way to recommend a practical partner, but still give the possibility to reject such a request.\\
+
+\emph{We have two problems. First, how can we find appropriate matches for people? And second, how can we create optimal groups?}\\
 
 These questions and difficulties will be answered in this report.
 
@@ -94,9 +115,10 @@ These groups can be of variable size, set by the MOOC organiser.
 To provide an overview of what the software must be capable of, we define four global requirements for the system.
 By defining these four global requirements we provide a foundation of what the system must be able to do.
 \begin{itemize}
-\item MOOC teachers must be able to create, manage and edit courses for which participants of their MOOC are able to register.
+\item  MOOC teachers must be able to create, manage and edit courses.
+Participants of their MOOC are able to register to this course.
 
-\item MOOC students must be able to register and deregister for a MOOC practical assignment.
+\item MOOC students must be able to register and deregister for a course.
 
 \item The system must be capable to use personal data provided by the user to find a suggestion of an appropriate practical partner or group member.
 It must be possible to adjust the definition (parameters) of the appropriate practical partner or group member, and search trough several suggestions.
@@ -116,6 +138,7 @@ Each section will use the MoSCoW model to divide the requirements in their appro
 \begin{itemize}
 \item Users must have a viewable profile that can be filled with personal information.
 \item Users must be able to enter the following registration information during registration: Full name, Email address, Password and Language.
+\item Users must fill in their academic performances. Which knowledge, skills and completed courses does the user have?
 \end{itemize}
 
 \reqr{Should have}
@@ -177,8 +200,8 @@ Each section will use the MoSCoW model to divide the requirements in their appro
 \subsubsection{Actor 2: MOOC teacher/MOOC administrator}
 \reqr{Must have}
 \begin{itemize}
-\item The administrator must be able to create a MOOC and add this to his account.
-\item The administrator must be able to open and close the particpant registration for a MOOC.
+\item The administrator must be able to create a course and add this to his account.
+\item The administrator must be able to open and close the particpant registration for a course.
 \item The administrator must be able to manage the list of participants and groups of participants.
 \item The administrator must be able to create an url that he can use to invite the participants.
 \end{itemize}
@@ -193,7 +216,7 @@ Each section will use the MoSCoW model to divide the requirements in their appro
 \reqr{Could have}
 \begin{itemize}
 \item The administrator should be able to grade the group for its practical.
-\item The administrator could be able to provide for his own criteria for each of his MOOC.
+\item The administrator could be able to provide for his own criteria for each of his course.
 \item The administrator could be able to add different assignments to the application.
 \item The administrator could be able to view what groups have finished what assignments.
 \item The administrator could be able to grade the different assignments.
@@ -207,7 +230,7 @@ Each section will use the MoSCoW model to divide the requirements in their appro
 
 
 \subsubsection{Actor 3: Groups of participants}
-This actor consist of two or more MOOC participants who accepted each other to their group.
+This actor consist of two or more course participants who accepted each other to their group.
 
 \reqr{Must have}
 \begin{itemize}
@@ -236,7 +259,7 @@ This actor consist of two or more MOOC participants who accepted each other to t
 
 \reqr{Must have}
 \begin{itemize}
-\item The application must be easily accessible to both participants and MOOC organizers.
+\item The application must be easily accessible to both participants and course organizers.
 \item The system must provide account management functionality.
 \item The system must use a database to store the different data put in by the user.
 \end{itemize}
@@ -260,20 +283,21 @@ This actor consist of two or more MOOC participants who accepted each other to t
 \reqr{Must have}
 \begin{itemize}
 \item The algorithm must be able to use a list of users as input.
+\item The algorithm must deal with continuous variation in amount of users.
 \item The algorithm must be able to return one or more suggestions of practical partners to the user given a list of rejected users.
 \item The algorithm must be able to return one or more suggestions of possible groups the participant could join.
 \end{itemize}
 
 \reqr{Should have}
 \begin{itemize}
-\item The algorithm uses basic user provided data (e.g. education, preferences) to build up a profile for a MOOC participant.
+\item The algorithm uses basic user provided data (e.g. education, preferences) to build up a profile for a course participant.
 \item The algorithm can calculate whether two people will be good practical partners using the basic user provided data.
 \item The algorithm can return a possible practical partners using the basic user provided data.
 \end{itemize}
 
 \reqr{Could have}
 \begin{itemize}
-\item The algorithm uses advanced user provided data (e.g. asked questions, programming tests) to build up an extended profile for a MOOC participant.
+\item The algorithm uses advanced user provided data (e.g. asked questions, programming tests) to build up an extended profile for a course participant.
 \item The algorithm can calculate whether two people will be good practical partners using the advanced user provided data.
 \item The algorithm can return a possible practical partner using the basic user provided data.
 \item The algorithm could be able to respond to the preferences of groups.
@@ -304,6 +328,7 @@ When the assignment is created successfully, a link is generated that can be sen
 
 When the students open the link, they have a choice between logging in or registering.
 For logging in and registering, the student could use LinkedIn, so a lot of data is gathered automatically.
+We can also look for LinkedIn alternatives, like Yammer and Ututi, which are non-commercial.
 After filling in the basic information, the student must provide information about his personality.
 This can be done by means of an questionnaire.
 
