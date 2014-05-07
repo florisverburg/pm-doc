@@ -372,24 +372,19 @@ We have done a literature survey into recommender systems since these kind of sy
 As can be read in these papers \citep{Breese1998},\citep{Peter2007}, there are roughly five kinds of algorithmic recommendation approaches:
 
 \begin{itemize}
-\item Knowledge-based filtering \citep{Peter2007}
 \item Demographic filtering \citep{Peter2007}
 \item Collaborative filtering \citep{Peter2007}\citep{Breese1998}
 \item Content-based filtering \citep{Peter2007}
-\item Hybrid filtering
+\item Knowledge-based filtering \citep{Peter2007}\cite{burke2000knowledge}
+\item Hybrid filtering \citep{Peter2007}
 \end{itemize}
 
 Next to these recommendations we added a subsection for the mentioning of other possibilities that we encountered while researching the subject.
 
-We will now first discuss each of the techniques mentioned above.
+We will now first discuss each of the techniques mentioned above.\\
 \makebox[\textwidth]{\includegraphics[width=12cm]{Images/RecommendationDomain}}
 \TODO{Zeg iets over plaatje}
 We will name what aspects are usable and what aspects are not.
-
-\subsubsection{Knowledge-based filtering}
-\TODO{Definitie Knowledge-based filtering toevoegen}
-\TODO{Voorbeeld Hybrid filtering toevoegen}
-\TODO{Bruikbare en niet bruikbare aspecten benoemen en verdedigen}
 
 \subsubsection{Demographic filtering}
 \TODO{Definitie Knowledge-based filtering toevoegen}
@@ -431,6 +426,22 @@ The user wants the best recommendation from the start.
 Although it might look like content-based filtering can not be used for our domain, we would like to keep them in our thought as a possible way to improve upon the algorithm.
 By using the user's history we can improve the recommendations by listening more to the users preferences.
 
+\subsubsection{Knowledge-based filtering}
+In the book Adaptive Web, they also mentioned knowledge-based filtering as a class of recommendation techniques.
+This is supported by a paper called Knowledge-based recommender systems \cite{burke2000knowledge}.
+In this paper they describe it as a recommender system that uses knowledge about users and products to generate a recommendation.
+It will use this knowledge to have a different approach to the generation of a recommendation and the user.
+Knowledge-based recommendation systems do not have the problem of a so called cold-start problem.
+The cold-start problem is the problem when a learning-based system does not have enough information to provide for a proper recommendation.
+Learning-based systems are systems that learn from each user or product added to the system.
+With each step they learn more about the users that are in the system and their preferences.
+This can occur when a new user is registered to the system, a new product or when there are only a few current users.
+This is a big advantage and is something we should keep in mind when designing our algorithm
+
+One of the downsides of knowledge-based filtering is that it can't learn.
+It will always be limited to the knowledge it has.
+An expert can improve the knowledge the system has, but it will not do so autonomous like a learning-based system.
+
 \subsubsection{Hybrid filtering}
 Adaptive web sites offer recommendations to the user by using a well studied technique.
 This technique can either use collaborative, knowledge-based and content-based recommendation, but it can also use a combination of these techniques.
@@ -440,14 +451,15 @@ The resulting systems are called hybrid recommender systems and are defined as t
 
 A variety of techniques have been proposed as the basis for hybrid recommender systems: collaborative, content-based, knowledge-based and demographic techniques.
 
-The learning-based techniques (collaborative, content-based and demographic) suffer from something that is called the cold-start problem.
-The cold-start problem can occur when learning-based systems do not have enough information to provide for proper feedback.
+The learning-based techniques (collaborative, content-based and demographic) suffer from the cold-start problem.
 Most hybrid recommender systems are combining techniques to deal with the cold-start problem.
 This is something we need to keep in mind when designing our algorithm.
 
 The converse of this problem is the stability versus plasticity problem.
 Once a user's profile has been established in the system, it is difficult to change one's preferences.
 Many adaptive systems make the older ratings have less influence and thus prevent the unresponsiveness of the system.
+
+We can use a combination of different techniques, and thus have a hybrid filtering, to have a resulting algorithm that perfectly adheres to the requirements.
 
 \subsubsection{Cluster algorithms}
 \TODO{Uitzoeken of Cluster algoritmen een toepassing bieden}
