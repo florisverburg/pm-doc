@@ -366,30 +366,28 @@ Some questions remain:
 \end{itemize}
 Due to the unique requirements set to how the system works, we need to look for all kinds of different algorithms that could help us solve our problem.
 Because of the unique requirements, these techniques will probably not solve the entire problem, but we can possibly use parts of these algorithms to formulate our own solution.
-As can be read in these papers \citep{Breese1998},\citep{Peter2007}, there are roughly three kinds of algorithmic recommendation approaches:
-\begin{itemize}
-\item Collaborative filtering, is the analysing of current user preferences to predict topics and products a new user might like.
-This method uses information about the preferences of past users and/or the results of preference research.
-\item Content-based filtering, builds up a user history and uses this history to recommend related products and topics. 
-\item Hybrid Recommender Systems
-\end{itemize}
 
-Each of these has its 
+We have done a literature survey into recommender systems since these kind of systems are closely related to what we want to achieve.
+
+As can be read in these papers \citep{Breese1998},\citep{Peter2007}, there are roughly three kinds of algorithmic recommendation approaches:
 
 \begin{itemize}
 \item Collaborative filtering \citep{Peter2007}\citep{Breese1998}
 \item Content-based filtering \citep{Peter2007}
 \item Hybrid filtering
-\item Dating algorithms \citep{okcupid}
-\item Cluster algorithms \citep{estivill2002so}
-\item Nearest neighbour algorithms \citep{cayton2008fast}
 \end{itemize}
 
+Next to these recommendations we added a subsection for the mentioning of other possibilities that we encountered while researching the subject.
+
 We will now first discuss each of the techniques mentioned above.
-We will name the aspects that make them inappropriate and what aspects could be used to formulate our own algorithm.
+We will name what aspects are usable and what aspects are not.
 
 \subsubsection{Collaborative filtering}
-The book Adaptive Web \citep{Peter2007} describes what collaborative filtering techniques are. These techniques generally involve matching the ratings of a current user for objects with those of similar users. In this way it produces recommendations for objects that the users has not yet rated or have not been seen by the active user. Traditionally, the primary technique used to implement a collaborative filtering is the use of k-Nearest-Neighbor (kNN) algorithm. This algorithm compares a target user's profile with the historical profiles of other users in order to find the top k users who have similar tastes or interests.
+The book Adaptive Web \citep{Peter2007} describes what collaborative filtering techniques are.
+He says that these techniques generally involve matching the ratings of a current user for objects with those of similar users.
+In this way it produces recommendations for objects that the users has not yet rated or have not been seen by the active user.
+Traditionally, the primary technique used to implement a collaborative filtering is the use of k-Nearest-Neighbor (kNN) algorithm.
+This algorithm compares a target user's profile with the historical profiles of other users in order to find the top k users who have similar tastes or interests.
 
 Examples of collaborative filtering algorithms are found in the on-line dating branch.
 An example that provides some insightful information about the subject is OKCupid.
@@ -405,15 +403,27 @@ In the paper: Recommender System for Online Dating Service\cite{lukas07}, they d
 
 
 \subsubsection{Content-based filtering}
-\TODO{Content-based filtering definitie toevoegen}
-\TODO{Voorbeeld content-based filtering toevoegen}
-\TODO{Bruikbare en niet bruikbare aspecten benoemen en verdedigen}
+The book Adaptive Web \citep{Peter2007} also describes what content-based filtering techniques are.
+He describes content-based filtering systems as systems where in a user profile represents the content description of items in which that user has previously expressed interest.
+The content description of items are represented by a set of features or attributes that characterize that item.
+The recommendation in these kind of systems usually consist of comparing unseen or unrated items with the user profile.
+Items that overlap with the interests of the user are recommended.
 
+The paper Using Content-Based Filtering for Recommendation \cite{van2000using} describes an example of a recommender system that uses user information to determine what to recommend.\\
+In this paper it becomes clear that a built up user profile can give a much better recommendation than a starting profile.
+Although this can work for many applications, this means that the user needs to build up a training set.
+The first couple of recommendations could be possibly bad and this is not in the users interest.
+The user wants the best recommendation from the start.
+Although it might look like content-based filtering can not be used for our domain, we would like to keep them in our thought as a possible way to improve upon the algorithm.
+By using the user's history we can improve the recommendations by listening more to the users preferences.
 
 \subsubsection{Hybrid filtering}
 \TODO{Hybrid filtering definitie toevoegen}
 \TODO{Voorbeeld Hybrid filtering toevoegen}
 \TODO{Bruikbare en niet bruikbare aspecten benoemen en verdedigen}
+
+\subsubsection{Cluster algorithms}
+\TODO{Uitzoeken of Cluster algoritmen een toepassing bieden}
 
 \subsubsection{Other possibilities}
 \TODO{Herschrijven}
@@ -425,9 +435,6 @@ The only options a user can set are age and distance away.
 Insufficient, the skills we would like our user to decide upon are not very applicable to the Tinder format.
 Next to this is the fact that the format does not provide for a way to influence the outcomes of the groups.
 For example, the administrator should be able to set values for the different skills that are advised for each group.
-
-\subsubsection{Cluster algorithms}
-\TODO{Uitzoeken of Cluster algoritmen een toepassing bieden}
 
 
 \subsubsection{Self assembled algorithm}
