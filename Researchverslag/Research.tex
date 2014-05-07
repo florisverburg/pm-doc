@@ -369,9 +369,11 @@ Because of the unique requirements, these techniques will probably not solve the
 
 We have done a literature survey into recommender systems since these kind of systems are closely related to what we want to achieve.
 
-As can be read in these papers \citep{Breese1998},\citep{Peter2007}, there are roughly three kinds of algorithmic recommendation approaches:
+As can be read in these papers \citep{Breese1998},\citep{Peter2007}, there are roughly five kinds of algorithmic recommendation approaches:
 
 \begin{itemize}
+\item Knowledge-based filtering \citep{Peter2007}
+\item Demographic filtering \citep{Peter2007}
 \item Collaborative filtering \citep{Peter2007}\citep{Breese1998}
 \item Content-based filtering \citep{Peter2007}
 \item Hybrid filtering
@@ -380,7 +382,19 @@ As can be read in these papers \citep{Breese1998},\citep{Peter2007}, there are r
 Next to these recommendations we added a subsection for the mentioning of other possibilities that we encountered while researching the subject.
 
 We will now first discuss each of the techniques mentioned above.
+\makebox[\textwidth]{\includegraphics[width=12cm]{Images/RecommendationDomain}}
+\TODO{Zeg iets over plaatje}
 We will name what aspects are usable and what aspects are not.
+
+\subsubsection{Knowledge-based filtering}
+\TODO{Definitie Knowledge-based filtering toevoegen}
+\TODO{Voorbeeld Hybrid filtering toevoegen}
+\TODO{Bruikbare en niet bruikbare aspecten benoemen en verdedigen}
+
+\subsubsection{Demographic filtering}
+\TODO{Definitie Knowledge-based filtering toevoegen}
+\TODO{Voorbeeld Demographic filtering toevoegen}
+\TODO{Bruikbare en niet bruikbare aspecten benoemen en verdedigen}
 
 \subsubsection{Collaborative filtering}
 The book Adaptive Web \citep{Peter2007} describes what collaborative filtering techniques are.
@@ -418,9 +432,22 @@ Although it might look like content-based filtering can not be used for our doma
 By using the user's history we can improve the recommendations by listening more to the users preferences.
 
 \subsubsection{Hybrid filtering}
-\TODO{Hybrid filtering definitie toevoegen}
-\TODO{Voorbeeld Hybrid filtering toevoegen}
-\TODO{Bruikbare en niet bruikbare aspecten benoemen en verdedigen}
+Adaptive web sites offer recommendations to the user by using a well studied technique.
+This technique can either use collaborative, knowledge-based and content-based recommendation, but it can also use a combination of these techniques.
+These kind of systems are called hybrid filtering techniques.
+Each of these techniques has its own strength and weaknesses and by combining these researchers try to improve the performance of the techniques.
+The resulting systems are called hybrid recommender systems and are defined as the combination of two or more of the different recommendation techniques.
+
+A variety of techniques have been proposed as the basis for hybrid recommender systems: collaborative, content-based, knowledge-based and demographic techniques.
+
+The learning-based techniques (collaborative, content-based and demographic) suffer from something that is called the cold-start problem.
+The cold-start problem can occur when learning-based systems do not have enough information to provide for proper feedback.
+Most hybrid recommender systems are combining techniques to deal with the cold-start problem.
+This is something we need to keep in mind when designing our algorithm.
+
+The converse of this problem is the stability versus plasticity problem.
+Once a user's profile has been established in the system, it is difficult to change one's preferences.
+Many adaptive systems make the older ratings have less influence and thus prevent the unresponsiveness of the system.
 
 \subsubsection{Cluster algorithms}
 \TODO{Uitzoeken of Cluster algoritmen een toepassing bieden}
@@ -436,6 +463,11 @@ Insufficient, the skills we would like our user to decide upon are not very appl
 Next to this is the fact that the format does not provide for a way to influence the outcomes of the groups.
 For example, the administrator should be able to set values for the different skills that are advised for each group.
 
+
+\subsubsection{Conclusion}
+
+Each of these techniques are very interesting for having a good recommendation algorithm, but we do not have the time within this project to expand so vastly on the subject.
+We will thus try to simplify the problem to something that we can
 
 \subsubsection{Self assembled algorithm}
 We concluded that these weren't appropriate for the requirements that were set.
