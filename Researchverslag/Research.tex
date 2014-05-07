@@ -394,8 +394,26 @@ Demographic filtering can be used by any recommender system that offers services
 The key element of demographic filtering is that it creates categories of users having similar demographic characteristics, and tracks the aggregate behaviour or preferences of users within these categories. 
 Recommendations for a new user are issued by first finding to which category he belongs and then by applying the aggregate preferences of previous users in that category.
 
-\TODO{Voorbeeld Demographic filtering toevoegen}
-\TODO{Bruikbare en niet bruikbare aspecten benoemen en verdedigen}
+In the paper A framework for collaborative, content-based and demographic filtering\cite{pazzani1999framework} an example is provide. 
+For example, Table \ref{table:dfexample}  shows information on the age, gender, education, etc. of people that rated
+a restaurant together with their rating of the restaurant. 
+One might expect to learn the type of person that likes a certain restaurant. \\ 
+
+\begin{table}[h]
+    \begin{tabular}{|l|l|l|l|l|l||l|}
+    \hline
+    ~     & gender & age & area code & education & employed & Dolce \\ \hline
+    Karen & F      & 15  & 714       & HS        & F        & +     \\ \hline
+    Lynn  & F      & 17  & 714       & HS        & F        & -     \\ \hline
+    Chris & M      & 35  & 714       & C         & T        & +     \\ \hline
+    Mike  & F      & 40  & 714       & C         & T        & -     \\ \hline
+    Jill  & F      & 10  & 714       & E         & F        & ?     \\ \hline
+    \end{tabular}
+\caption{Demographic filtering example}
+\label{table:dfexample}
+\end{table}
+
+\noindent We could use data like these to recommend similar groups for people with the same demographic background.
 
 \subsubsection{Collaborative filtering}
 The book Adaptive Web \citep{Peter2007} describes what collaborative filtering techniques are.
