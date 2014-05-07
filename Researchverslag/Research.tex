@@ -354,7 +354,7 @@ Play is a high-productivity Java and Scala web application framework that integr
 
 \TODO{conclusion}
 
-\subsection{Algorithm}
+\subsection{Literature survey recommender systems}
 Using the requirements stated in the previous section we see that the requirements all state the need for the handling of a specific set of input and outputting the needed information.
 The requirements do not state any limitations about the inner workings of the algorithm.
 Some questions remain:
@@ -496,27 +496,46 @@ Although we can not use the entire format, we can use the accepting and/or rejec
 It is also a good idea to let the possible group members talk to each other before they have to decide to join one's group.
 
 \subsubsection{Conclusion}
-Each of these techniques are very interesting for having a good recommendation algorithm, but we do not have the time within this project to expand so vastly on the subject.
-We will thus try to simplify the problem to something that we can
-
-\subsubsection{Self assembled algorithm}
-\TODO{Herschrijven naar nieuwe setting}\\
-\TODO{Toevoegen welke onderdelen worden gebruikt}\\
-\TODO{Visualiseren van het algoritme}\\
-We concluded that these weren't appropriate for the requirements that were set.
+Each of these techniques are very interesting for having a good recommendation algorithm, but we do not have the time with this project to expand so vastly on the subject.
+We will thus have to simplify the problem to something where for we can implement a basic recommendation algorithm and that still adheres to the requirements.\\
+We concluded that the techniques weren't appropriate for the requirements that were set.
 There are three reasons why the techniques mentioned above aren't appropriate for our solution.
 First is the fact that the requirements state the need for the administrator to be able to influence the group characteristics.
 Secondly the requirements state the possibility that the participants could be able to influence the recommendation.
 Lastly not every method is able to easily provide for groups of different sizes.
-The techniques mentioned above do not provide for the flexibility 
+The techniques mentioned above do not provide for the flexibility that we require.
+We are best suited with an algorithm that can easily be implemented with a basic result and can easily be extended with extra functions.
+
+\subsection{The Algorithm}
+Following up on the literature survey we need to decide what aspects of what techniques can be used to construct an algorithm and to determine how it will be used.
 That is why we took another look at the requirements and how the different actors should interact with each other.
 During this evaluation we thought up a algorithm that combines multiple known techniques that adheres to the requirements.
 
-\emph{The algorithm:}\\
-The algorithm is centred around the usage of the m properties a participant has to fill in as user information.
-These properties will be used to determine whether the combination of two participants results in a combined property that lies closed to a predefined number for this property.
-This predefined number can either be set by the administrator or later adjusted by the searching participant.
+\subsubsection{Aspects}
+We decided upon the following aspects:
+\begin{itemize}
+\item The algorithm uses the idea of the social interaction platform that is based off platform that the Tinder app uses.
+This part of the Tinder app provides for all the interaction possibilities needed for our system.
+We only need to extend upon the creation of groups.
+\item The algorithm will use a knowledge-based approach to deal with the various kinds of user information.
+It is important to use the proper scales for each information type, else the algorithm can not properly determine whether two people would be good group members.
+\item We use the geometric mean that is used by OKCupid's algorithm to calculate the differences and similarities between users.
+By using this we can accurately determine how much two people defer from each other.
+Using this data, we can determine who would and who wouldn't be good group members.
+\item We would like to make the algorithm robust for the cold-start problem, the usage of a knowledge-based approach should help with this.
+\end{itemize}
 
+\subsubsection{What does the algorithm do?}
+The algorithm will be used to recommend a possible group member to a person.
+It will do so by analysing information the user has filled in.
+This information will be compared to other users to determine their similarities and differences.
+The algorithm will then calculate how good of a group member others users are.
+While computing this it will track the top partners to eventually return these to the user.
+It will do so by combining the two group members and compute a resulting value for each information property.
+Whether two user form a good group can then be determined by comparing the resulting values with predefined values.
+These predefined numbers can either be set by the administrator or later adjusted by the searching participant.
+
+\emh{Formal description of the algorithm}
 There are two cases in which the algorithm should be able to recommend a new group member:\\
 \emph{A single participant searches for a first group member}
 Given m properties and n participants currently enlisted to the course the algorithm will search for a possible practical partner for participant X.
@@ -538,6 +557,7 @@ This results in a number per property which can be used by the algorithm mention
 \item The user can use extra properties (which the administrator can't define) to further specify their groups.
 \item The user can adjust the predefined numbers (the predefined numbers of the administrator are not required).
 \item The algorithm uses the group size to ensure that there are more versatile people in a group.
+\item The algorithm can incorporate a content and/or collaborative-based recommendation.
 \end{itemize}
 
 \section{Conclusion}
