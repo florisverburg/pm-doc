@@ -1,0 +1,309 @@
+\section*{Preface}
+This document is the Plan of Approach report that has been written for the Peer Matching assignment for the Bachelor Project course.
+The assignment was issued by Dr. L.J.M. Rothkrantz of the TU Delft.
+In this document, we will outline the Plan of Approach for this project.
+In the first section* we will introduce the assignment and explain why it was issued.
+In the second chapter we will describe the current situation, the goal of the project, the project assignment and the deliverables.
+In the third chapter we will define our approach and planning for the time that is available to us.
+In the fourth section* we will define the project approach, who will be working on the project, who is in charge of what and administrative procedures.
+We will also be describing how we finance the  resource that we require, how we will report the progress and what technical resources we will be using.
+In the final section* we will describe our approach to assuring quality of the final product.
+\section*{Introduction}
+In this section* we will provide an introduction to the assignment.
+We will start by giving a company outline followed by giving a background and motivation of the assignment.
+This will answer the question: why has this assignment been issued? 
+\subsection*{Company outline}
+The assignment is issued by Dr. L.J.M. Rothkrantz who is part of the Interactive Intelligence group in the Intelligent Systems department.
+This department is located in the EEMCS faculty at the TU Delft.
+The research mission of the Computer Science department is as follows:
+"The research mission of Computer Science within the Faculty of EEMCS is to contribute to the advancement of science, engineering, and design in the broad fields of autonomous distributed systems and information analysis and interaction."\cite{cstudelftnl}
+
+\subsection*{Background and motivation of the assignment}
+Each year many students go to an university to follow the predefined bachelor and/or master programs, but not everyone has the time and intent to follow an entire program.
+There is a demand from all sorts of people to be able to follow a course while their main occupation isn't that of a student.
+For example: a working parent could be very interested in such a course.
+That is why universities introduced MOOCs.
+
+The basic idea of MOOCs is that students remote in place and time follow the lectures, can participate in a practical assignment and can make an exam.
+If they score sufficient, they are rewarded with a certificate that states their succes in the course.
+
+The concept of the MOOCs is a very new concept that still has many areas to improve upon.
+One of these areas is the area of practical assignments.
+Currently, for a Computer Science MOOC at the TU Delft, multiple practical assignments are required.
+The participants are required to form groups to make these assignments.
+After the announcement the participants either use mail, Facebook or  Twitter to contact other people in order to form the groups.
+
+We would like to improve upon this concept and try to provide a more fitting approach.
+\section*{Assignment description}
+In this section* we will describe the definition of our Peer Matching assignment. 
+We will describe which people are involved in the assignment, what the exact assignment is and what the difficulties can be.
+
+\subsection*{Client}
+The assignment was written by Dr. L.J.M. Rothkrantz of the TU Delft and is our main client.
+Dr. L.J.M. Rothkrantz asked Dragos Datcu from the TU Delft to advise us on our design and implementation of the Peer Matching assignment.
+
+The target users of the system are MOOC participants and MOOC teachers, specifically for the Computer Science courses. The system is easily extendable to provide more different MOOCs then Computer Science courses, but will not be supported by default.
+
+\subsection*{Contact information}
+\emph{Team}
+
+Marijn Goedegebure
+\emph{(marijngoedegebure@gmail.com)}
+
+Floris Verburg
+\emph{(floris.verburg@gmail.com)}
+
+Freek van Tienen
+\emph{(freek.v.tienen@gmail.com)}
+
+\noindent\emph{Project supervisors}
+
+Dr. L.J.M. Rothkrantz
+
+Dragos Datcu
+
+\subsection*{Problem description}
+MOOCs around the world are growing in size and thus the practical assignments need to be easy to manage.
+The growth also means that it is more difficult for each participant to find a possible practical partner due to the large amount of people.
+It also becomes really difficult to find the correct partner or group members when you don't see each other during courses and haven't even met most of the people from your course.
+
+Most of the time participants of MOOCs are searching group members on social media like Facebook or Twitter.
+They just try to look through some of the participants names in the course, search for them on-line through social media and check if they are a capable partner or group member.
+This approach takes a lot of time and most of the time there are too much MOOC participants to go trough all of them.
+
+Next to the fact that this process is very time consuming, this process also often leads to a sub optimal solution.
+This is due to the problem that people often look for partners of group members which share the same interests.
+While this often makes it easy to work together, this will not guarantee that you have a good functioning group and enough knowledge inside the group.
+
+We would like to improve upon this process by creating an application that can be used to create practical groups without the participants being required to go search intensively trough all the participants.
+Participants should be able to easily access the application, fill in some relevant information about themselves and then be recommended possible practical partners or group members.
+
+The interaction with the system has some difficulties.
+If we want to get some information from third parties, we are required to use the information in a way this third party delivers the data.
+There can be difficulties processing this data.
+  
+The recommendation of possible group members can be quite difficult too.
+One of the problems we are facing is the question: What user information is useful to determine whether two people can be good practical partners?
+
+\subsection*{Goal}
+To provide an overview of what the software must be capable of, we define four global requirements for the system.
+By defining these four global requirements we provide a foundation of what the system must be able to do.
+\begin{itemize}
+\item MOOC teachers must be able to create, manage and edit courses for which participants of their MOOC are able to register.
+
+\item MOOC students must be able to register and deregister for a MOOC practical assignment.
+
+\item The system must be capable to use personal data provided by the user to find a suggestion of an appropriate practical partner or group member.
+It must be possible to adjust the definition (parameters) of the appropriate practical partner or group member, and search trough several suggestions.
+\end{itemize}
+
+\subsection*{Assignment formulation}
+During the course of this project we will develop a Peer Matching system for finding appropriate practical partners or group members during MOOCs practical assignments.
+To be able to find an appropriate practical partner or group member, we split up the assignment in two main areas of focus:
+
+\textbf{The basic system} makes it possible to register to MOOC practicals, find and create practical partners or group members, and communicate with other participants.
+The research in this area focusses on which information a participant would like to know when choosing a practical partner or group member.
+
+\textbf{The algorithm} makes it easier for the users to search through all the available practical partners by giving suggestions of appropriate practical partners or group members.
+Here the research is focussed on how to find suitable group members or practical partners, based on skills and personality.
+
+\subsection*{Deliverables}
+At the end of the project we will deliver a working prototype of the Peer Matching system, containing as much requirements as possible.
+Because of the complexity of the Peer Matching algorithm and the short timeframe of 10 weeks, we choose to develop a prototype instead of a full working product.
+We also choose te focus mainly on MOOCs from the study Computer Science, because the development team has more experience with these courses which makes it possible to make a more feasible Peer Matching algorithm.
+
+\subsection*{Risks}
+We have concluded the following main risks:
+
+\begin{itemize}
+\item Finding a suitable algorithm for matching practical partners and group members could be very difficult to evaluate and requires a lot of time.
+This is because it is very difficult to define a "suitable" match between practical partners and group members based on skills and personality.
+Every student is different and has its own preferences about a "suitable" practical partner or group member.
+This makes it almost impossible to evaluate if the algorithm gives correct suggestions to the students.
+
+\item Overestimating our knowledge and underestimating the time required for tasks.
+Since this is a common problem with Software Engineering there is a good change that this will also be happing to us.
+Estimating the knowledge in de software design team is very difficult because it relies on too many factors.
+Because of that estimating the time required for several tasks is very hard.
+\end{itemize}
+
+\section*{Approach and time schedule}
+In this section* we will be describing the methods, techniques and tools that we will be using to develop our application.
+We will also be giving a global overview of the planning.
+
+\subsection*{Methods and techniques}
+We will be developing our application in the programming language Java.
+We will combine this with the Play framework to provide us with a solid basis with which we can develop our web application.
+Next to this we will be using scrum as our software development, more on that in the appropriate section*.
+
+\subsubsection*{Applications and technologies}
+We will being using the following applications and technologies:
+\begin{itemize}
+\item IntelliJ IDEA, is our Integrated Development Environment (IDE) which will facilitate the development and testing of our code.
+IntelliJ will be integrated with the Play framework which will be helpful during development.
+\item GitHub, is our on-line code and documentation repository.
+It provides for a version control system, an issue tracker and code review possibilities.
+We will be using it to store all our code and documentation's code (LaTeX).
+\item Cloudbees
+Cloudbees will be used to run our test environment, our continuous integration and the release environment.
+It uses Jenkins for the continuous integration.
+\item Play framework
+The play framework gives us the possibility to easily create a web application using Java.
+\item Findbugs is a plug in for Cloudbees and IntelliJ that gives us the possibility to let our java code be checked for small bugs using static analysis.
+\item JaCoCo is a plug in for Cloudbees and IntelliJ that provides us with data analysis about our code coverage.
+\item Checkstyle is a plug in for Cloudbees and IntelliJ that checks the code for coding standards.
+This makes it ideal to enforce the coding standard for our project.
+\end{itemize}
+
+\subsubsection*{Software development method}
+We will be using scrum as our software development method.
+Scrum is based on the agile software development framework which can be used to manage software projects.
+We choose scrum because of its flexible approach to software development.
+We do not have the time to research all of the aspects of the system.
+Scrum gives us the possibility to react to changes of requirements, but also to react to new insights given by our increasing understanding of the system as time progresses.
+We will define the different roles associated with scrum (e.g. the product owner, development team, scrum master) in the next section*.
+
+\subsection*{Planning}
+We have set up a global planning that splits up the project in phases.
+Each of these phases has deliverables attached to them.
+We will be mentioning our goals for each week.
+Other important dates are also added to the planning.
+
+\subsubsection*{Phase 1, Set up and research}
+During the first phase we will be researching the requirements of the system and which requirements are essential for the application and what requirements are not.
+We will also be looking into the set up of the project for our implementation phase.\\
+
+\noindent{Week 1: 21-04-2014 - 25-04-2014}\\
+Drafts of Plan of Approach and literature study, setup of the development environment.\\
+\noindent\emph{Week 2: 28-04-2014 - 02-05-2014}\\
+Finished Plan of Approach, literature study, first system design.
+
+\subsubsection*{Phase 2, Implementation}
+During the second phase we will be developing the application.
+During this time we will be using Scrum to support our development.
+During week 3 to 8 we will be developing the application.
+During this time we won't have big deliverables, but we will be using the weekly meetings with our supervisors to measure our progress.\\
+
+\noindent\emph{Week 3: 05-05-2014 - 09-05-2014}\\
+
+\noindent\emph{Week 4: 12-05-2014 - 16-05-2014}\\
+
+\noindent\emph{Week 5: 19-05-2014 - 23-05-2014}\\
+
+\noindent\emph{Week 6: 26-05-2014 - 30-05-2014}\\
+Start of the acceptance testing.
+
+\noindent\emph{Week 7: 02-06-2014 - 06-06-2014}\\
+End of the acceptance testing, first draft of the final report and send code to SIG for review.
+
+\subsubsection*{Phase 3, Final report and presentation}
+
+\noindent\emph{Week 8: 09-06-2014 - 13-06-2014}\\
+Final development week, final draft of the final report.
+
+\noindent\emph{Week 9: 16-06-2014 - 20-06-2014}\\
+Send code for final review to SIG, send final report to supervisors for review, creation of the presentation.
+
+\noindent\emph{Week 10: 23-06-2014 - 27-06-2014}\\
+Presentation
+\section*{Project approach}
+In this section* we will be explaining our approach to the project.
+This begins with by defining the stakeholders of the project and what roles they will be having during the course of the project.
+Following this, we will be explaining the administrative processes that will be used to monitor the project and to make sure that it will achieve the goals set.
+Next, we will explain the means by which we finance the resources we use.
+We will also define the ways in which we report our progress to the client.
+Lastly, we will define the resources that we will be using during the project.
+
+\subsection*{Stakeholders}
+The following table lists the different group members, their roles and a short description.
+This description describes the role and responsibilities of the group member.\\
+\begin{tabular}{|l|l|p{5cm}|}
+\hline
+Name & Roles & Description\\
+\hline
+Freek van Tienen & Lead Development & Responsible for implementation phase.\\
+\hline
+Floris Verburg & Scrum master and Quality Assurance & Responsible for the Scrum process, the quality of the code and test coverage.\\
+\hline
+Marijn Goedegebure & Project Manager and Reports & Manages the project and ensures that the requirements are met.\\
+\hline
+Leon Rothkrantz & Client, Group Mentor and Supervisor & Supervises the project, aides the group with difficulties and has issued the assignment.\\
+\hline
+Dragos Datcu &  Group Mentor and Supervisor & Supervises the project and aides the group with difficulties.\\
+\hline
+\end{tabular}
+
+\subsection*{Administrative processes and reporting}
+In this subsection* we will be describe the administrative processes that we will be using to make sure that the project will achieve the goals set.
+\subsubsection*{Monday meetings}
+We will have weekly meetings on Monday with just the group members to determine the weeks deliverables and talk through their requirements.
+For each week we set up an agenda at the start of the meeting with all the things we would like to talk about.
+During the meeting one of use will make minutes about the meeting which will be available to all the group members on the google drive.
+During this meeting we will single out tasks that can be done and add those to a google drive file.
+This google drive file is a log that has all of the tasks that have been done, are in progress and need to be done.
+Each task has an assigned group member, a phase, a category, a yes/no if it is finished, a deadline and a finishing date.
+When a task is finished the finishing date is filled in and the task is set to finished. The group member that just finished his task can now use the log to determine what to do next.
+This log will also be used as the backlog for the scrum period.
+\subsubsection*{Friday meetings}
+We will have weekly meetings on Friday with our supervisors.
+During this meeting we will be talking about the progress that has been made past week and what we plan to do next week.
+We also talk about design decisions during these meetings.
+There will also be minutes documenting the important information and decisions of this meeting.
+\subsubsection*{Development period}
+During the development period we will be having daily meetings, as prescribed by Scrum.
+These short meetings will follow the Scrum paradigm.
+
+\subsection*{Financing}
+We do not have a budget provided so our project must use open source software and free to use services.
+All of the tools and techniques that we use follow this rule.
+
+\subsection*{Reporting to the client}
+We will use the Friday meetings to report our progress to the client (and supervisors).
+The deliverables that we set will be sent to the supervisors for review.
+
+\subsection*{Resources}
+We will be using the different meeting rooms and public studying areas as our working environment.
+Although not perfect, it will be enough for the short duration of the project.
+The meeting rooms provide for a good place to hold meetings and work together as a group.
+The public studying areas are a good place to work alone on a task.
+
+\section*{Quality assurance}
+For quality assurance we use several tools and techniques, to make sure our code is maintainable and is well documented.
+In this section* we will first describe some of the techniques we will use and explain why they are useful for quality assurance.
+Next we will describe how several tools are providing use useful help and knowledge about our quality.
+
+\subsection*{Techniques}
+As described before we will use scrum as our software development method, which will give us the opportunity to write tests very early in the process.
+Due to the fast scrum cycles of one week and splitting the software in small features, we can test each feature in the same scrum cycle.
+This way we will detect bugs and programming faults very early.
+We will also detect possible problems in the group process early.
+
+Next to scrum we will make use of Git branches to separate our feature implementations in different branches.
+When a feature is completely tested and reviewed by another member of the programming team, it will be merged into the staging branch.
+For this, we will use pull requests on Git, so everyone of us must review the changes before they will be added to the staging branch.
+After that acceptance testing will be done on the staging branch and when all tests are passed it will be merged into the master branch.
+This will always assure that we have a stable release available in the master branch.
+
+As last technique we will use unit testing together with acceptance testing with our client and future users of the system and together with user testing.
+Unit testing will be happing during each scrum cycle, and will be required for each feature to be merged into the staging branch.
+Acceptance testing will happen in the last two weeks of our project implementation and will give us feedback on which requirements we finished or didn't finish.
+User testing also will happen in the last two weeks of our project implementation.
+These tests will give us feedback on the accessibility of our system and if the system interacts in a natural way.
+
+\subsection*{Tools}
+For quality assurance our main tool will be the Jenkins (Cloudbees) continuous integration testing environment.
+This environment gives us the opportunity to automatically perform several testing techniques and code analysis during each push to the Github repository.
+In this environment we will run several tools we will explain in the following paragraphs in more detail.
+
+At first all our Unit test will be run on Jenkins, which will give us fast feedback about the functionality of classes and functions.
+Bugs can easily be found, and when code is changed later on each test will be run again to make sure it keeps on working.
+
+Next we will run Findbugs to statically analyse our code for small bugs, and wrong naming conventions.
+This will not make sure there are less bugs in our code, but at least will give a helping hand in finding bugs very easily.
+
+After Findbugs we will run JaCoCo, which will give a really good insight in the data analysis of our code coverage.
+It will help use find parts of code where more testing needs to be done.
+
+As last we will run Codestyle, to make sure that every programming holds itself to the same conventions.
+Codestyle will rive a report of the errors in the conventions and need to be checked before pushing to staging,
+This will make sure our code is more maintainable, because it provides more easy to read and understand code.
