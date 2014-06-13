@@ -1,28 +1,51 @@
 \chapter{Project Methodology}
 In this chapter we will describe the project methodology that we have applied to this project.
-We will first divide the project into three phases.
-For each phase we will specify the goal of this phase, the planning, the process strategy, the planned deliverables and the project roles.
+We will first talk about a global planning for the project.
+Here we will divide the project into three phases.
+After this we will talk about an overall process strategy and what strategy we will apply to which phase and why.
+Thirdly, we will talk about which team member has which project roles and what these project roles imply.
+After this we will talk about each of the three phases in more detail about their individual planning and deliverables.
+Here we will also reflect on the phase and talk about what went wrong and what went right.
 Lastly, we define the tools that we have used during the project.
-We have chosen for this particular form of documentation because in this way we can easily describe the unique aspects of each phase.
 
 \section{Global planning}
-We have set up a global planning that splits up the project in phases.
-Each of these phases has deliverables attached to them.
-We will be mentioning our goals for each week.
-Other important dates are also added to the planning.
-
-In the image below you can see the global planning that we have set up.
+In figure~\ref{global_planning} you can see the global planning that we have set up.
 It mentions all the big deliverables and gives the team a good overview of how far the progress of the project should be.
 The team can compare the current state of the project with this planning and can conclude if there is sufficient progress and if measures should be undertaken.
-%Todo add image of the global planning
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{images/Global_planning}
+    \caption{Global planning of the project}
+    \label{global_planning}
+\end{figure}
+
+As you can see in the image, we divided the project into three phases:
+\begin{itemize}
+\item Research and set-up (phase 1)
+\item Design and implementation (phase 2)
+\item Testing, documentation and presentation (phase 3)
+\end{itemize}
+Each of these phases describes the things that need to be done during that phase.
+Not all tasks are completely in one phase, they overlap between two phases.
+To know how far we have progressed, we specified a week where the task should start and when it should end.
+In the sections about the phases we will go into further detail about the deliverables and planning of each phase.
 
 \section{Overall process strategy}
-During this phase we choose to not have a strict task distribution.
-Many of the tasks at hand needed group thinking and group opinions.
-For example, the interpretation of the problem description is something that can be thought out by a single person, but needs to be communicated about toward the other team members.
-If not communicated enough, the resulting problem description may not be the same as how the team interpreted the client's description.
-Things that needed to be done were documented in a spreadsheet.
+We started the project off without a strict task distribution.
+We choose to do so because many of the tasks at hand needed group thinking and group opinions.
+For example, the interpretation of the problem description is something that can be thought out by a single person, but needs to be communicated to and discussed with the other team members.
+If not communicated enough, the resulting problem description may not be the same as how the team interpreted the client's description.\\
+The tasks that needed to be done were documented in a spreadsheet.
 In this way, every team member had insight into the things that still needed to be done.
+Each team member could claim a task for himself when he finished his last task.
+That way a quick look into the spreadsheet will give you a good overview of which tasks were important within a short time notice.
+
+\subsection{Meetings}
+Although the team spends most of the week together working on the project, it is still necessary to plan weekly meetings.
+These meetings help with spending time dedicated with talking through the current progress of the project and possible problems that we could encounter.
+The meetings are planned at the beginning of each week, so that we could discuss what has been done last week and what needs to be done the upcoming week.
+It also helps identifying the things that need to be done. These things were added to the spreadsheet after the meeting.
 
 \subsection{Software development method}
 During the implementation phase we used a known software development framework.
@@ -33,26 +56,38 @@ The time that we have to implement the system is limited so we did not have the 
 Scrum has a flexible approach to software development and satisfies the requirements that we have mentioned above.
 In scrum, you only need a basic design of the system before you start implementing.
 During implementation you provide daily feedback on your progress and the team can change the way things are programmed or have been programmed to steer the product in the proper direction.
-We have defined the different roles associated with scrum (e.g. the product owner, development team, scrum master) as you can see below.
+During the research into scrum we ran into the problem that scrum required us to divide roles between team members (e.g. the product owner, development team, scrum master).
+We choose to also divide the bigger remaining responsibilities among the team members.
+In this way we could ensure that each team member had his own responsibilities and that no aspect of the project would fall behind.
+In the next section we define the different roles and divide them among the team members.
 
 \section{Project roles}
-As said above, there was not a strict task distribution.
+As said above, in the beginning there was not a strict task distribution.
 Following the advise of our group mentor, every week a different team member was the designated chairman and another team member was the designated secretary.
 The chairman of the week had the responsibility to preside the weekly meetings and to maintain an overview of the tasks that were at hand.
 The secretary had the responsibility of making minutes of both the weekly meetings and the meetings with the group mentors and client.
-Next to these two roles, there were no other defined roles.
+These two roles stayed the same throughout the project.\\
 
-The following table lists the different group members, their roles and a short description.
-This description describes the role and responsibilities of the group member.\\
+As said above, we realized that we needed more defined roles.
+We defined the following roles:
+\begin{itemize}
+\item Lead Development, is responsible for the implementation phase;
+\item Scrum master, is responsible for the scrum process;
+\item Quality Assurance, is responsible for the quality of code and test coverage;
+\item Project Manager, is responsible for maintaining an overview of the project and making sure the product is finished on time;
+\item Lead Documentation, is responsible for the documentation of the various aspects of the project.
+\end{itemize}
+
+The following table lists the different group members and their roles.\\
 \begin{tabular}{|l|l|p{5cm}|}
 \hline
 Name & Roles & Description\\
 \hline
-Freek van Tienen & Lead Development & Responsible for implementation phase.\\
+Freek van Tienen & Lead Development\\
 \hline
-Floris Verburg & Scrum master and Quality Assurance & Responsible for the Scrum process, the quality of the code and test coverage.\\
+Floris Verburg & Scrum master and Quality Assurance\\
 \hline
-Marijn Goedegebure & Project Manager and Reports & Manages the project and ensures that the requirements are met.\\
+Marijn Goedegebure & Project Manager and Reports\\
 \hline
 \end{tabular}
 
@@ -68,6 +103,7 @@ We planned phase 1 to be two weeks long.
 With the first week having a focus on setting up the project and doing research to the problem and requirements.
 The second week was more about defining the project methodology, analysing and researching the possible problems that we could encounter and making a first system design.
 The second week was also used to finish up the research report.
+
 \subsubsection{Planned deliverables}
 At the end of phase 1 we wanted to have the following deliverables done:
 \begin{itemize}
@@ -138,9 +174,9 @@ During phase three we wanted to have the following deliverables done:
 %Todo, write a phase reflection	
 
 \section{Tools}
-We have used several tools to support our development.
-They helped us to maintain the quality of the code and improve the maintainability.
-Some of these tools also helped with structuring the implementation phase.
+We have used several tools to support our project.
+The tools helped in administrative work, but also in improving code quality and maintainability.
+In the following list we mention each tool that we used and the benefit that it has.
 
 \begin{itemize}
 \item IntelliJ IDEA, is our Integrated Development Environment (IDE) which will facilitate the development and testing of our code.

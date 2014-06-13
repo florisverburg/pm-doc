@@ -14,25 +14,45 @@ The tests that are written for other features will be always run after the featu
 This ensures that other features that may change the working of the code does not let the tests fail.
 So all the features that were already in the system will still work even after the merging of the new feature.
 
-In the following image you can see the increasing amount of tests that increase with each pull request that has been merged.
-%Insert image of dev branch
+In figure~\ref{testresulttrenddev} you can see the increasing amount of tests that increase with each pull request that has been merged with the development branch.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{images/TestresultTrendDev2}
+    \caption{Amount of tests per build}
+    \label{testresulttrenddev}
+\end{figure}
 
-In the second image you can see the increasing amount of tests of the different pull requests that have been made.
+In figure~\ref{testresulttrendpullrequest} you can see the increasing amount of tests of the different pull requests that have been made.
 In this image you can clearly see that when sometimes when a new feature is added, some tests start to fail.
 Due to our continuous integration we could spot the errors early and make sure that they are fixed before merging with the development branch.
-%Insert image of pull request
 
-The third image depicts the code coverage achieved by the tests.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{images/TestresultTrendPullRequests}
+    \caption{Amount of tests per build of a pull request}
+    \label{testresulttrendpullrequest}
+\end{figure}
+
+Figure~\ref{testresulttrendpullrequest} shows how not every pull request is without errors.
+All of these errors first had to be resolved before the pull request could be merged.\\
+
+Figure~\ref{codecoveragetrenddev} depicts the code coverage achieved by the tests.
 The goal is to have the code coverage percentages to be around a certain percentage during the entire implementation.
 One could argue that a 100\% code coverage is desired, but some features are quite trivial and don't need a 100\% code coverage.
 Next to this is the fact that some plugins, in our case the eBean plugin, generates code for classes.
-This generated code is not something we need to test since it is not written by us.
+This generated code is not something we need to test since it is not written by us.\\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{images/CodeCoverageTrendDev2}
+    \caption{Code coverage trend for the development branch}
+    \label{codecoveragetrenddev}
+\end{figure}
+
 We also underestimated the complexity of some features and thus did not wrote the tests for all cases with the first pull request of those features.
 In that first basic implementation some of the cases were already implemented in part of the system but not actually called upon and made available from the front end.
 We thus decided to first create a pull request for a basic version and thus split up the amount of changes.
 Later, when the feature was further implemented, we added tests that would test these extra cases.
-
-%Insert image of the test code coverage
 
 \subsection{Integration testing}
 Everything a pull request was made, the changes were checked by a member of the team that wasn't the one requesting the merge.
@@ -41,10 +61,15 @@ The member of the team to check the code asked questions about some changes and 
 Although we use checkstyle and findbugs to perform code analysis, they do not find everything.
 So there is much value to achieve with a member of the team checking the code.
 
-In the following image you can see an example of a pull request and how a team member commented on a part of the code.
+In figure~\ref{pullrequest-example} you can see an example of a pull request and how a team member commented on a part of the code.
 The requesting team member responded on the issue and argued why he choose the implementation.
 
-%Insert image of an example pull request with a comment
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{images/pullrequest-example1}
+    \caption{An example of a pull request comment and reply.}
+    \label{pullrequest-example}
+\end{figure}
 
 For an overview of the pull request and the comments that were made, you can find more information on the following website:
 https://github.com/florisverburg/pm-impl/pulls
