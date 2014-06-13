@@ -25,6 +25,22 @@ There can be difficulties processing this data.
 The recommendation of possible group members can be quite difficult too.
 One of the problems we are facing is the question: What user information is useful to determine whether two people can be good practical partners?
 
+\section{Client and academic supervision}
+During the project, we had both a TU Delft coach and a company contact.
+During weekly meetings, we discussed our progress and the preferences form the client.
+In Table~\ref{supervision} you can see the roles of our supervisors.
+
+\begin{table}[h]
+\begin{tabular}{ | p{3cm} | p{5cm} | p{6cm} | }
+ \hline
+Leon Rothkrantz & Group Mentor and Supervisor & Supervises the project from the academic point of view and aides the group with difficulties.\\ \hline
+Dragos Datcu &  Client, Group Mentor and Supervisor & Supervises the project from a client point of view and aides the group with difficulties.\\
+\hline
+\end{tabular}
+\caption{Our supervisors}
+\label{supervision}
+\end{table}
+
 \section{Actors of the System}
 The system can be used by three different actors.
 Each of these actors can perform different actions and therefore have different requirements.
@@ -39,11 +55,6 @@ This professor will need to register with the system and create a MOOC.
 \subsubsection{Actor 3: Groups of participants}
 This actor consist of two or more MOOC participants who accepted each other to their group.
 These groups can be of variable size, set by the MOOC organiser.
-
-\section{Client and academic supervision
-
-Leon Rothkrantz \& Group Mentor and Supervisor \& Supervises the project from the academic point of view and aides the group with difficulties.\\
-Dragos Datcu \&  Client, Group Mentor and Supervisor \& Supervises the project from a client point of view and aides the group with difficulties.\\
 
 \section{Global Requirements}
 To provide an overview of what the software must be capable of, we define four global requirements for the system.
@@ -166,10 +177,29 @@ Each of these features has an own graphical user interface (GUI).
 Below, we will provide mockups from the graphical user interfaces of the most important features.
 
 \subsection{Profile}
-As you can see in Figure~\ref{mockup_profile}, 
+As you can see in Figure~\ref{mockup_profile}, you can view someone's (or your own) profile.
+You can see the basic profile information which the user has filled in himself.
+\\\\
+If you are looking for a practical partner, you can get a better impression of that person when you get an overview of the profile information of that person.
+This is just a simple page, because you should quickly get an impression of the student.\\
+
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{images/mockup_profile}
+    \includegraphics[width=\textwidth, frame]{images/mockup_profile}
     \caption{Interface for the profile page}
     \label{mockup_profile}
 \end{figure}
+
+\noindent In Figure~\ref{mockup_edit_profile}, you see the page for editing your profile.
+On this page, you can edit your basic profile information as well as the level of your skills.
+You can also change your password and your profile image.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth, frame]{images/mockup_edit_profile}
+    \caption{Interface for editing the profile}
+    \label{mockup_edit_profile}
+\end{figure}
+
+\subsection{Practical}
+
