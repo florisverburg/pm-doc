@@ -1,6 +1,56 @@
 \chapter{System Design and Implementation}
 
 \section{Global System Design}
+In this section, we will explain how we designed the application and why we made several decisions.
+We do this with different diagrams.
+We have made for example a class diagram, a database diagram, sequence diagrams and state diagrams.
+
+\subsection{Database}
+In Figure~\ref{database_diagram}, you see our database diagram.
+We will explain the structure of the database shortly.
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth, frame]{images/database_diagram}
+    \caption{The database diagram}
+    \label{database_diagram}
+\end{figure}
+
+\noindent In the center of the diagram, you see the user.
+The user has a many to many relation with a group.
+There are four different groups.
+There is a group for students, for teachers, for administrators and one for guests.
+It is obvious that a group can contain multiple users, but a user can also have multiple groups.
+Users can be a teacher, as well as an administrator.
+
+Every group has different rights.
+The same right can also be assigned to multiple groups.
+That is why we also have a many to many relation between a group and a right.
+\\\\
+A user must also be able to log in.
+To accomplish this, the user must have an identity.
+An identity can only belong to one user.
+If this should not be the case, the system would not be save because other users have access to a user's rights.
+\\\\
+A user can be part of multiple practical groups and a practical group consist of multiple users.
+Therefore, user and practical group have also a many to many relation.
+This is the same for user and practical.
+
+A practical group belongs to only one practical.
+A practical group does not belong to multiple practicals.
+\\\\
+An invite has two many to one relations with a user.
+An invite has a sender as well as an receiver.
+There can only be one sender and one receiver for an invite.
+
+Every invite belongs to only one practical.
+These therefore have also a many to one relation.
+\\\\
+The last relation is between an invite and a message.
+These messages are for communication between the sender and the receiver of the invite.
+An invite can have multiple messages.
+Every message belongs to only one invite.
 
 \section{Model View Controller}
 As mentioned earlier, we are using the Play Framework. 
