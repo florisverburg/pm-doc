@@ -143,6 +143,21 @@ We chose to explain some more about both the invites and the matching algorithm.
 For the invites we explain what are difficulties were and which situations were hard to implement, while for the matching algorithm we will explain some more how it works and why we chose it.
 
 \subsection{Global}
+During the implementation we chose for the git feature workflow as described in section \ref{software_development_method}.
+Most of the time this lead us to small and nice feature's which added both the model as well as the visuals to the APMatch system.
+There were some exceptions like the Invites and Matching algorithm which were a lot harder to implement than expected.
+These big feature's sometimes broke our workflow, because there were too many dependencies between the different features.
+Luckily most of the time there were enough other feature's that could be implemented to solve the issue of waiting on the dependencies to be implemented.
+
+Our global implementation went as planned and made use of the MVC design method of the Play Framework.
+This lead to a nice structured way of models that related closely to the database model, containing most of the functionality of the APMatch system.
+We also extended the MVC model a bit with a helper package which contains functionalities like hashing, Linkedin and the matching algorithm.
+The helper classes don't relate to the database model, but will supply the needed functionalities for the controllers.
+
+The controllers of the of the MVC model were defined in six different controllers: Application, Authentication, Invite, Practical, PracticalGroup and Profile.
+The Application controller only provides the static pages like the home page, contact page and the information page.
+The Authentication controller provides the functionalities for both the Linkedin login, and the normal authentication and registration.
+All the other controllers provide the functionality for all the pages which relate to the subjects of their name.
 
 \subsection{Invites}
 
