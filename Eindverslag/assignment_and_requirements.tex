@@ -1,7 +1,7 @@
 \chapter{Assignment and Requirements}
 
 \section{Assignment Summary}
-The whole original assignment can be found in Appendix A. In this section we just provide a short summary of the assignment. 
+The whole original assignment can be found in Appendix B. In this section we just provide a short summary of the assignment. 
 \\\\
 Massive open online courses (MOOCs) around the world are growing in size and thus the practical assignments need to be easy to manage.
 The growth also means that it is more difficult for each participant to find a possible practical partner due to the large amount of people.
@@ -185,6 +185,7 @@ This is just a simple page, because you should quickly get an impression of the 
 
 \begin{figure}[h]
     \centering
+    \captionsetup{justification=centering}
     \includegraphics[width=\textwidth, frame]{images/mockup_profile}
     \caption{Interface for the profile page}
     \label{mockup_profile}
@@ -193,13 +194,48 @@ This is just a simple page, because you should quickly get an impression of the 
 \noindent In Figure~\ref{mockup_edit_profile}, you see the page for editing your profile.
 On this page, you can edit your basic profile information as well as the level of your skills.
 You can also change your password and your profile image.
+This information wil be taken into account while determining the recommended practical partners.
+So it is important for the users to be able to fill in this information easily.
 
 \begin{figure}[h]
     \centering
+    \captionsetup{justification=centering}
     \includegraphics[width=\textwidth, frame]{images/mockup_edit_profile}
     \caption{Interface for editing the profile}
     \label{mockup_edit_profile}
 \end{figure}
 
 \subsection{Practical}
+The main feature in our application is recommend practical partners.
+Therefore, the users need to be able to register for a practical assignment.
+The users receive a link from the teacher and when they have clicked on it, the user is added to the practical.
+The practical is then added to the user's practical overview.
+Such an overview can be seen in Figure~\ref{mockup_practical_overview}
+\\\\
+In Figure~\ref{mockup_practical}, the user can see a page for a certain practical.
+First of all, there is some information about the practical itself.
+We show a short description of the practical.
 
+After that, we show the most important part, the recommendation.
+The application determines which other practical groups matches your group the best.
+On this page you can click on the practical group for more information.
+You can also invite a practical group to join yours.
+
+After the recommendation part, we also show the user's current practical group.
+
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth, frame]{images/mockup_practical_overview}
+    \caption{Interface for the practical overview page}
+    \label{mockup_practical_overview}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth, frame]{images/mockup_practical}
+    \caption{Interface for the practical page}
+    \label{mockup_practical}
+\end{figure}
