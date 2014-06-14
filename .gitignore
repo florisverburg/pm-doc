@@ -39,3 +39,7 @@ TSWLatexian*
 .DS_Store
 TU Delft LaTeX template/Thumbs.db
 Researchverslag/Images/Thumbs.db
+
+# PDF for Appendix
+!appendix_survey_user_test_data.pdf
+!appendix_surveyUserTest_survey.pdf
