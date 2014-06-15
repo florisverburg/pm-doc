@@ -108,14 +108,171 @@ We hand the user a document which lists the different actions that we want the u
 Before and after the test we let the user fill in a survey.
 The survey at the start is about who the user is and the survey at the end is about what they thought of the system.
 To easily process the responses that we receive, we have used a google form.
-In this google form we have combined the survey and the step by step action plan for the tester.
-The google form document can be found in the appendix.
-
+In this Google form we have combined the survey and the step by step action plan for the tester.
+The Google form document can be found in the appendix.
 
 \subsubsection{The user test results}
-TODO list the different conclusions of the survey
+The user test was conducted during two days and provided us with some interesting comments about the system.
+In this section we will give a brief summary of the results of the survey and what we can do with this feedback.\\
 
-\subsection{Requirements test}
+As you can see in the complete survey that is in appendix D, we started the test with a few basic questions.
+First two questions about our demographic:
+\begin{itemize}
+\item What is your age?
+\item What is your occupation?
+\item Do you know what a MOOC is?
+\end{itemize}
+
+Both questions gave results that we expected.
+As you can see in the following image (figure~\ref{demographic_chart}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{images/demographic_chart}
+    \caption{Demographic questions}
+    \label{demographic_chart}
+\end{figure}
+
+The image above shows us that the people that were questioned were all students and between the appropriate age to be in our target audience.\\
+More surprising is the amount of people that knew what a MOOC is.
+We thought this to be much more than the figures show.\\
+After the occupation question there was a split up in the survey.
+Students and teachers would be given different questions from there on.
+The other that could have been filled in would have submitted the survey directly.\\
+
+The student part of the survey gives us more information about our demographic, as can be seen in figure~\ref{student_demographic_info}:\\
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{images/student_demographic_info}
+    \caption{Student demograhpic info }
+    \label{student_demographic_info}
+\end{figure}
+
+We did not have any respondents that were teachers or "others" so we do not have any data on the other part of our target audience.
+Having more time for an extended survey would definitely give more information about the demographic of our target audience.\\
+
+After the first survey, the participant had to perform a number of actions on the system.
+After each action there were a couple questions asked.
+One of these questions was always about possible improvements.
+This was asked to give the participant the possibility to give suggestions.\\
+First action to be performed was the registration and logging in to the system.
+In figure~\ref{register_login_chart} you can see the answers to these questions:\\
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{images/register_login_chart}
+    \caption{Register and login success rates}
+    \label{register_login_chart}
+\end{figure}
+
+The charts show a positive reaction to the registration and log in parts of our system.
+Almost all of the participants succeeded in registering and logging in.\\
+There were, however, some comments on how some parts had errors in them or how some parts were unclear. We made a list of these suggestions:
+\begin{itemize}
+\item Require fields tooltips sometimes align wrong
+\item Email activation link was not clickable
+\item The scale for a skill could be something different then from 1 to 10, since most people do not tend to give themselves a bad "grade".
+\item Send an email with more text, this way people become more involved
+\item There needs to be more incentive to enter your skills
+\item The slider value is not correctly updated
+\end{itemize}
+
+Each of these suggestions highlight some aspect of the system that needs to be looked at.
+All of these things can be used in future improvements of the system.
+This might also be things to look into during the week between the final report and the presentation.\\
+
+The next part of the test was the registration to a practical using an url and viewing the freshly registered practical.
+The first couple of questions were about whether the functionality worked and whether the participant had any suggestions on the functionality.
+The second part was focussed on the recommendations.\\
+
+The charts of the first part can be seen in figure~\ref{register_practical_chart}\\
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{images/register_practical_chart}
+    \caption{Practical registration and viewing success rate}
+    \label{register_practical_chart}
+\end{figure}
+
+The charts indicate that almost all of the participants have successfully registered to the practical and have successfully viewed the appropriate practical.\\
+
+The suggestions indicate that there are some important improvements that can be done to make the system more accessible.
+The list of suggestions and remarks is as follows:
+\begin{itemize}
+\item No explanation of the purpose of the practical page
+\item A notice of a successful registration
+\item Unclear why there are links to other practical groups
+\item Unclear what the purpose is of the invitations
+\item Show names instead of practical groups
+\item Explanation of the recommended skills
+\end{itemize}
+
+We also noticed that the fact that some students were unfamiliar with MOOC's played a role in their ability to deduce the meaning of the numbers on the page and the meaning of the system.
+Since the system will have to be used by all kinds of users, we need to improve vastly on the interface and the explanation of what the system does.
+There are many possibilities for improving the system and we will have to look into the different possibilities to select the best one.
+
+The chart about the recommendations can be seen in figure~\ref{recommendations_chart}, followed by the suggestions and remarks.\\
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{images/recommendations_chart}
+    \caption{Recommendation usefulness rating}
+    \label{recommendations_chart}
+\end{figure}
+
+\begin{itemize}
+\item Explain what it is recommending me
+\item For who are the recommendations?
+\item What are the recommendations based on?
+\item What is meant by recommendations? Are these my targets?
+\item What do the values mean and what do I do with it?
+\end{itemize}
+This chart is combined with the suggestions and remarks let's us conclude that there should be a lot more information about the workings of the recommendations.
+People who will work with the system will require that information to believe that the recommendations are really working in their favour.\\
+
+The last feature to test was the invitation of another student to join your practical group.\\
+Figure~\ref{invite_chart} shows the success rate of the participants:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{images/invite_chart}
+    \caption{Invite success rate}
+    \label{invite_chart}
+\end{figure}
+
+The figure shows that the interface for inviting another student is working correctly.
+The suggestions and remarks are mainly about the participants how the invitation correlate to the practical groups:
+\begin{itemize}
+\item See other person's name and skills without going to a different page
+\item Invited practical group #14 but in my overview it said that I invited Peter de Jong
+\item Showing the skills instead of the group names might be more convenient
+\item Addition of a communication skill to improve the selection criteria
+\item Should a user start being in a group?
+\end{itemize}
+
+The comments raise an interesting point about whether we should change the user being in a group from the start or that a group should be created when an invite is accepted.
+It makes sense to do so, but we have multiple ways of changing this.
+We can either only change the front end representation or change the way accepting invites work.
+Both quite easily to do and worth changing.\\
+
+The last part of the final survey asked a very important questions concerning the role of the recommendations:\\
+What did you think about the usage of recommendations to suggest possible group members?\\
+\begin{itemize}
+\item Cool that you provide recommendations
+\item Good idea
+\item This was useful. With these recommendations you did not have to scan through all the people
+\item Great addition to courses! Not quite sure whether or not the using of recommendations to create the overall optimal group composition is the best way. A group with members of equal skill might be a better solution
+\end{itemize}
+The comments about the recommendations were great.
+It is nice to know that students appreciate the goal of the system.\\
+
+\subsubsection{User test reflection}
+The user test gave us the opportunity to test some essential parts of the system by open minded participants who are part of our target audience.
+They provided us with detailed feedback on the different aspects of the system.
+The user test did not gave us the possibility to completely test the invite system.
+To have this part tested by our target audience we need a different kind of test.
+A test that runs over the course of a week in which multiple users try to use the system at multiple times.
+Such a test would be a great way and quite necessary to have the system tested before it would be used in a real MOOC.\\
+The feedback that we collected with the user test gives us some great improvements that we can consider for feature work.
+We will talk more about feature work after the conclusion.
+
+\subsection{Acceptance test}
 TODO list the different requirements that have been met and say something about the progress made.
 
 \section{Software Improvement Group Feedback}
