@@ -214,6 +214,43 @@ The Authentication controller provides the functionalities for both the Linkedin
 All the other controllers provide the functionality for all the pages which relate to the subjects of their name.
 
 \subsection{Invites}
+One of the most underestimated parts of the implementation of APMatch was the invites system.
+This part took by far the most time during the implementation phase, but was at firs estimated as a part which could be quickly implemented.
+This underestimation was mostly caused by the complexity of the invites system, which we will explain in the following paragraphs.
+After that we will explain how we solved this difficult invite system, and conclude with what could be improved to make it even better.
+
+So why is this invite system so complex?
+This all is mainly caused by the problem that occurs when creating practical groups larger than two.
+Creating a group larger than two requires either a group manager to create and maintain invites, or a different way of inviting people when you are joined in a practical group.
+This is needed because of the fact that having the possibility for all the group members to invite other people could lead to several conflicting situations.
+So the easiest way to solve this is by creating a group manager, which would be the only user that has the rights to send and invite other users.
+
+But then how do we chose a group manager?
+We could of course easily solve this by doing it random, but that could lead to strange situations and then you also need to add group manager functionalities, to for example change the group manager.
+To avoid these situations we then chose to instead of doing it random, make the inviter that forms the group the group manager.
+This will make it sure that when you accept a certain invite you also know who will be the group manager and also can depend your choice on that.
+
+Despite the fact that we now solved both the complex system of having more then two group members, there were still other problems that also caused our underestimation.
+This was due the fact that you could have multiple open invites available at a certain time, both send invites and received invites.
+Here we could have chosen to deny the user to have multiple outstanding invites to users, but because we expect that there will be a lot of inactive users this seems very implausible.
+Users will then have to wait a certain amount of time for an inactive user, while other possible groups members might join other groups.
+This is why we chose to implement it that when an invite is accepted and you're not becoming a group manager, all the other invites will be rejected.
+Hereby the problem of having multiple open invites at a certain time is solved.
+
+One of the last problems we found during the implementation of the invites system was the fact that you should be able to invite a group.
+This caused two different subproblems, one person inviting a group and a group inviting another group.
+Both were dealt with in the same way, by defining that a single person is also a group with just one person in it.
+This only left us with the merging of two groups which was done the same way as joining one by one.
+
+Because of all these all these edge cases we needed to test the invite system very carefully using a lot of unit tests.
+Finding these edge cases, defining the edge cases and then writing the unit tests for these edge took more time than expected.
+Initially we didn't taught of all these edge cases and were just thinking of a simple invite system.
+
+For the future we advise to first think out the whole invite system and split it up in smaller features.
+Then both the progress will be easier to track and writing tests cases will also be easier.
+We also advise to make it more understandable for the user what exactly is happening during the invites.
+This means that the users needs to know what happens to his other invites when he for example accepts an invite.
+Also hiding the fact that the user is in a practical group on its own should make it more understandable for the user what is happening with the invites.
 
 \subsection{Matching algorithm}
 \label{sec:algorithm}
