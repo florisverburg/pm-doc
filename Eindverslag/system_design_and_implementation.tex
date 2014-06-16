@@ -17,7 +17,7 @@ We will explain the structure of the database shortly.
     \label{database_diagram}
 \end{figure}
 
-\noindent In the center of the diagram, you see the user.
+In the center of the diagram, you see the user.
 The user has a many to many relation with a group.
 There are four different groups.
 There is a group for students, for teachers, for administrators and one for guests.
@@ -27,26 +27,26 @@ Users can be a teacher, as well as an administrator.
 Every group has different rights.
 The same right can also be assigned to multiple groups.
 That is why we also have a many to many relation between a group and a right.
-\\\\
+
 A user must also be able to log in.
 To accomplish this, the user must have an identity.
 An identity can only belong to one user.
 If this should not be the case, the system would not be save because other users have access to a user's rights.
-\\\\
+
 A user can be part of multiple practical groups and a practical group consist of multiple users.
 Therefore, user and practical group have also a many to many relation.
 This is the same for user and practical.
 
 A practical group belongs to only one practical.
 A practical group does not belong to multiple practicals.
-\\\\
+
 An invite has two many to one relations with a user.
 An invite has a sender as well as an receiver.
 There can only be one sender and one receiver for an invite.
 
 Every invite belongs to only one practical.
 These therefore have also a many to one relation.
-\\\\
+
 The last relation is between an invite and a message.
 These messages are for communication between the sender and the receiver of the invite.
 An invite can have multiple messages.
@@ -56,18 +56,18 @@ Every message belongs to only one invite.
 In Figure~\ref{class_diagram} you can see our application's class diagram.
 This diagram is not complete with all the methods and attributes, but the most important methods and attributes are included.
 For example, all the get and set methods are not included.
-\\\\
+
 The structure of this diagram looks a lot like the database diagram.
 In this diagram, we make a difference between a student and a user, because they can perform different actions.
 
 For example, only a teacher can create courses.
 A student cannot do this, a student can only sign up for this courses.
-\\\\
+
 A student can also find possible group members.
 These possible group members are determined by the recommender class.
 With the getNextGroupMember method the next best practical partner will be calculated.
 You can read more about the matching algorithm in Section~\ref{sec:algorithm}
-\\\\
+
 The other methods are needless to explain.
 The name of the methods tell the function.
 
@@ -83,7 +83,7 @@ The name of the methods tell the function.
 In this section we describe the behaviour of our system with the help of state diagrams.
 We describe this behaviour with two different state diagrams.
 One diagram for the administrator and an other one for a student.
-\\\\
+
 First of all, the administrator must be registered and logged in before he can perform any action.
 When the administrator is logged in, he can create practical.
 When the practical is created, the administrator can manage this practical.
@@ -99,14 +99,14 @@ The admin can remove users or even entire practical groups.
     \label{state_diagram_admin}
 \end{figure}
 
-\noindent The student's state diagram is a little bit more complex.
+The student's state diagram is a little bit more complex.
 The first part is the same as with the administrator.
 The student also must be registered and logged in to perform any action.
-\\\\
+
 When the student is logged in, he has an option.
 He can either go to his profile, or manage his practical.
 When he chooses to go to his profile, he can view or edit it.
-\\\\
+
 The courses have some more options.
 First of all, the student can see which fellow students are recommended to join his group.
 The student can invite these students to join his practical group.
@@ -126,11 +126,11 @@ When the student accepts an invite, both the practical groups are joined.
 \subsection{Sequence Diagrams}
 In this section we explain the sequence diagrams.
 We have only made a sequence diagram for logging in, but because of the Model View Controller structure (Section~\ref{sec:mvc}) most of the actions have a similar sequence diagram.
-\\\\
+
 The user only has direct contact with the views.
 The views send the information that the user provided to the controllers.
 After that, the controllers collect the required information from the database via the models.
-\\\\
+
 When the controllers have all the required information, they execute their calculations.
 After the calculations are fully executed, the results will be sent back to the views.
 The views display these results and via these views the results will reach the users.
@@ -154,7 +154,7 @@ The Presentation layer is further split into a View and a Controller layer.
 The \textbf{Controller} responds to events (typically user actions) and processes them, and may also invoke changes on the model.
 In a Web application, events are typically HTTP requests: a Controller listens for HTTP requests, extracts relevant data from the 'event', such as query string parameters, request headers... 
 And applies changes on the underlying model objects.
-\\\\
+
 In Play, a Controller is a Java class where each public, static, method is an \textbf{action}.
 An action is a Java entry point invoked when a HTTP Request is received.
 The Java code from the Controller class is not really object oriented: it is mainly procedural code.
@@ -165,7 +165,7 @@ The \textbf{Model} is the domain-specific representation of the information on w
 Domain logic adds 'meaning' to raw data (e.g., calculating if today is the user's birthday, or the totals, taxes, and shipping charges for a shopping cart).
  Most applications use a persistent storage mechanism such as a database to store data.
 MVC does not specifically mention the data access layer because it is understood to be underneath, or encapsulated by, the Model.
-\\\\
+
 In Play, the domain model object layer is a set a Java classes using all the object oriented features available from the Java language. 
 It contains data structures and operations on which the application operates. 
 Whenever model objects need to be saved into a persistent storage, they may contain some glue artefacts like JPA annotations or SQL statements.
@@ -175,7 +175,7 @@ The \textbf{View} renders the model into a form suitable for interactions, typic
 Multiple views can exist for a single model, for different purposes.
 In a Web application the view is usually rendered in a 'Web format' like HTML, XML or JSON.
 However there are some cases where the view can be expressed in a binary form, e.g. dynamically rendered chart diagrams.
-\\\\
+
 In Play, most of the application views are generated using an efficient template system provided by play. 
 The Controller gets some interesting data from the model layer, and then applies a template to decorate these objects. 
 This packages contains HTML, XML, JSON and other template files with special directives used to dynamically generate the model representation.

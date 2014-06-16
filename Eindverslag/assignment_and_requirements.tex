@@ -2,26 +2,26 @@
 
 \section{Assignment Summary}
 The whole original assignment can be found in Appendix B. In this section we just provide a short summary of the assignment. 
-\\\\
+
 Massive open online courses (MOOCs) around the world are growing in size and thus the practical assignments need to be easy to manage.
 The growth also means that it is more difficult for each participant to find a possible practical partner due to the large amount of people.
 It also becomes really difficult to find the correct partner or group members when you don't see each other during courses and haven't even met most of the people from your course.
-\\\\
+
 Most of the time participants of MOOCs are searching group members on social media like Facebook or Twitter.
 They just try to look through some of the participants names in the course, search for them on-line through social media and check if they are a capable partner or group member.
 This approach takes a lot of time and most of the time there are too much MOOC participants to go trough all of them.
-\\\\
+
 Next to the fact that this process is very time consuming, this process also often leads to a sub optimal solution.
 This is due to the problem that people often look for partners of group members which share the same interests.
 While this often makes it easy to work together, this will not guarantee that you have a good functioning group and enough knowledge inside the group.
-\\\\
+
 We would like to improve upon this process by creating an application that can be used to create practical groups without the participants being required to go search intensively trough all the participants.
 Participants should be able to easily access the application, fill in some relevant information about themselves and then be recommended possible practical partners or group members.
-\\\\
+
 The interaction with the system has some difficulties.
 If we want to get some information from third parties, we are required to use the information in a way this third party delivers the data.
 There can be difficulties processing this data.
-\\\\
+
 The recommendation of possible group members can be quite difficult too.
 One of the problems we are facing is the question: What user information is useful to determine whether two people can be good practical partners?
 
@@ -85,30 +85,30 @@ The section starts with mentioning the possible types of user information the ap
 Followed up by what actions are possible within the system.
 After that the kind of system is limited by the requirements listed.
 Lastly we will list the requirements set for the algorithm.
-\\\\
+
 We use the MoSCoW model to divide the requirements in their appropriate categories.
 The M stands for must have, the S for should have, the C for could have and the W for would have.
 
 \subsection{User Information}
- \begin{tabular}{ | p{0.5cm} | p{12cm} | p{2cm} | }
- \hline
- \textbf{\#} & \textbf{Requirement} & \textbf{MoSCoW} \\ \hline
- 1 & Users must have a viewable profile that can be filled with personal information. & M \\ \hline
- 2 & Users must be able to enter the following registration information during registration: Full name, Email address, Password. & M \\
+\begin{tabular}{ | p{0.5cm} | p{12cm} | p{2cm} | }
+\hline
+\textbf{\#} & \textbf{Requirement} & \textbf{MoSCoW} \\ \hline
+1 & Users must have a viewable profile that can be filled with personal information. & M \\ \hline
+2 & Users must be able to enter the following registration information during registration: Full name, Email address, Password. & M \\
 3 & Users must fill in their academic performances. Which knowledge, skills and completed courses does the user have? & M \\ \hline
 4 & Users should be able to enter the basic user information, like: country, age, short description, skills, education, a picture and personality traits. & S \\ \hline
 5 & Users could be able to use a personality test to determine their personality traits. & C \\ \hline
 6 & Users could be able to fill in their personality traits. & C \\ \hline
 7 & Users could be able to enter the following extended user information: preferred group role, role of the other group members, etcetera. & C \\ \hline
 8 & Users could be able to enter a predefined questionnaires. & C \\
- \hline
+\hline
 \end{tabular}
 
 \subsection{Usage of the System}
 \begin{tabular}{ | p{0.5cm} | p{12cm} | p{2cm} | }
- \hline
- \textbf{\#} & \textbf{Requirement} & \textbf{MoSCoW} \\ \hline
- \multicolumn{3}{|p{14.5cm}|}{\textbf{Actor 1: MOOC participant}} \\ \hline
+\hline
+\textbf{\#} & \textbf{Requirement} & \textbf{MoSCoW} \\ \hline
+\multicolumn{3}{|p{14.5cm}|}{\textbf{Actor 1: MOOC participant}} \\ \hline
 1 & The potential participant (anyone who visits the site) must be able to view the different MOOCs without registering or logging in. & M \\ \hline
 2 & The participant must be able to inform him/herself about the usage of the application without registering or logging in. & M \\ \hline
 3 & The participant must be able to register to the application. & M \\ \hline
@@ -127,8 +127,8 @@ The M stands for must have, the S for should have, the C for could have and the 
 16 & The participant could be able to search for other participants using information that is available in the profile. & C \\ \hline
 \end{tabular}
 \begin{tabular}{ | p{0.5cm} | p{12cm} | p{2cm} | }
- \hline
- \multicolumn{3}{|p{14.5cm}|}{\textbf{Actor 2: MOOC teacher/MOOC administrator}} \\ \hline
+\hline
+\multicolumn{3}{|p{14.5cm}|}{\textbf{Actor 2: MOOC teacher/MOOC administrator}} \\ \hline
 17 & The administrator must be able to create a course and add this to his account. & M \\ \hline
 18 & The administrator must be able to open and close the participant registration for a course. & M \\ \hline
 19 & The administrator must be able to manage the list of participants and groups of participants. & M \\ \hline
@@ -144,7 +144,7 @@ The M stands for must have, the S for should have, the C for could have and the 
 29 & The administrator could be able to provide feedback for the different assignments. & C \\ \hline
 \end{tabular}
 \begin{tabular}{ | p{0.5cm} | p{12cm} | p{2cm} | }
- \hline
+\hline
 \multicolumn{3}{|p{14.5cm}|}{\textbf{Actor 3: Groups of participants}} \\ \hline
 30 & The groups must be able to communicate with each other using the application. & M \\ \hline
 31 & A group should be able to view a possible group member. & S \\ \hline
@@ -153,13 +153,13 @@ The M stands for must have, the S for should have, the C for could have and the 
 34 & The group could be able to select their preferences for the new group member. & C \\ \hline
 35 & The participants could be able to share files to other group members using this application. & C \\ \hline
 36 & The participants would be able upload their source code to the application for verification. & W \\
- \hline
+\hline
 \end{tabular}
 
 \subsection{Kind of System}
 \begin{tabular}{ | p{0.5cm} | p{12cm} | p{2cm} | }
- \hline
- \textbf{\#} & \textbf{Requirement} & \textbf{MoSCoW} \\ \hline
+\hline
+\textbf{\#} & \textbf{Requirement} & \textbf{MoSCoW} \\ \hline
 1 & The application must be easily accessible to both participants and course organizers. & M \\ \hline
 2 & The system must provide account management functionality. & M \\ \hline
 3 & The system must use a database to store the different data put in by the user. & M \\ \hline
@@ -169,8 +169,8 @@ The M stands for must have, the S for should have, the C for could have and the 
 
 \subsection{Peer Matching}
 \begin{tabular}{ | p{0.5cm} | p{12cm} | p{2cm} | }
- \hline
- \textbf{\#} & \textbf{Requirement} & \textbf{MoSCoW} \\ \hline
+\hline
+\textbf{\#} & \textbf{Requirement} & \textbf{MoSCoW} \\ \hline
 1 & The algorithm must be able to use a list of users as input. & M \\ \hline
 2 & The algorithm must deal with continuous variation in amount of users. & M \\ \hline
 3 & The algorithm must be able to return one or more suggestions of practical partners to the user given a list of rejected users. & M \\ \hline
@@ -195,7 +195,7 @@ Below, we will provide mockups from the graphical user interfaces of the most im
 \subsection{Profile}
 As you can see in Figure~\ref{mockup_profile}, you can view someone's (or your own) profile.
 You can see the basic profile information which the user has filled in himself.
-\\\\
+
 If you are looking for a practical partner, you can get a better impression of that person when you get an overview of the profile information of that person.
 This is just a simple page, because you should quickly get an impression of the student.\\
 
@@ -207,10 +207,10 @@ This is just a simple page, because you should quickly get an impression of the 
     \label{mockup_profile}
 \end{figure}
 
-\noindent In Figure~\ref{mockup_edit_profile}, you see the page for editing your profile.
+In Figure~\ref{mockup_edit_profile}, you see the page for editing your profile.
 On this page, you can edit your basic profile information as well as the level of your skills.
 You can also change your password and your profile image.
-This information wil be taken into account while determining the recommended practical partners.
+This information will be taken into account while determining the recommended practical partners.
 So it is important for the users to be able to fill in this information easily.
 
 \begin{figure}[H]
@@ -227,7 +227,7 @@ Therefore, the users need to be able to register for a practical assignment.
 The users receive a link from the teacher and when they have clicked on it, the user is added to the practical.
 The practical is then added to the user's practical overview.
 Such an overview can be seen in Figure~\ref{mockup_practical_overview}
-\\\\
+
 In Figure~\ref{mockup_practical}, the user can see a page for a certain practical.
 First of all, there is some information about the practical itself.
 We show a short description of the practical.
