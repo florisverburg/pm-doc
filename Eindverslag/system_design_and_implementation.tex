@@ -1,8 +1,9 @@
 \chapter{System Design and Implementation}
+\label{sec:design_implementation}
 
 \section{Global System Design}
-In this section, we will explain how we designed the application and why we made several decisions.
-We do this with different diagrams.
+In this section we will explain how we designed the application and why we made several decisions.
+We do this using different diagrams.
 We have made for example a class diagram, a database diagram, sequence diagrams and state diagrams.
 
 \subsection{Database}
@@ -31,26 +32,27 @@ That is why we also have a many to many relation between a group and a right.
 A user must also be able to log in.
 To accomplish this, the user must have an identity.
 An identity can only belong to one user.
-If this should not be the case, the system would not be save because other users have access to a user's rights.
+If this should not be the case, the system would not be safe because other users have access to protected parts of the system.
 
 A user can be part of multiple practical groups and a practical group consist of multiple users.
-Therefore, user and practical group have also a many to many relation.
+Therefore user and practical group also have a many to many relation.
 This is the same for user and practical.
 
 A practical group belongs to only one practical.
-A practical group does not belong to multiple practicals.
+A practical can have multiple practical groups.
+Therefore is this a many to one relation.
 
 An invite has two many to one relations with a user.
 An invite has a sender as well as an receiver.
 There can only be one sender and one receiver for an invite.
+But a user can send and receive multiple invites, therefore is this also a many to one relation.
 
 Every invite belongs to only one practical.
-These therefore have also a many to one relation.
+These therefore also have a many to one relation.
 
 The last relation is between an invite and a message.
 These messages are for communication between the sender and the receiver of the invite.
-An invite can have multiple messages.
-Every message belongs to only one invite.
+An invite can have multiple messages and every message belongs to only one invite.
 
 \subsection{Class Diagram}
 In Figure~\ref{class_diagram} you can see our application's class diagram.
@@ -85,8 +87,8 @@ We describe this behaviour with two different state diagrams.
 One diagram for the administrator and an other one for a student.
 
 First of all, the administrator must be registered and logged in before he can perform any action.
-When the administrator is logged in, he can create practical.
-When the practical is created, the administrator can manage this practical.
+When the administrator is logged in, he can create practicals.
+When the practical is created, the administrator can edit and manage this practical.
 
 One of the parts of managing the practical is managing the users that are enrolled for this practical.
 The admin can remove users or even entire practical groups.
@@ -103,7 +105,7 @@ The student's state diagram is a little bit more complex.
 The first part is the same as with the administrator.
 The student also must be registered and logged in to perform any action.
 
-When the student is logged in, he has an option.
+When the student is logged in, he has two options.
 He can either go to his profile, or manage his practical.
 When he chooses to go to his profile, he can view or edit it.
 
@@ -191,14 +193,14 @@ This packages contains HTML, XML, JSON and other template files with special dir
 
 \section{Implementation}
 In this section we will describe the software implementation of APMatch.
-We will start of with some global implementation description of our APMatch system and then we will continue with some more advanced topics.
+We will start of with a global implementation description of our APMatch system and then we will continue with some more advanced topics.
 
 We chose to explain some more about both the invites and the matching algorithm.
-For the invites we explain what are difficulties were and which situations were hard to implement, while for the matching algorithm we will explain some more how it works and why we chose it.
+For the invites we explain what our difficulties were and which situations were hard to implement, while for the matching algorithm we will explain some more on how it works and why we chose it.
 
 \subsection{Global}
 During the implementation we chose for the git feature workflow as described in section \ref{software_development_method}.
-Most of the time this lead us to small and nice feature's which added both the model as well as the visuals to the APMatch system.
+Most of the time this leads us to small and nice feature's which added both the model as well as the visuals to the APMatch system.
 There were some exceptions like the Invites and Matching algorithm which were a lot harder to implement than expected.
 These big feature's sometimes broke our workflow, because there were too many dependencies between the different features.
 Luckily most of the time there were enough other feature's that could be implemented to solve the issue of waiting on the dependencies to be implemented.
@@ -215,7 +217,7 @@ All the other controllers provide the functionality for all the pages which rela
 
 \subsection{Invites}
 One of the most underestimated parts of the implementation of APMatch was the invites system.
-This part took by far the most time during the implementation phase, but was at firs estimated as a part which could be quickly implemented.
+This part took by far the most time during the implementation phase, but was at first estimated as a part which could be quickly implemented.
 This underestimation was mostly caused by the complexity of the invites system, which we will explain in the following paragraphs.
 After that we will explain how we solved this difficult invite system, and conclude with what could be improved to make it even better.
 
@@ -225,7 +227,7 @@ Creating a group larger than two requires either a group manager to create and m
 This is needed because of the fact that having the possibility for all the group members to invite other people could lead to several conflicting situations.
 So the easiest way to solve this is by creating a group manager, which would be the only user that has the rights to send and invite other users.
 
-But then how do we chose a group manager?
+But then how do we choose a group manager?
 We could of course easily solve this by doing it random, but that could lead to strange situations and then you also need to add group manager functionalities, to for example change the group manager.
 To avoid these situations we then chose to instead of doing it random, make the inviter that forms the group the group manager.
 This will make it sure that when you accept a certain invite you also know who will be the group manager and also can depend your choice on that.
@@ -262,12 +264,12 @@ After that we will give a description about the complexity and will conclude thi
 Before we start explaining the algorithm we will first describe how to calculate the distance for a certain practical group.
 Calculating the distance of a practical group is done by going through the skills defined by the practical teacher.
 We will then calculate the average of the values of the skills of all the users in the practical group and the users' practical group combined.
-Then all the average's are multiplied with each other and then you take root of the amount of skills in the practical.
-This resulting number will defined as the distance.
+Then all the averages are multiplied with each other and then you take root of the amount of skills in the practical.
+This resulting number will be defined as the distance.
 
 The matching algorithm starts with a practical and user.
 It will start with going through the different practical groups in the practical.
-To simplify the algorithm it is chosen to make sure every user is in a practical group.
+To simplify the algorithm we chose to make sure every user is in a practical group.
 This means that when an user doesn't have any practical partners he is still in a practical group with only himself in it.
 While going trough the different practical groups it will calculate the distance as described in the previous paragraph.
 After calculating the distance with every other practical group and saving this in a map, this result is sorted by descending distance.
@@ -307,7 +309,7 @@ We define $m$ as the amount of skills defined in a practical.
 We define $j$ as the amount of users in a certain practical group plus the amount of users in your own practical group.
 Since in the first loop we go trough the practical groups to calculate the distance we start with a time complexity of $O(n)$.
 Inside this loop we go trough each of the skills defined in the practical to calculate the average which will give us $O(n*m)$.
-In order to calculate this average we need to go rough all the users in our practical group and the practical group examined.
+In order to calculate this average we need to go trough all the users in our practical group and the practical group examined.
 This will lead to a time complexity of $O(n*m*j)$.
 As one of the last steps we still need to sort the list of the practical groups which will be done in a time complexity of $O(n*log(n))$.
 All this combined will lead into a total time complexity of $O(nmj+n*log(n))$ which for small $m$ and $j$ will lead to a total time complexity of $O(n*log(n))$.

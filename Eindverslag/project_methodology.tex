@@ -1,4 +1,5 @@
 \chapter{Project Methodology}
+\label{sec:methodology}
 In this chapter we will describe the project methodology that we have applied to this project.
 We will first talk about a global planning for the project.
 Here we will divide the project into three phases.
@@ -34,7 +35,7 @@ In the sections about the phases we will go into further detail about the delive
 \section{Overall process strategy}
 We started the project off without a strict task distribution.
 We choose to do so because many of the tasks at hand needed group thinking and group opinions.
-For example, the interpretation of the problem description is something that can be thought out by a single person, but needs to be communicated to and discussed with the other team members.
+For example, the interpretation of the problem description is something that can be thought out by a single person, but needs to be communicated and discussed with the other team members.
 If not communicated enough, the resulting problem description may not be the same as how the team interpreted the client's description.\\
 The tasks that needed to be done were documented in a spreadsheet.
 In this way, every team member had insight into the things that still needed to be done.
@@ -43,7 +44,7 @@ That way a quick look into the spreadsheet will give you a good overview of whic
 
 \subsection{Meetings}
 Although the team spends most of the week together working on the project, it is still necessary to plan weekly meetings.
-These meetings help with spending time dedicated with talking through the current progress of the project and possible problems that we could encounter.
+During these meetings we talk through the current progress of the project and possible problems that we could encounter.
 The meetings are planned at the beginning of each week, so that we could discuss what has been done last week and what needs to be done the upcoming week.
 It also helps identifying the things that need to be done. These things were added to the spreadsheet after the meeting.
 
@@ -52,7 +53,7 @@ During the implementation phase we used a known software development framework.
 This development framework is known as scrum.
 Scrum is based on the agile software development framework which can be used to 
 manage software projects.
-The time that we have to implement the system is limited so we did not have the time to research and design all aspects of the system. We need a software development framework that gave us the possibility to react to changes in requirements, but also to react to new insights given by our increasing understanding of the system as time progresses.
+The time that we have to implement the system is limited so we did not have the time to research and design all aspects of the system. We need a software development framework that gave us the possibility to react to changes in requirements, but also reacts to new insights given by our increasing understanding of the system as time progresses.
 Scrum has a flexible approach to software development and satisfies the requirements that we have mentioned above.
 In scrum, you only need a basic design of the system before you start implementing.
 During implementation you provide daily feedback on your progress and the team can change the way things are programmed or have been programmed to steer the product in the proper direction.
@@ -122,7 +123,7 @@ In this way, every team member had insight into the things that still needed to 
 
 \subsection{Phase reflection}
 During the first phase we had some trouble with determining the direction that the project would take.
-Although the Computer Science bachelor has a lot of projects, this is the first project that you are completely free.
+Although the Computer Science bachelor has a lot of projects, this is the first project that you are completely free and where you need to make your own decisions. 
 This gave us some problems at the start of the project.
 After reading up on some projects that were done last few years, we had a better insight into what was expected from us.
 During the first week we made good progress with defining the requirements, but later realised that we probably should have started with the plan of approach.
@@ -152,7 +153,7 @@ We planned the second phase to be six weeks long.
 The first week was used to finish up the system design.
 The other 5 weeks were used to implement this system design.
 During the final two weeks we looked into the user tests and the acceptance tests.
-During this time there we also sent our source code to the Software Improvement Group for them to check.
+During this time there we also sent our source code to the Software Improvement Group for them to check for the code quality.
 The feedback that we got back will be discussed later in this paper.
 
 \subsubsection{Planned deliverables}
@@ -237,6 +238,8 @@ The tools helped in administrative work, but also in improving code quality and 
 In the following list we mention each tool that we used and the benefit that it has.
 
 \begin{itemize}
+\item Play framework,
+The play framework gives us the possibility to easily create a web application using Java.
 \item IntelliJ IDEA, is our Integrated Development Environment (IDE) which will facilitate the development and testing of our code.
 IntelliJ will be integrated with the Play framework which will be helpful during development.
 \item GitHub, is our on-line code and documentation repository.
@@ -245,8 +248,6 @@ We will be using it to store all our code and documentation's code (LaTeX).
 \item Cloudbees
 Cloudbees will be used to run our test environment, our continuous integration and the release environment.
 It uses Jenkins for the continuous integration.
-\item Play framework
-The play framework gives us the possibility to easily create a web application using Java.
 \item Findbugs is a plug in for Cloudbees and IntelliJ that gives us the possibility to let our java code be checked for small bugs using static analysis.
 \item JaCoCo is a plug in for Cloudbees and IntelliJ that provides us with data analysis about our code coverage.
 \item Checkstyle is a plug in for Cloudbees and IntelliJ that checks the code for coding standards.

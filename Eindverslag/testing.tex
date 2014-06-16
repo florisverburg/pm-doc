@@ -1,21 +1,28 @@
 \chapter{Testing}
+\label{sec:testing}
 In this chapter we will be talking about the different techniques that we have employed to test the different aspects of the system.
 We will first be talking about the different kind of unit tests that we have written.
-These tests provide for a basic code coverage.
-After this we will be talking about what kind integration tests we have performed to ensure the connection between the different components.
-Lastly we will be talking about the acceptance tests that were performed.
+These tests provide a basic code coverage.
+After this we will be talking about what kind of integration tests we have performed to ensure the connection between the different components.
+Lastly we will be talking about the requirement tests that were performed, to test if we achieved our goals.
 
 \section{Testing methods during the implementation phase}
+During the implementation phase, we already started with testing.
+Because the system was not completed during this phase, only parts of the system could be tested.
+We have tested each feature with unit tests, see Section~\ref{sec:unit_test}.
+We also performed integration test during the implementation phase, see Section~\ref{sec:integration}
+
 \subsection{Unit testing}
+\label{sec:unit_test}
 During the implementation phase a feature is only complete when it is fully tested.
-This is done by running the system and testing it by the programmer, but also done by running automated tests.
-These automated tests are required for achieving a good code coverage and for ensuring the code to work appropriately.
-The tests that are written for other features will be always run after the feature has been merged.
-This ensures that other features that may change the working of the code does not let the tests fail.
-So all the features that were already in the system will still work even after the merging of the new feature.
+This is done by test from the programmer while running the system, but also done by running automated tests.
+These automated tests are required for achieving a good code coverage and for ensuring the code to function appropriately.
+The tests that are written for other features will be always run before the feature has been merged.
+This ensures that other features that may change the function of the code does not let the tests fail.
+So all the features that were already in the system will still function even after the merging of the new feature.
 
 In figure~\ref{testresulttrenddev} you can see the increasing amount of tests that increase with each pull request that has been merged with the development branch.
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/TestresultTrendDev2}
     \caption{Amount of tests per build}
@@ -26,7 +33,7 @@ In figure~\ref{testresulttrendpullrequest} you can see the increasing amount of 
 In this image you can clearly see that when sometimes when a new feature is added, some tests start to fail.
 Due to our continuous integration we could spot the errors early and make sure that they are fixed before merging with the development branch.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/TestresultTrendPullRequests}
     \caption{Amount of tests per build of a pull request}
@@ -42,7 +49,7 @@ One could argue that a 100\% code coverage is desired, but some features are qui
 Next to this is the fact that some plugins, in our case the eBean plugin, generates code for classes.
 This generated code is not something we need to test since it is not written by us.\\
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/CodeCoverageTrendDev2}
     \caption{Code coverage trend for the development branch}
@@ -55,16 +62,17 @@ We thus decided to first create a pull request for a basic version and thus spli
 Later, when the feature was further implemented, we added tests that would test these extra cases.
 
 \subsection{Integration testing}
-Everything a pull request was made, the changes were checked by a member of the team that wasn't the one requesting the merge.
+\label{sec:integration}
+Every time a pull request was made, the changes were checked by a member of the team that did not make the pull request.
 This ensured that the changes made reflected the feature that was selected to be implemented.
 The member of the team to check the code asked questions about some changes and checked if complex functions could be made more efficient.
-Although we use checkstyle and findbugs to perform code analysis, they do not find everything.
+Although we use checkstyle and findbugs to perform code analysis, they did not find everything.
 So there is much value to achieve with a member of the team checking the code.
 
 In figure~\ref{pullrequest-example} you can see an example of a pull request and how a team member commented on a part of the code.
 The requesting team member responded on the issue and argued why he choose the implementation.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/pullrequest-example1}
     \caption{An example of a pull request comment and reply.}
@@ -84,8 +92,8 @@ We will start with describing the user tests.
 The purpose of the user test is to test the system without the limiting factors of a development environment.
 The system will be tested for his robustness in the different kinds of input a user can generate.
 The test also let's the user make extensive use of the interface that we provided.
-Any errors will be revealed by the user interaction.
-If the tester find anything unclear he can comment on that in the appropriate text boxes provided in the survey.
+Any errors will be revealed by the user's interaction.
+If the tester finds anything unclear he can comment on that in the appropriate text boxes provided in the survey, see Appendix~\ref{app:survey}.
 
 To test the system we will be defining the people that are valid testing subjects and how we documented the various aspects of the test.
 
@@ -109,14 +117,14 @@ Before and after the test we let the user fill in a survey.
 The survey at the start is about who the user is and the survey at the end is about what they thought of the system.
 To easily process the responses that we receive, we have used a google form.
 In this Google form we have combined the survey and the step by step action plan for the tester.
-The Google form document can be found in the appendix.
+The Google form document can be found in Appendix~\ref{app:survey}.
 
 \subsubsection{The user test results}
 The user test was conducted during two days and provided us with some interesting comments about the system.
 In this section we will give a brief summary of the results of the survey and what we can do with this feedback.\\
 
-As you can see in the complete survey that is in appendix D, we started the test with a few basic questions.
-First two questions about our demographic:
+As you can see in the complete survey that is in Appendix~\ref{app:survey}, we started the test with a few basic questions.
+First three questions about our demographic:
 \begin{itemize}
 \item What is your age?
 \item What is your occupation?
@@ -124,9 +132,9 @@ First two questions about our demographic:
 \end{itemize}
 
 Both questions gave results that we expected.
-As you can see in the following image (figure~\ref{demographic_chart}
+As you can see in Figure~\ref{demographic_chart}.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/demographic_chart}
     \caption{Demographic questions}
@@ -136,14 +144,14 @@ As you can see in the following image (figure~\ref{demographic_chart}
 The image above shows us that the people that were questioned were all students and between the appropriate age to be in our target audience.
 
 More surprising is the amount of people that knew what a MOOC is.
-We thought this to be much more than the figures show.
+We thought this to be much more than the figures shows.
 
 After the occupation question there was a split up in the survey.
 Students and teachers would be given different questions from there on.
 The other that could have been filled in would have submitted the survey directly.
 
-The student part of the survey gives us more information about our demographic, as can be seen in figure~\ref{student_demographic_info}:\\
-\begin{figure}[h]
+The student part of the survey gives us more information about our demographic, as can be seen in figure~\ref{student_demographic_info}.\\
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/student_demographic_info}
     \caption{Student demograhpic info }
@@ -157,16 +165,16 @@ After the first survey, the participant had to perform a number of actions on th
 After each action there were a couple questions asked.
 One of these questions was always about possible improvements.
 This was asked to give the participant the possibility to give suggestions.\\
-First action to be performed was the registration and logging in to the system.
+The first action to be performed was the registration and logging in to the system.
 In figure~\ref{register_login_chart} you can see the answers to these questions:\\
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/register_login_chart}
     \caption{Register and login success rates}
     \label{register_login_chart}
 \end{figure}
 
-The charts show a positive reaction to the registration and log in parts of our system.
+The charts shows a positive reaction to the registration and the log in parts of our system.
 Almost all of the participants succeeded in registering and logging in.
 
 There were, however, some comments on how some parts had errors in them or how some parts were unclear. We made a list of these suggestions:
@@ -188,7 +196,7 @@ The first couple of questions were about whether the functionality worked and wh
 The second part was focussed on the recommendations.
 
 The charts of the first part can be seen in figure~\ref{register_practical_chart}\\
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/register_practical_chart}
     \caption{Practical registration and viewing success rate}
@@ -213,7 +221,7 @@ Since the system will have to be used by all kinds of users, we need to improve 
 There are many possibilities for improving the system and we will have to look into the different possibilities to select the best one.
 
 The chart about the recommendations can be seen in figure~\ref{recommendations_chart}, followed by the suggestions and remarks.\\
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/recommendations_chart}
     \caption{Recommendation usefulness rating}
@@ -221,7 +229,7 @@ The chart about the recommendations can be seen in figure~\ref{recommendations_c
 \end{figure}
 
 \begin{itemize}
-\item Explain what it is recommending me
+\item Explain what is it recommending me
 \item For who are the recommendations?
 \item What are the recommendations based on?
 \item What is meant by recommendations? Are these my targets?
@@ -231,8 +239,8 @@ This chart is combined with the suggestions and remarks let's us conclude that t
 People who will work with the system will require that information to believe that the recommendations are really working in their favour.\\
 
 The last feature to test was the invitation of another student to join your practical group.\\
-Figure~\ref{invite_chart} shows the success rate of the participants:
-\begin{figure}[h]
+Figure~\ref{invite_chart} shows the success rate of the participants.
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/invite_chart}
     \caption{Invite success rate}
@@ -271,7 +279,7 @@ They provided us with detailed feedback on the different aspects of the system.
 The user test did not gave us the possibility to completely test the invite system.
 To have this part tested by our target audience we need a different kind of test.
 A test that runs over the course of a week in which multiple users try to use the system at multiple times.
-Such a test would be a great way and quite necessary to have the system tested before it would be used in a real MOOC.
+Such a test would be a great way and quite necessary to have the system tested before it could be used in a real MOOC.
 
 The feedback that we collected with the user test gives us some great improvements that we can consider for feature work.
 We will talk more about feature work after the conclusion.
