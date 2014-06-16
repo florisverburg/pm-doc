@@ -276,8 +276,81 @@ Such a test would be a great way and quite necessary to have the system tested b
 The feedback that we collected with the user test gives us some great improvements that we can consider for feature work.
 We will talk more about feature work after the conclusion.
 
-\subsection{Acceptance test}
-TODO First list the goals and check if we achieved those. Second, list the different requirements that have been met and say something about the progress made.
+\subsection{Requirements test}
+In chapter 2 we define global goals, global requirements and detailed requirements.
+We will go into the detailed requirements in this chapter, the other two will be discussed in the conclusion.
+In the detailed requirements section we divided the requirements into four categories following the MoSCoW-model.
+The categories are:
+\begin{itemize}
+\item Must have, classifies as requirements that have to be in the final product, without these requirements the product would not be usable.
+\item Should have, these requirements are desired, but without these the product is usable.
+\item Could have, these requirements will be implemented if there is enough time.
+\item Would have, these requirements will not be looked into for this project, but can be interesting for a feature project.
+\end{itemize}
+
+Following the MoSCoW-model we can now say that we should atleast have all of the must have requirements implemented or a good reason why we have not.
+We will first list the must haves that we have not implemented and why not.
+Secondly we look at which should have requirements we did and which should have requirements we did not implement.
+Using this, we will determine the progress we made during the project and if we correctly used the MoSCoW-model.
+The could and would have requirements will be discussed in the future work section.
+
+\subsubsection{Must haves}
+In the following table we listed the must have requirements that were not met.
+
+\begin{tabular}{ | p{12cm} | p{2cm} | }
+\hline
+\textbf{Requirement} & \textbf{MoSCoW} \\ \hline
+\multicolumn{3}{|p{14.5cm}|}{\textbf{Actor 1: MOOC participant}} \\ \hline
+The potential participant (anyone who visits the site) must be able to view the different MOOCs without registering or logging in. & M \\ \hline
+The participant must be able to inform him/herself about the usage of the application without registering or logging in. & M \\ \hline
+\end{tabular}
+
+During the user test we noticed that the two must haves that we did not implement, were quite essential to the system.
+Due to the nature of the project, a proof of concept, we focussed more on implementing interesting features than making the system more understandable.
+So as a proof of concept point of view these requirements were probably more should haves than must haves, but from a user point of view these requirements were far more important than we have treated them.
+
+
+\subsubsection{Should haves}
+In the following section we will show a list of should have requirements that we have implemented and we discuss why we have chosen for these requirements to be implemented.
+Following, we will shortly discuss the requirements that we have chosen not to implement and why we have not implemented these requirements.
+
+We will first start with the list of requirements that have been implemented:
+
+\begin{tabular}{ | p{12cm} | p{2cm} | }
+\hline
+\textbf{Requirement} & \textbf{MoSCoW} \\ \hline
+Users should be able to enter the basic user information, like: country, age, short description, skills, education, a picture and personality traits. & S \\ \hline
+The participant should be able to ask a currently existing group if he can join them. & S \\ \hline
+The participant should be able to use their LinkedIn profile to log in to the application. & S \\ \hline
+In case the participant already has an account, the participant should be able to add the course to his profile using the teachers url. & S \\ \hline
+The participant should be able to receive an invitation from a group. & S \\ \hline
+The participant should be able to accept the invitation from a group. & S \\ \hline
+A group should be able to view a possible group member. & S \\ \hline
+A group should be able to invite a possible group member to join their group. & S \\ \hline
+A group should be able to accept an request from a participant to join their group. & S \\ \hline
+The algorithm uses basic user provided data (e.g. education, preferences) to build up a profile for a course participant. & S \\ \hline
+The algorithm can calculate whether two people will be good practical partners using the basic user provided data. & S \\ \hline
+The algorithm can return a possible practical partners using the basic user provided data. & S \\
+\hline
+\end{tabular}
+
+Following the goal to create a proof of concept we implemented the should haves that focus on facilitating a more complete proof of concept.
+We implemented a lot of the recommendation algorithm should haves, since it would make the proof of concept a lot better.
+
+Next to this is the invitation system.
+While setting up the invite system, we kept in mind that both single students as groups of students will be using this system.
+This helped with formulating a system where single students can invite other single students and other groups, and where groups can invite other single students and groups.
+This gives the single students (and groups) complete freedom in creating their practical groups.
+
+The requirements that we have chosen not to implement are mainly requirements about the teacher's part of the system.
+Due to the goals of the project we thought these requirements to have a lower priority and not be very important to the proof of concept.
+These requirements will become interesting when the implementation continues and is focussed on usage of the system.
+
+\subsubsection{Requirements test conclusion}
+As we can conclude from the analysis done in the previous sections, we can definitely say that we made a good estimation of the scope of the project.
+Due to the time and an underestimation of the importance, we did not manage to complete all the must haves.
+The two must have requirements that still need to be done are quite easy to implement and should be at the top of the list of things to be done.
+Although we failed to implement all the must haves before the delivery of this report, we did managed to implement a lot of should haves.
 
 \section{Software Improvement Group Feedback}
 \subsection{Intermediate feedback}

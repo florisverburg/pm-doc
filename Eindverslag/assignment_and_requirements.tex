@@ -60,9 +60,10 @@ These groups can be of variable size, set by the MOOC organiser.
 To determine the direction the project should be following, we define goals for the project.
 These goals will later be used to determine whether the final product is in line with these goals.
 \begin{itemize}
-\item The final product, that will be presented, will be a working proof of concept which will fit closely with the specified target audience and demands of the assignment
-\item We want to create a platform for searching other students and letting the students invite other students for a practical group
-\item We want the final product to recommend good fitting, possible group members to the students. By "good fitting" we mean that there is some heuristic that we use to calculate whether two students would make a good combination.
+\item The final product, that will be presented, will be a working proof of concept which will fit closely with the specified target audience and demands of the assignment.
+\item We want to create a platform for searching other students, letting the students invite other students for a practical group and letting the students join each other.
+\item We want the final product to recommend good fitting, possible group members to the students.
+By "good fitting" we mean that there is some heuristic that we use to calculate whether two students would make a good combination.
 \item We want the final product to achieve more optimal groups than the current situation by recommending other students.
 \end{itemize}
 
@@ -72,7 +73,7 @@ Next to this, the assignment specifically focusses on the need of the students t
 Although it would be beneficial for the teacher to have an easy to use platform for managing his practical assignments, it is out of the scope of this project.
 
 To provide an overview of what actions the software must be capable of, we define four global requirements for the system.
-By defining these four global requirements we provide a foundation for the detailed requirements.
+By defining these three global requirements we provide a foundation for the detailed requirements.
 \begin{itemize}
 \item MOOC teachers must be able to create, manage and edit courses.
 Participants of their MOOC are able to register to this course.
@@ -87,7 +88,7 @@ It must be possible to adjust the definition (parameters) of the appropriate pra
 This section will mention the different requirements that involve the basic system which the actors interact with.
 The section starts with mentioning the possible types of user information the application can use and what requirements are associated with that.
 Followed up by what actions are possible within the system.
-After that the kind of system is limited by the requirements listed.
+After that, the kind of system is limited by the requirements listed.
 Lastly we will list the requirements set for the algorithm.
 
 We use the MoSCoW model to divide the requirements in their appropriate categories.
@@ -134,9 +135,9 @@ The M stands for must have, the S for should have, the C for could have and the 
 \hline
 \multicolumn{3}{|p{14.5cm}|}{\textbf{Actor 2: MOOC teacher/MOOC administrator}} \\ \hline
 17 & The administrator must be able to create a course and add this to his account. & M \\ \hline
-18 & The administrator must be able to open and close the participant registration for a course. & M \\ \hline
-19 & The administrator must be able to manage the list of participants and groups of participants. & M \\ \hline
-20 & The administrator must be able to create an url that he can use to invite the participants. & M \\ \hline
+18 & The administrator must be able to create an url that he can use to invite the participants. & M \\ \hline
+19 & The administrator must be able to manage the list of participants and groups of participants. & S \\ \hline
+20 & The administrator must be able to open and close the participant registration for a course. & S \\ \hline
 21 & The administrator should be able to set a deadline for a practical. & S \\ \hline
 22 & The administrator should be able to communicate with every participant. & S \\ \hline
 23 & The administrator should be able to communicate with the groups. & S \\ \hline
@@ -150,10 +151,10 @@ The M stands for must have, the S for should have, the C for could have and the 
 \begin{tabular}{ | p{0.5cm} | p{12cm} | p{2cm} | }
 \hline
 \multicolumn{3}{|p{14.5cm}|}{\textbf{Actor 3: Groups of participants}} \\ \hline
-30 & The groups must be able to communicate with each other using the application. & M \\ \hline
-31 & A group should be able to view a possible group member. & S \\ \hline
-32 & A group should be able to invite a possible group member to join their group. & S \\ \hline
-33 & A group should be able to accept an request from a participant to join their group. & S \\ \hline
+30 & A group should be able to view a possible group member. & S \\ \hline
+31 & A group should be able to invite a possible group member to join their group. & S \\ \hline
+32 & A group should be able to accept an request from a participant to join their group. & S \\ \hline
+33 & The groups must be able to communicate with each other using the application. & C \\ \hline
 34 & The group could be able to select their preferences for the new group member. & C \\ \hline
 35 & The participants could be able to share files to other group members using this application. & C \\ \hline
 36 & The participants would be able upload their source code to the application for verification. & W \\
@@ -190,6 +191,23 @@ The M stands for must have, the S for should have, the C for could have and the 
 13 & The algorithm would have to be able to use information gathered from rejections to improve the matching. & W \\
 \hline
 \end{tabular}
+
+\section{Changed requirements}
+During the project we noticed that some requirements were not classified properly.
+These requirements do not have the priority that we initially thought they would have.
+Following the goals that we have set for the final product, we reasoned that these requirements were not must haves for the final product.
+The teacher part of the system is something we would want to look into, the moment that the final product has a focus towards actual use and not at the proof of concept phase.
+Below we listed the requirements that were reclassified.
+We have listed both the old and new classification.
+\begin{tabular}{ | p{0.5cm} | p{10cm} | p{2cm} | p{2cm} | }
+\hline
+\textbf{\#} & \textbf{Requirement} & \textbf{Old MoSCoW classification} & \textbf{New MoSCoW classification} \\ \hline
+19 & The administrator must be able to manage the list of participants and groups of participants. & M & S \\ \hline
+20 & The administrator must be able to open and close the participant registration for a course. & M & S \\ \hline
+33 & The groups must be able to communicate with each other using the application. & M & C \\ \hline
+\end{tabular}
+
+
 
 \section{Graphical User Interface Mockups}
 We have multiple important features in our application.
