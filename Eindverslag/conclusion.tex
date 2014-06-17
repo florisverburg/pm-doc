@@ -33,4 +33,78 @@ During the implementation phase we made use of unit testing and integration test
 After the implementation phase we made use of a user test and requirements test.
 Lastly, we describe the feedback that we have received from SIG and how we think to improve on this feedback.
 
-%Vervolgens de doelen noemen en per doel uitleggen in hoeverre we dit doel bereikt hebben
+\textbf{The final product, that will be presented, will be a working proof of concept which will fit closely with the specified target audience and demands of the assignment.}
+To determine whether this goal has been met, we can look at the requirements.
+The requirements have been set up with the target audience and the problem description in mind.
+The problem description states the following important problems that need to be solved by the system:
+\begin{itemize}
+\item Difficulty finding a good practical partner.
+\item Searching for a practical partner is a time consuming process.
+\item Sub optimal solution, people often look for group members which share some interests.
+While this often makes it easy to work together, this will not guarantee that you have a good functioning group with enough knowledge.
+\end{itemize}
+
+Looking at the requirements, we can definitely see that these problems are well represented by the requirements.
+During the project we focussed on implementing these requirements.
+It is no surprise that the resulting product is a proof of concept for the solutions that we have selected to solve the problems mentioned above.
+
+To determine how well our proof of concept solves the problems we will have to look at to what extent we have implemented the requirements.
+We will make that comparison in the other goals, since those goals were focussed  more on what the system should be able to do.
+
+\textbf{We want to create a platform for searching other students and letting the students invite other students for a practical group.}
+
+We have achieved this goal by creating a website and implementing an invitation system for this website.
+Using this invitation system, students can search and invite one another.
+This invitation system gives students the possibilities to invite both single students as groups of students.
+It also gives groups the possibilities to invite both single students as groups of students.
+The invitation system gives the user all the possible actions needed for the process of creating a practical group.
+
+We can verify the completion of these features by looking at the requirements test.
+The requirements clearly states which requirements have been implemented and which requirements have not.
+The requirements test also clearly states that all the must and should haves concerning the creation of a platform for searching and inviting other students have been implemented.
+
+\textbf{We want the final product to recommend good fitting possible group members to the students.
+By "good fitting" we mean that there is some heuristic that we use to calculate whether two students would make a good practical group.
+We want the final product to achieve more optimal solutions than the current situation}
+
+In our research report we wrote extensively about what aspects are important to our recommendation algorithm.
+Questions that we asked ourselves at the start of our research were:
+\begin{itemize}
+\item How does the algorithm determine a possible practical partner?
+\item How does the algorithm make a difference between two possible partners and determine which one is a better fit?
+\item How does the algorithm make use of the extra information provided if the could haves are implemented?
+\item How does it make sure the partner that is recommended hasn't already been suggested?
+\end{itemize}
+
+We tried answering these questions using known techniques like knowledge-base recommendations, content-based recommendation, collaborative recommendation and demographic recommendation.
+After doing research we concluded that the known techniques did solve all our problems.
+We thus choose to select aspects of some techniques and combine these to a complete solution.
+We decided upon the following aspects:
+\begin{itemize}
+\item The algorithm uses the idea of social interaction platform that is based off the platform that the Tinder app uses.
+\item The algorithm uses a knowledge-based approach to deal with the various kinds of user information.
+\item We use the geometric mean that is used by OKCupid's algorithm to calculate the differences and similarities between users.
+\item We would like to make the algorithm robust for cold-start problems, the usage of a knowledge-based approach should help with this.
+\end{itemize}
+
+We do not have a guarantee of the performances of our algorithm, but we can say that our algorithm is perfectly tailored for the problems that were mentioned in the problem description.
+We can improve on our understanding of the implemented algorithm and it's results by creating simulations.
+These simulations would simulate the different actions of the system and will simulate both the use of the system as the use of the algorithm.
+Due to the time limits of the project we did not get to implementing these simulations.
+
+Using the requirements test of chapter 5 we can say that we have done a good job implementing the must and should haves that are focused on these problems.
+The only thing we have fallen short in, is the fact that we deal with a wide target audience.
+MOOC's are open to all people and we have not spend enough time writing an explanation of the system.
+
+\textbf{We want the final product to have a high maintainability.
+This means that we would like to achieve an above average score with the Software Improvement Group test.}
+Maintainability is very important in creating a software product, because it is important to easily solve defects, replace worn-out components, meet new requirements, etc.
+While programming, all these aspects are very important.
+In chapter 5 we have discussed the SIG feedback.
+
+To have an above average score, you need a score of out of five stars in the SIG test.
+In our first submission we almost scored four stars.
+The SIG does not just give you a score, it also gives you feedback on possible improvements.
+Using this feedback we want to improve our system and try to score a four or even a five out of five stars.
+This will be further discussed in our presentation.
+For now we are happy with the three stars that we have scored.
