@@ -10,19 +10,19 @@ The growth also means that it is more difficult for each participant to find a p
 The difficulty to find the correct partner or group members when the students do not see each other during courses and have not even met most of the people from the course is also affected.
 
 Most of the time participants of MOOCs are searching group members on social media like Facebook or Twitter.
-They just try to look through some of the participants names in the course, search for them on-line through social media and check if they are a capable partner or group member.
+The participants try to look through some of the names in the course, search for them on-line through social media and check if they are a capable partner or group member.
 This approach takes a lot of time and most of the time there are too much MOOC participants to go trough all of them.
 
 Next to the fact that this process is very time consuming, this process also often leads to a sub optimal solution.
 This is due to the problem that people often look for partners of group members which share the same interests.
 While this often makes it easy to work together, this will not guarantee that a good functioning group with enough knowledge is created.
 
-We would like to improve upon this process by creating an application that can be used to create practical groups without the participants being required to go search intensively trough all the participants.
+We would like to improve upon this process by creating an application that can be used to create practical groups without the participants being required to search intensively through all the participants.
 Participants should be able to easily access the application, fill in some relevant information about themselves and then get recommendations of possible practical partners or group members.
 
 The interaction with the system has some difficulties.
-If we want to get some information from third parties, we are required to use the information in a way this third party delivers the data.
-There can be difficulties processing this data and filtering out the relevant data.
+If we want to get some information from third parties, we are required to use the information in the way third parties deliver the data
+There will be difficulties processing this data and filtering out the relevant data.
 
 The recommendation of possible group members can be quite difficult too.
 One of the problems we are facing is the question: What user information is useful to determine whether two people can be good practical partners?
@@ -37,37 +37,38 @@ In Table~\ref{supervision} the roles of our supervisors can be seen.
 \begin{tabular}{ | p{3cm} | p{5cm} | p{6cm} | }
  \hline
 Leon Rothkrantz & Group Mentor and Supervisor & Supervises the project from the academic point of view and aides the group with difficulties.\\ \hline
-Dragos Datcu &  Client, Group Mentor and Supervisor & Supervises the project from a client point of view and aides the group with difficulties from his experiences of working for InteliWatch.\\
+Dragos Datcu &  Client, Group Mentor and Supervisor & Supervises the project from a client point of view and aides the group with difficulties using his experiences of working for InteliWatch.\\
 \hline
 \end{tabular}
 \label{supervision}
 \end{table}
 
 \section{Actors of the System}
-The system can be used by three different actors.
+In the problem description we defined the three actors of the system.
 Each of these actors can perform different actions and therefore have different requirements.
 By defining the requirements, as we do in the next section, we take these different actors in account.
 
 \subsubsection{Actor 1: MOOC participant}
 Due to the nature of the MOOCs, there are no requirements set for the participants.
-Every person with an interest in the given course can enlist for the MOOC and should thus be able to register with our system.
+Every person with an interest in the given course can enlist for the MOOC and should thus be able to register with or understand our system.
+
 \subsubsection{Actor 2: MOOC teacher/MOOC administrator} 
 The MOOC is organised by a professor of a university or a company.
 This professor will need to register with the system and create a MOOC.
+
 \subsubsection{Actor 3: Groups of participants}
 This actor consist of two or more MOOC participants who accepted each other to their group.
 These groups can be of variable size, with a maximum, set by the MOOC organiser.
 
 \section{Global Goals and Requirements}
 To determine the direction the project should follow, we define goals for the project.
-These goals will later be used to determine whether the final product completed this goals.
+These goals will later be used to determine whether the final product completed these goals.
 \begin{itemize}
 \item The final product, that will be presented, will be a working proof of concept which will fit closely with the specified target audience and demands of the assignment
 \item We want to create a platform for searching other students and letting the students invite other students for a practical group
 \item We want the final product to recommend good fitting possible group members to the students. By "good fitting" we mean that there is some heuristic that we use to calculate whether two students would make a good practical group.
-\item We want the final product to achieve more optimal groups than the current situation by recommending other students based on their own skills.
-\item We want the final product to have a high maintainability.
-This means that we would like to achieve an above average score with the Software Improvement Group test.
+\item We want the final product to achieve more optimal groups than the current situation by recommending students on their choices based on their own skills.
+\item We want the maintainability of the final product to very high and want the code to be easily extendable.
 \end{itemize}
 
 The goals do not include a goal for the teachers part, because we mainly want to focus on the student.
@@ -75,7 +76,7 @@ This is because of the limited time of the project and the current goals having 
 Next to this, the assignment specifically focusses on the need of the students to have a platform to search, interact with other students to form practical groups and have help with searching for their best practical group.
 Although it would be beneficial for the teacher to have an easy to use platform for managing his practical assignments, it is out of the scope of this project.
 
-To provide an overview of what actions the software must be capable of, we define four global requirements for the system.
+To provide an overview of what actions the software must be capable of, we define three global requirements for the system.
 By defining these three global requirements we provide a foundation for the detailed requirements.
 \begin{itemize}
 \item MOOC teachers must be able to create, manage and edit courses.
@@ -95,20 +96,19 @@ Lastly we will list the requirements set for the algorithm.
 
 We use the MoSCoW model to divide the requirements in their appropriate categories.
 The M stands for must have, the S for should have, the C for could have and the W for would have.\cite{moscow}
-We use this for each actor.
 
 \subsection{User Information}
 \begin{tabular}{ | p{0.5cm} | p{12cm} | p{2cm} | }
 \hline
 \textbf{\#} & \textbf{Requirement} & \textbf{MoSCoW} \\ \hline
 1 & Users must have a viewable profile that can be filled with personal information. & M \\ \hline
-2 & Users must be able to enter the following registration information during registration: Full name, Email address, Password. & M \\
+2 & Users must be able to enter the following registration information during registration: Full name, Email address, Password. & M \\ \hline
 3 & Users must fill in their academic performances. Which knowledge, skills and completed courses does the user have? & M \\ \hline
-4 & Users should be able to enter the basic user information, like: country, age, short description, skills, education, a picture and personality traits. & S \\ \hline
+4 & Users should be able to enter basic user information, for example: country, age, short description, skills, education and a picture. & S \\ \hline
 5 & Users could be able to use a personality test to determine their personality traits. & C \\ \hline
 6 & Users could be able to fill in their personality traits. & C \\ \hline
 7 & Users could be able to enter the following extended user information: preferred group role, role of the other group members, etcetera. & C \\ \hline
-8 & Users could be able to enter a predefined questionnaires. & C \\
+8 & Users could be able to enter a predefined questionnaire. & C \\
 \hline
 \end{tabular}
 
@@ -141,14 +141,14 @@ We use this for each actor.
 \begin{tabular}{ | p{0.5cm} | p{12cm} | p{2cm} | }
 \hline
 \multicolumn{3}{|p{14.5cm}|}{\textbf{Actor 2: MOOC teacher/MOOC administrator}} \\ \hline
-17 & The administrator must be able to add a course and add this to his account. & M \\ \hline
+17 & The administrator must be able to create a course and add this to his account. & M \\ \hline
 18 & The administrator must be able to create an URL that he can use to invite the participants. & M \\ \hline
-19 & The administrator must be able to manage the list of participants and groups of participants. & S \\ \hline
-20 & The administrator must be able to open and close the participant registration for a course. & S \\ \hline
+19 & The administrator should be able to manage the list of participants and groups of participants. & S \\ \hline
+20 & The administrator should be able to open and close the participant registration for a course. & S \\ \hline
 21 & The administrator should be able to set a deadline for a practical. & S \\ \hline
 22 & The administrator should be able to communicate with every participant. & S \\ \hline
 23 & The administrator should be able to communicate with the groups. & S \\ \hline
-24 & The administrator should be able to grade the group for its practical. & C \\ \hline
+24 & The administrator could be able to grade the group for its practical. & C \\ \hline
 25 & The administrator could be able to provide for his own criteria for each of his course. & C \\ \hline
 26 & The administrator could be able to add different assignments to the application. & C \\ \hline
 27 & The administrator could be able to view what groups have finished what assignments. & C \\ \hline
@@ -159,10 +159,10 @@ We use this for each actor.
 \begin{tabular}{ | p{0.5cm} | p{12cm} | p{2cm} | }
 \hline
 \multicolumn{3}{|p{14.5cm}|}{\textbf{Actor 3: Groups of participants}} \\ \hline
-30 & Course students group members should be able to log in to the system & M \\ \hline
+30 & Course students group members must be able to log in to the system & M \\ \hline
 31 & A group should be able to view a possible group member. & S \\ \hline
 32 & A group should be able to invite a possible group member to join their group. & S \\ \hline
-33 & A group should be able to accept an request from a participant to join their group. & S \\ \hline
+33 & A group should be able to accept a request from a participant to join their group. & S \\ \hline
 34 & The groups must be able to communicate with each other using the application. & C \\ \hline
 35 & The group could be able to select their preferences for the new group member. & C \\ \hline
 36 & The participants could be able to share files to other group members using this application. & C \\ \hline
@@ -174,10 +174,10 @@ We use this for each actor.
 \begin{tabular}{ | p{0.5cm} | p{12cm} | p{2cm} | }
 \hline
 \textbf{\#} & \textbf{Requirement} & \textbf{MoSCoW} \\ \hline
-1 & The application must be easily accessible to both participants and course organizers. & M \\ \hline
+1 & The application must be easily accessible to both participants and course organisers. & M \\ \hline
 2 & The system must provide account management functionality. & M \\ \hline
 3 & The system must use a database to store the different data put in by the user. & M \\ \hline
-4 & The system could be able to be combined with practical systems already used by MOOC organizers. & C \\
+4 & The system could be able to be combined with practical systems already used by MOOC organisers. & C \\
 \hline
 \end{tabular}
 
@@ -186,12 +186,12 @@ We use this for each actor.
 \hline
 \textbf{\#} & \textbf{Requirement} & \textbf{MoSCoW} \\ \hline
 1 & The algorithm must be able to use a list of users as input. & M \\ \hline
-2 & The algorithm must deal with continuous variation in amount of users. & M \\ \hline
+2 & The algorithm must be able to deal with the continuous variation in amount of users. & M \\ \hline
 3 & The algorithm must be able to return one or more suggestions of practical partners to the user given a list of rejected users. & M \\ \hline
 4 & The algorithm must be able to return one or more suggestions of possible groups the participant could join. & M \\ \hline
 5 & The algorithm uses basic user provided data (e.g. education, preferences) to build up a profile for a course participant. & S \\ \hline
 6 & The algorithm can calculate whether two people will be good practical partners using the basic user provided data. & S \\ \hline
-7 & The algorithm can return a possible practical partners using the basic user provided data. & S \\ \hline
+7 & The algorithm can return a possible practical partner using the basic user provided data. & S \\ \hline
 8 & The algorithm uses advanced user provided data (e.g. asked questions, programming tests) to build up an extended profile for a course participant. & C \\ \hline
 9 & The algorithm can calculate whether two people will be good practical partners using the advanced user provided data. & C \\ \hline
 10 & The algorithm can return a possible practical partner using the basic user provided data. & C \\ \hline
@@ -207,11 +207,11 @@ These requirements do not have the priority that we initially thought they would
 Following the goals that we have set for the final product, we reasoned that these requirements were not must haves for the final product.
 The teacher part of the system is something we would want to look into, the moment that the final product has a focus towards actual use and not at the proof of concept phase.
 Below we listed the requirements that were reclassified.
-We have listed both the old and new classification.
+We have listed both the old and new classification.\\
 \begin{tabular}{ | p{0.5cm} | p{10cm} | p{2cm} | p{2cm} | }
 \hline
 \textbf{\#} & \textbf{Requirement} & \textbf{Old MoSCoW classification} & \textbf{New MoSCoW classification} \\ \hline
-19 & The administrator must be able to manage the list of participants and groups of participants. & M & S \\ \hline
-20 & The administrator must be able to open and close the participant registration for a course. & M & S \\ \hline
+19 & The administrator should be able to manage the list of participants and groups of participants. & M & S \\ \hline
+20 & The administrator should be able to open and close the participant registration for a course. & M & S \\ \hline
 33 & The groups must be able to communicate with each other using the application. & M & C \\ \hline
 \end{tabular}
