@@ -2,9 +2,8 @@
 \label{sec:design_implementation}
 
 \section{Global System Design}
-In this section we will explain how we designed the application and why we made several decisions.
-We do this using different diagrams.
-We have made for example a class diagram, a database diagram, sequence diagrams and state diagrams.
+In this section we will explain how we designed the application and why we made several design and implementation decisions.
+We do this using different diagrams, for example a class diagram, a database diagram, sequence diagrams and state diagrams.
 
 \subsection{Database}
 In Figure~\ref{database_diagram}, our database diagram can be seen.
@@ -22,8 +21,14 @@ In the center of the diagram, the user is shown.
 The user has a many to many relation with a group.
 There are four different groups.
 There is a group for students, for teachers, for administrators and one for guests.
+An administrator can create teachers and edit settings for the application.
+A teacher can create and manage courses.
+A student is someone who participates the course and want to find a practical group.
+A guest is someone who is not logged in to the application.
 It is obvious that a group can contain multiple users, but a user can also have multiple groups.
 Users can be a teacher, as well as an administrator.
+A group is not a practical group.
+The practical groups are explained below here.
 
 Every group has different rights.
 The same right can also be assigned to multiple groups.
@@ -45,10 +50,9 @@ Therefore is this a many to one relation.
 An invite has two many to one relations with a user.
 An invite has a sender as well as an receiver.
 There can only be one sender and one receiver for an invite.
-But a user can send and receive multiple invites, therefore is this also a many to one relation.
+But a user can send and receive multiple invites, therefore this is also a many to one relation.
 
-Every invite belongs to only one practical.
-These therefore also have a many to one relation.
+Every invite belongs to only one practical, these therefore also have a many to one relation.
 
 The last relation is between an invite and a message.
 These messages are for communication between the sender and the receiver of the invite.
@@ -84,7 +88,7 @@ The name of the methods tell the function.
 \subsection{State Diagrams}
 In this section we describe the behaviour of our system with the help of state diagrams.
 We describe this behaviour with two different state diagrams.
-One diagram for the administrator and an other one for a student.
+One diagram for the administrator and another one for a student.
 
 First of all, the administrator must be registered and logged in before he can perform any action.
 When the administrator is logged in, he can create practicals.
@@ -101,7 +105,7 @@ The admin can remove users or even entire practical groups.
     \label{state_diagram_admin}
 \end{figure}
 
-The student's state diagram is a little bit more complex.
+The student's state diagram is more complex.
 The first part is the same as with the administrator.
 The student also must be registered and logged in to perform any action.
 
@@ -149,6 +153,9 @@ The views display these results and via these views the results will reach the u
 We have multiple important features in our application.
 Each of these features has an own graphical user interface (GUI).
 Below, we will provide mockups from the graphical user interfaces of the most important features.
+
+We have made mockups for the profile page and for the practical page.
+This are the most important features, so it is important for these features to have a clear interface.
 
 \subsection{Profile}
 As can be seen in Figure~\ref{mockup_profile}, a user can view someone's (or it's own) profile.
@@ -236,7 +243,7 @@ Domain logic adds 'meaning' to raw data (e.g., calculating if today is the user'
  Most applications use a persistent storage mechanism such as a database to store data.
 MVC does not specifically mention the data access layer because it is understood to be underneath, or encapsulated by, the Model.
 
-In Play, the domain model object layer is a set a Java classes using all the object oriented features available from the Java language. 
+In Play, the domain model object layer is a set of Java classes using all the object oriented features available from the Java language. 
 It contains data structures and operations on which the application operates. 
 Whenever model objects need to be saved into a persistent storage, they may contain some glue artefacts like JPA annotations or SQL statements.
 
