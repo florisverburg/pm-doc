@@ -2,12 +2,12 @@
 \label{sec:conclusion}
 During the past weeks we have created a platform where teachers can create the practicals associated with their MOOC and where students can enrol for practicals and form practical groups to work together on assignments.
 This platform serves as a proof of concept for the various problems that were mentioned in the problem description.
-One of the problems is the scale of MOOC's, which makes searching for a good group member is not a trivial problem.
+One of the problems is the scale of MOOCs, which makes searching for a good group member is not a trivial problem.
 To assist the student in forming a good group, the platform recommends possible group members to the searching student.
 
-We split the project up in three phases: the orientation phase, the implementation phase and the final phase.
+We split the project in three phases: the orientation phase, the implementation phase and the final phase.
 The project started off with the orientation phase in which the different aspects of the problem description were analysed.
-During this time we looked into what kind of recommendation algorithm we will be using.
+During this time we looked into what kind of recommendation algorithm we would be using.
 We also made an extensive list of requirements that helped us set out the different design decisions.
 Lastly, we made a basic system design.
 In the next phase, the implementation phase, we incrementally implemented the different features of the system.
@@ -19,21 +19,22 @@ The last thing to be done in the last phase is looking in what ways we can impro
 This is discussed in the future work section later this chapter.
 
 %Uitleggen wat we in dit document hebben beschreven
-This report documents the entire project.
-We start with introducing the problem and our target audience.
-Secondly, the report describes our supervisors, the different actors of the system, global goals, global requirements and detailed requirements.
-Following this, we describe the project methodology we have chosen and we discuss how it panned out for us.
-Per phase we describe the goal, planning and deliverables of the phase.
-We also reflect on each phase separately.
-In chapter 4 we describe the design we made of the system and how we implemented specific parts.
+This report described the entire project.
+We started with introducing the problem and our target audience.
+Secondly, the report described our supervisors, the different actors of the system, global goals, global requirements and detailed requirements.
+Following this, we described the project methodology we have chosen and we discussed how it panned out for us.
+Per phase we described the goal, planning and deliverables of the phase.
+We also reflected on each phase separately.
+In chapter 4 we described the design we made of the system and how we implemented specific parts.
 Things that we discuss in this chapter: Database diagram, class diagram, state diagrams, sequence diagrams, MVC, implementation of the recommendation algorithm and implementation of the invitation system.
-Next, we describe the different kinds of testing that has been done during the project.
-We start with describing the different kinds of testing that we have done during the implementation phase, followed by the testing that we have done after the implementation phase.
+Next, we described the different kinds of testing that has been done during the project.
+We started with describing the different kinds of testing that we have done during the implementation phase, followed by the testing that we have done after the implementation phase.
 During the implementation phase we made use of unit testing and integration testing.
 After the implementation phase we made use of a user test and requirements test.
-Lastly, we describe the feedback that we have received from SIG and how we think to improve on this feedback.
+Lastly, we described the feedback that we have received from SIG and how we thought on improving this feedback.
 
 \textbf{The final product, that will be presented, will be a working proof of concept which will fit closely with the specified target audience and demands of the assignment.}
+
 To determine whether this goal has been met, we can look at the requirements.
 The requirements have been set up with the target audience and the problem description in mind.
 The problem description states the following important problems that need to be solved by the system:
@@ -96,6 +97,8 @@ Using the requirements test of chapter 5 we can say that we have done a good job
 The only thing we have fallen short in, is the fact that we deal with a wide target audience.
 MOOC's are open to all people and we have not spend enough time writing an explanation of the system.
 
+\textbf{We want the maintainability of the final product to very high and want the code to be easily extendable.}
+
 Maintainability is very important in creating a software product, because it is important to easily solve defects, replace worn-out components, meet new requirements, etc.
 While programming, all these aspects are very important.
 In chapter 5 we have discussed the SIG feedback and have seen that our maintainability scores above average.
@@ -116,7 +119,7 @@ This improvement has a high priority because it makes the proof of concept much 
 The proof of concept would be a better representation of the system that is needed.
 Our goal is to implement these two before the presentation.
 
-\item The goal above already describes some of the improvements that can be made to the user interface.
+\item The recommendation above already describes some of the improvements that can be made to the user interface.
 Other improvements can be found in the interface mock-ups that are not yet implemented.
 Implementing these interface mock-ups will drastically improve the user interface.
 These have a moderate priority due to the focus being on having a working system.
@@ -130,14 +133,14 @@ that.
 
 \item Although we deliver a working proof of concept, it is difficult to verify the performance of our recommendation algorithm and our system.
 This would need either a large user test or a simulation.
-We think that the implementation of a simulation would help to understand and verify the working of the current system would be the implementation of a simulation.
+We think that the implementation of a simulation would help to understand and verify the working of the current system.
 This simulation will simulate the process of using the system and by doing this try to measure the performance of the recommendation algorithm and the system.
 
 \item To improve the recommendations that the algorithm gives more information is needed.
 This can be done by adding more skills for the user to fill in.
 Increasing the amount of skills that the user provides will increase the accuracy in which the algorithm can recommend.
 This could be done by letting the user rate him-/herself for more skills, this is the easiest solution for this improvement.
-But other ways of rating user skills might be more beneficial due to the system.
+But other ways of rating user skills might be more beneficial to the system.
 These other ways might be the user answering questions which are related to the subjects.
 The answers can then be rated to determine the score of the different users.
 
@@ -148,8 +151,8 @@ An example of this is a rating of the recommendation by the user.
 The algorithm has to be adjusted so it can use these ratings to further improve his recommendation.
 
 \item In the requirements test we have mentioned that we have implemented all the must and should have requirements that are connected to the focus and goals of the project.
-The next step for this product is to work to version which will be used in a live situation.
-This will give a lot more feature that will have to be implemented.
+The next step for this product is towards work to version which will be used in a live situation.
+This will result in more features that will have to be implemented.
 One of the things that need to be done will be implementing a more advanced practical management system for the teacher.
 In that way the product will be more attractive to the people that have the choice to start using it.
 It will not have a big initial priority, but will increase in priority when the product will be focussed more on live usage.
