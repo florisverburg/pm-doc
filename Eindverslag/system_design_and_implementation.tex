@@ -7,7 +7,7 @@ We do this using different diagrams.
 We have made for example a class diagram, a database diagram, sequence diagrams and state diagrams.
 
 \subsection{Database}
-In Figure~\ref{database_diagram}, you see our database diagram.
+In Figure~\ref{database_diagram}, our database diagram can be seen.
 We will explain the structure of the database shortly.
 
 \begin{figure}[h]
@@ -18,7 +18,7 @@ We will explain the structure of the database shortly.
     \label{database_diagram}
 \end{figure}
 
-In the center of the diagram, you see the user.
+In the center of the diagram, the user is shown.
 The user has a many to many relation with a group.
 There are four different groups.
 There is a group for students, for teachers, for administrators and one for guests.
@@ -55,7 +55,7 @@ These messages are for communication between the sender and the receiver of the 
 An invite can have multiple messages and every message belongs to only one invite.
 
 \subsection{Class Diagram}
-In Figure~\ref{class_diagram} you can see our application's class diagram.
+In Figure~\ref{class_diagram} our application's class diagram can be seen.
 This diagram is not complete with all the methods and attributes, but the most important methods and attributes are included.
 For example, all the get and set methods are not included.
 
@@ -68,7 +68,7 @@ A student cannot do this, a student can only sign up for this courses.
 A student can also find possible group members.
 These possible group members are determined by the recommender class.
 With the getNextGroupMember method the next best practical partner will be calculated.
-You can read more about the matching algorithm in Section~\ref{sec:algorithm}
+More about the matching algorithm can be read in Section~\ref{sec:algorithm}
 
 The other methods are needless to explain.
 The name of the methods tell the function.
@@ -151,11 +151,11 @@ Each of these features has an own graphical user interface (GUI).
 Below, we will provide mockups from the graphical user interfaces of the most important features.
 
 \subsection{Profile}
-As you can see in Figure~\ref{mockup_profile}, you can view someone's (or your own) profile.
-You can see the basic profile information which the user has filled in himself.
+As can be seen in Figure~\ref{mockup_profile}, a user can view someone's (or it's own) profile.
+The user can see the basic profile information which the user has filled in himself.
 
-If you are looking for a practical partner, you can get a better impression of that person when you get an overview of the profile information of that person.
-This is just a simple page, because you should quickly get an impression of the student.\\
+If a user is looking for a practical partner, he can get a better impression of that person when he gets an overview of the profile information of that person.
+This is just a simple page, because the user should quickly get an impression of the student.\\
 
 \begin{figure}[H]
     \centering
@@ -165,9 +165,9 @@ This is just a simple page, because you should quickly get an impression of the 
     \label{mockup_profile}
 \end{figure}
 
-In Figure~\ref{mockup_edit_profile}, you see the page for editing your profile.
-On this page, you can edit your basic profile information as well as the level of your skills.
-You can also change your password and your profile image.
+In Figure~\ref{mockup_edit_profile}, the page for editing the profile can be seen.
+On this page, the user can edit his basic profile information as well as the level of his skills.
+He can also change his password and his profile image.
 This information will be taken into account while determining the recommended practical partners.
 So it is important for the users to be able to fill in this information easily.
 
@@ -199,9 +199,9 @@ First of all, there is some information about the practical itself.
 We show a short description of the practical.
 
 After that, we show the most important part, the recommendation.
-The application determines which other practical groups matches your group the best.
-On this page you can click on the practical group for more information.
-You can also invite a practical group to join yours.
+The application determines which other practical groups matches the user's group the best.
+On this page the user can click on the practical group for more information.
+The user can also invite a practical group to join his practical group.
 
 After the recommendation part, we also show the user's current practical group.
 
@@ -291,23 +291,23 @@ After that we will explain how we solved this difficult invite system, and concl
 
 So why is this invite system so complex?
 This all is mainly caused by the problem that occurs when creating practical groups larger than two.
-Creating a group larger than two requires either a group manager to create and maintain invites, or a different way of inviting people when you are joined in a practical group.
+Creating a group larger than two requires either a group manager to create and maintain invites, or a different way of inviting people when the user is joined in a practical group.
 This is needed because of the fact that having the possibility for all the group members to invite other people could lead to several conflicting situations.
 So the easiest way to solve this is by creating a group manager, which would be the only user that has the rights to send and invite other users.
 
 But then how do we choose a group manager?
-We could of course easily solve this by doing it random, but that could lead to strange situations and then you also need to add group manager functionalities, to for example change the group manager.
+We could of course easily solve this by doing it random, but that could lead to strange situations and then group manager functionalities also need to be added, to for example change the group manager.
 To avoid these situations we then chose to instead of doing it random, make the inviter that forms the group the group manager.
-This will make it sure that when you accept a certain invite you also know who will be the group manager and also can depend your choice on that.
+This will make it sure that when the user accepts a certain invite he also knows who will be the group manager and also can depend his choice on that.
 
 Despite the fact that we now solved both the complex system of having more then two group members, there were still other problems that also caused our underestimation.
-This was due the fact that you could have multiple open invites available at a certain time, both send invites and received invites.
+This was due the fact that the user could have multiple open invites available at a certain time, both send invites and received invites.
 Here we could have chosen to deny the user to have multiple outstanding invites to users, but because we expect that there will be a lot of inactive users this seems very implausible.
 Users will then have to wait a certain amount of time for an inactive user, while other possible groups members might join other groups.
-This is why we chose to implement it that when an invite is accepted and you're not becoming a group manager, all the other invites will be rejected.
+This is why we chose to implement it that when an invite is accepted and the user is not becoming a group manager, all the other invites will be rejected.
 Hereby the problem of having multiple open invites at a certain time is solved.
 
-One of the last problems we found during the implementation of the invites system was the fact that you should be able to invite a group.
+One of the last problems we found during the implementation of the invites system was the fact that the user should be able to invite a group.
 This caused two different subproblems, one person inviting a group and a group inviting another group.
 Both were dealt with in the same way, by defining that a single person is also a group with just one person in it.
 This only left us with the merging of two groups which was done the same way as joining one by one.
@@ -332,7 +332,7 @@ After that we will give a description about the complexity and will conclude thi
 Before we start explaining the algorithm we will first describe how to calculate the distance for a certain practical group.
 Calculating the distance of a practical group is done by going through the skills defined by the practical teacher.
 We will then calculate the average of the values of the skills of all the users in the practical group and the users' practical group combined.
-Then all the averages are multiplied with each other and then you take root of the amount of skills in the practical.
+Then all the averages are multiplied with each other and then the root of the amount of skills in the practical is taken.
 This resulting number will be defined as the distance.
 
 The matching algorithm starts with a practical and user.
@@ -374,7 +374,7 @@ The formal definition of this algorithm is visible in Algorithm \ref{recommend}.
 To Analyse the complexity we need the following measurements.
 We define $n$ as the amount of practical groups in a practical.
 We define $m$ as the amount of skills defined in a practical.
-We define $j$ as the amount of users in a certain practical group plus the amount of users in your own practical group.
+We define $j$ as the amount of users in a certain practical group plus the amount of users in the user's own practical group.
 Since in the first loop we go trough the practical groups to calculate the distance we start with a time complexity of $O(n)$.
 Inside this loop we go trough each of the skills defined in the practical to calculate the average which will give us $O(n*m)$.
 In order to calculate this average we need to go trough all the users in our practical group and the practical group examined.
