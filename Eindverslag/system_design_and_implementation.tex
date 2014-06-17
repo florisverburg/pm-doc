@@ -342,9 +342,10 @@ This means that when an user doesn't have any practical partners he is still in 
 While going trough the different practical groups it will calculate the distance as described in the previous paragraph.
 After calculating the distance with every other practical group and saving this in a map, this result is sorted by descending distance.
 Then we start recommending practical groups to the user starting by the top of the list.
-The formal definition of this algorithm is visible in Algorithm \ref{recommend}.
+The formal definition of this algorithm is visible in Figure \ref{recommend}.
 
-\begin{algorithm}
+\begin{figure}[H]
+ \centering
 \begin{algorithmic}
 \Function{Recommend}{$practical$, $user$}
 	\State $resultList\gets$ Empty map of PracticalGroup and distance
@@ -369,7 +370,7 @@ The formal definition of this algorithm is visible in Algorithm \ref{recommend}.
 \EndFunction
 \caption{The recommendation algorithm}\label{recommend}
 \end{algorithmic}
-\end{algorithm}
+\end{figure}
 
 To Analyse the complexity we need the following measurements.
 We define $n$ as the amount of practical groups in a practical.
