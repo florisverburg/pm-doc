@@ -1,0 +1,21 @@
+De code van het systeem scoort bijna 4 sterren op ons onderhoudbaarheidsmodel, wat betekent dat de code bovengemiddeld onderhoudbaar is. De hoogste score is niet behaald door een lagere score voor Duplicatie, Module Coupling en Component Independence.
+
+Voor Duplicatie wordt er gekeken naar het percentage van de code welke redundant is, oftewel de code die meerdere keren in het systeem voorkomt en in principe verwijderd zou kunnen worden.
+Vanuit het oogpunt van onderhoudbaarheid is het wenselijk om een laag percentage redundantie te hebben omdat aanpassingen aan deze stukken code doorgaans op meerdere plaatsen moet gebeuren. In dit systeem is er bijvoorbeeld duplicatie te vinden binnen 'view.scala.html', maar ook tussen de 'ProfileForm'- en 'RegisterForm'-classen.
+Het is aan te raden om dit soort duplicaten op te sporen en te verwijderen. 
+
+Voor Module Coupling wordt er gekeken naar het percentage van de code wat relatief vaak wordt aangeroepen.
+Normaal gesproken zorgt code die vaak aangeroepen wordt voor een minder stabiel systeem omdat veranderingen binnen dit type code kan leiden tot aanpassingen op veel verschillende plaatsen.
+Wat hier opvalt is dat de drie grootste classen ('User', 'Invite' en 'Practical') gezamenlijk 30\% van de Java code bevatten.
+Alhoewel het commentaar vermeld dat bijvoorbeeld 'User' een 'user representation of the database' is, bevat deze class naast een representatie van eigenschappen ook configuratie en functionaliteit voor het versturen van emails.
+Om zowel de grootte als het aantal aanroepen te verminderen, zouden deze functionaliteiten gescheiden kunnen worden.
+Dit leidt er toe dat de afzonderlijke functionaliteiten makkelijker te begrijpen, te testen en daardoor eenvoudiger te onderhouden worden.
+
+Voor Component Independence wordt er gekeken naar de hoeveelheid code die alleen intern binnen een component wordt gebruikt, oftewel de hoeveelheid code die niet aangeroepen wordt vanuit andere componenten.
+Hoe hoger het percentage code welke vanuit andere componenten wordt aangeroepen, des te groter de kans dat aanpassingen in een component propageren naar andere componenten, wat invloed kan hebben op toekomstige productiviteit.
+In dit geval valt met name op dat er meerdere cyclische afhankelijkheden zijn tussen componenten, bijvoorbeeld tussen 'models' en 'helpers', maar ook tussen 'helpers' en 'controllers'.
+Het lijkt er dan ook op dat het niet duidelijk is welk component verantwoordelijk moet zijn voor welke functionaliteit.
+Om het systeem ook in de toekomst onderhoudbaar te houden, is het aan te raden om dit duidelijker te maken.
+
+Over het algemeen scoort de code bovengemiddeld, hopelijk lukt het om dit niveau te behouden tijdens de rest van de ontwikkelfase.
+De aanwezigheid van test-code is in ieder geval veelbelovend, hopelijk zal het volume van de test-code ook groeien op het moment dat er nieuwe functionaliteit toegevoegd wordt. 
