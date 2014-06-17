@@ -205,6 +205,13 @@ The user can also invite a practical group to join his practical group.
 
 After the recommendation part, we also show the user's current practical group.
 
+\section{Model View Controller}
+\label{sec:mvc}
+As mentioned earlier, we are using the Play Framework. 
+This frameworks follows the Model View Controller (MVC) architectural pattern applied to the Web architecture\cite{playframework_mvc}.
+This pattern splits the application into separate layers: the Presentation layer and the Model layer. 
+The Presentation layer is further split into a View and a Controller layer.
+
 \begin{figure}[H]
     \centering
     \captionsetup{justification=centering}
@@ -212,13 +219,6 @@ After the recommendation part, we also show the user's current practical group.
     \caption{Interface for the practical page}
     \label{mockup_practical}
 \end{figure}
-
-\section{Model View Controller}
-\label{sec:mvc}
-As mentioned earlier, we are using the Play Framework. 
-This frameworks follows the Model View Controller (MVC) architectural pattern applied to the Web architecture\cite{playframework_mvc}.
-This pattern splits the application into separate layers: the Presentation layer and the Model layer. 
-The Presentation layer is further split into a View and a Controller layer.
 
 \subsection{Controller}
 The \textbf{Controller} responds to events (typically user actions) and processes them, and may also invoke changes on the model.
