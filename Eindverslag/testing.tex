@@ -361,8 +361,50 @@ The two must have requirements that still need to be done are quite easy to impl
 Although we failed to implement all the must haves before the delivery of this report, we did managed to implement a lot of should haves.
 
 \section{Software Improvement Group Feedback}
+For analysing how maintainable our created software solution we handed in our code to the Software Improvement Group (SIG).
+SIG analysed our code for maintainability and gave us some short advice on how to improve on this.
+The intermediate feedback from SIG can be found in appendix \ref{app:sig} and is written in Dutch.
+In this section we will summarise this feedback and give an explanation on how we plan to improve the code maintainability.  
+
 \subsection{Intermediate feedback}
+On the maintainability scale of SIG we scored almost 4 out 5 stars during the intermediate feedback.
+This indicates a better than average code maintainability where still some improvements can be made.
+Three aspects that we could mainly improve on are:
+
+\begin{itemize}
+\item \textbf{Code duplication:} The code that is redundant, because it occurs multiple times and could therefor be removed. 
+Because of maintainability it is suggested to keep the code duplication very low, because adjustments to this code needs to happen in multiple places.
+\item \textbf{Module Coupling:} Here is taken into account the percentage of code that is called the most.
+Normally this code makes the system less stable, because changes in this code can lead to changes on many different places.
+\item \textbf{Component Independence:} By component independence is looked at the amount of that is used only internally in a component.
+How higher the percentage of code that is called from other components, how higher the chance is that changes propagate to other components.
+This has an influence in the future productivity.
+\end{itemize}
+
+As last they in the report they mention that the availability of the test code is promising and hope that it will grow at the moment of adding more features.
+
 \subsection{Improvements}
-\subsection{Final feedback}
+Based on the intermediate feedback from SIG we tried to analyse most of these problems ourself.
+We already had some tools for analysing the code maintainability and changed some of the settings and added some new tools.
+
+For the code duplication problems we enabled the 'StrictDuplicateCode' module in CheckStyle to search for duplicate code.
+This module searches for a defined amount of similar lines of code and ignoring the whitespace in between.
+We will improve on all these duplicate lines of code and try to remove as much a possible.
+
+Next to adjusting CheckStyle we also added a new tool called Google CodePro for analysing the other aspects from the SIG feedback.
+Goole CodePro can do a lot of checks both CheckStyle and Findbugs already support, but it can also analyse the dependencies.
+An example of the dependency graph between the packages is shown in Figure \ref{dependency_graph}.
+In this dependency graph we can see the problems of the module coupling and component independence.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/dependency_graph}
+    \caption{Dependency graph}
+    \label{dependency_graph}
+\end{figure}
+
+In Figure \ref{dependency_graph} we see that we have cyclomatic dependencies between controllers, forms, helpers and models.
+We can improve on that by illuminating the dependencies between packages that go both ways.
+Since we now are able to analyse this in the dependency graph this can easily be improved.git s
 
 
