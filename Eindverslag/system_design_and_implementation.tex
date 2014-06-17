@@ -351,6 +351,24 @@ After calculating the distance with every other practical group and saving this 
 Then we start recommending practical groups to the user starting by the top of the list.
 The formal definition of this algorithm is visible in Figure \ref{recommend}.
 
+To Analyse the complexity we need the following measurements.
+We define $n$ as the amount of practical groups in a practical.
+We define $m$ as the amount of skills defined in a practical.
+We define $j$ as the amount of users in a certain practical group plus the amount of users in the user's own practical group.
+Since in the first loop we go through the practical groups to calculate the distance we start with a time complexity of $O(n)$.
+Inside this loop we go through each of the skills defined in the practical to calculate the average which will give us $O(n*m)$.
+In order to calculate this average we need to go through all the users in our practical group and the practical group examined.
+This will lead to a time complexity of $O(n*m*j)$.
+As one of the last steps we still need to sort the list of the practical groups which will be done in a time complexity of $O(n*log(n))$.
+All this combined will lead into a total time complexity of $O(nmj+n*log(n))$ which for small $m$ and $j$ will lead to a total time complexity of $O(n*log(n))$.
+
+We chose this implementation, because it is very easy to understand and very adjustable implementation of the algorithm.
+There are several ways to optimise the algorithm by using precomputing.
+This can be done for example during the defining of the skills by the user and will save execution time when viewing recommended solutions.
+Next to that we have shown in the previous paragraph that with both a small amount of skills defined by a practical and with a small amount of users in practical groups, this algorithm will run in $O(n*log(n))$.
+Since this will be the case, because both sizes are limited this will be fast enough to run in realtime while recommending without precomputing.
+All these cases prove that the algorithm is good enough for recommendation system.
+
 \begin{figure}[H]
  \centering
 \begin{algorithmic}
@@ -378,24 +396,6 @@ The formal definition of this algorithm is visible in Figure \ref{recommend}.
 \caption{The recommendation algorithm}\label{recommend}
 \end{algorithmic}
 \end{figure}
-
-To Analyse the complexity we need the following measurements.
-We define $n$ as the amount of practical groups in a practical.
-We define $m$ as the amount of skills defined in a practical.
-We define $j$ as the amount of users in a certain practical group plus the amount of users in the user's own practical group.
-Since in the first loop we go through the practical groups to calculate the distance we start with a time complexity of $O(n)$.
-Inside this loop we go through each of the skills defined in the practical to calculate the average which will give us $O(n*m)$.
-In order to calculate this average we need to go through all the users in our practical group and the practical group examined.
-This will lead to a time complexity of $O(n*m*j)$.
-As one of the last steps we still need to sort the list of the practical groups which will be done in a time complexity of $O(n*log(n))$.
-All this combined will lead into a total time complexity of $O(nmj+n*log(n))$ which for small $m$ and $j$ will lead to a total time complexity of $O(n*log(n))$.
-
-We chose this implementation, because it is very easy to understand and very adjustable implementation of the algorithm.
-There are several ways to optimise the algorithm by using precomputing.
-This can be done for example during the defining of the skills by the user and will save execution time when viewing recommended solutions.
-Next to that we have shown in the previous paragraph that with both a small amount of skills defined by a practical and with a small amount of users in practical groups, this algorithm will run in $O(n*log(n))$.
-Since this will be the case, because both sizes are limited this will be fast enough to run in realtime while recommending without precomputing.
-All these cases prove that the algorithm is good enough for recommendation system.
 
 
 
