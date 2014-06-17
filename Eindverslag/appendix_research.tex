@@ -25,7 +25,7 @@ The goal is to create a Delft Extension School that will bundle all open \& onli
 We would like to improve upon this concept and try to provide a more fitting approach.
 
 \subsection*{Problem definition}
-In thissubsection* we will continue on the case provided by the introduction.
+In this subsection we will continue on the case provided by the introduction.
 We will pinpoint the points we would like to improve upon.
 
 MOOCs around the world are growing in size and thus the practical assignments need to be easy to manage.
@@ -54,16 +54,16 @@ We will also need to figure out a good way to recommend a practical partner, but
 These questions and difficulties will be answered in this report.
 
 \section*{Introduction to requirements}
-The followingsection*s will describe what requirements are set for the product.
-Thissection* will define four global requirements who cover the entire project.
-These requirements are then split up in the next twosection*s, the first being the requirements for the basic system and the second being the requirements for the peer matching algorithm.
+The following sections will describe what requirements are set for the product.
+This section will define four global requirements who cover the entire project.
+These requirements are then split up in the next two sections, the first being the requirements for the basic system and the second being the requirements for the peer matching algorithm.
 We choose to split these requirements up, because of the literature study required to further specify the requirements.
-In thesesection*s, the global requirements are split up in smaller requirements.
+In these sections, the global requirements are split up in smaller requirements.
 It is easier to verify these smaller requirements for their completion and these requirements are more transformable to functions of the system.
 We also assigned these requirements into their appropriate MoSCoW \cite{highsmith2001agile} method category.
 
 \subsection*{Actors of the system}
-In thissubsection* we will clarify the different actors used in the system and throughout this report.
+In this subsection we will clarify the different actors used in the system and throughout this report.
 \subsubsection*{MOOC participant}
 Due to the nature of the MOOCs, there are no requirements set for the participants.
 Every person with an interest in the given course can enlist for the MOOC and should thus be able to register with our system.
@@ -88,12 +88,12 @@ It must be possible to adjust the definition (parameters) of the appropriate pra
 \end{itemize}
 
 \section*{Requirements}
-Thissection* will mention the different requirements that involve the basic system which the actors interact with.
-Thesection* starts with mentioning the possible types of user information the application can use and what requirements are associated with that.
+This section will mention the different requirements that involve the basic system which the actors interact with.
+The section starts with mentioning the possible types of user information the application can use and what requirements are associated with that.
 Followed up by what actions are possible within the system.
 After that the kind of system is limited by the requirements listed.
 Lastly we will list the requirements set for the algorithm.
-Eachsection* will use the MoSCoW model to divide the requirements in their appropriate categories.
+Each section will use the MoSCoW model to divide the requirements in their appropriate categories.
 
 
 \subsection*{User information}
@@ -142,7 +142,7 @@ Eachsection* will use the MoSCoW model to divide the requirements in their appro
 \reqr{Should have}
 \begin{itemize}
 \item The participant should be able to ask a currently existing group if he can join them.
-\item The participant should be able to use their Linkedin profile to log in to the application.
+\item The participant should be able to use their LinkedIn profile to log in to the application.
 \item In case the participant already has an account, the participant should be able to add the course to his profile using the teachers url.
 \item The participant should be able to receive an invitation from a group.
 \item The participant should be able to accept the invitation from a group.
@@ -273,7 +273,7 @@ This actor consist of two or more course participants who accepted each other to
 \end{itemize}
 
 \section*{Design choices}
-In thissection* we will be describing our choices for the design.
+In this section we will be describing our choices for the design.
 For each choice we will be arguing why we have chosen for this.
 We will argue using scientific literature or the requirements.
 We will first describe the choices we have made concerning the kind of system.
@@ -329,7 +329,7 @@ The Play Framework looks a lot like the Spring Framework, it includes the same f
 To conclude, we chose the Play Framework to work with. All of the team members already had experience with programming in Java. One of the team members also had worked with the Play Framework before, so we had some experience with this framework in our group.
 
 \subsection*{Literature survey recommender systems}
-Using the requirements stated in the previoussection* we see that the requirements all state the need for the handling of a specific set of input and outputting the needed information.
+Using the requirements stated in the previous section we see that the requirements all state the need for the handling of a specific set of input and outputting the needed information.
 The requirements do not state any limitations about the inner workings of the algorithm.
 Some questions remain:
 \begin{itemize}
@@ -355,7 +355,7 @@ As can be read in these papers \citep{Breese1998},\citep{Peter2007}, there are r
 
 The following image supports the existence of these five classes.
 The image shows how the different classes use different kinds of resources.
-Next to these recommendations we added asubsection* for the mentioning of other possibilities that we encountered while researching the subject.
+Next to these recommendations we added a subsection for the mentioning of other possibilities that we encountered while researching the subject.
 We will now first discuss each of the techniques and what aspects are usable and what aspects are not.
 \makebox[\textwidth]{\includegraphics[width=12cm]{Images/RecommendationDomain}}
 
@@ -408,7 +408,7 @@ The geometric mean would still give an overall score for the combining of two pe
 \subsubsection*{Content-based filtering}
 The book Adaptive Web \citep{Peter2007} also describes what content-based filtering techniques are.
 He describes content-based filtering systems as systems where in a user profile represents the content description of items in which that user has previously expressed interest.
-The content description of items are represented by a set of features or attributes that characterize that item.
+The content description of items are represented by a set of features or attributes that characterise that item.
 The recommendation in these kind of systems usually consist of comparing unseen or unrated items with the user profile.
 Items that overlap with the interests of the user are recommended.
 
