@@ -411,4 +411,13 @@ In Figure \ref{dependency_graph} we see that we have cyclomatic dependencies bet
 We can improve on that by eliminating the dependencies between packages that go both ways.
 Since we now are able to analyse this in the dependency graph this can easily be improved.
 
+\subsection{Final feedback}
+After implementing the improvements from the previous section we uploaded our code to SIG again, to analyse if our code was improved.
+In total they say that both the maintainability and the size of the system has grown.
 
+The code duplication that was described above was mainly improved by using more abstraction and implementation of methods.
+For the module coupling they analysed that we divided most of the functionality that was available in the User class and moved them to several other classes.
+As last they also mention that we have removed all the cyclomatic dependencies.
+
+From this observations they conclude that we have used SIG's advice during the rest of our implementation.
+They are happy to see that next to the improvement of the maintainability also the amount of test code is improved.
